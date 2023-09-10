@@ -43,17 +43,23 @@
 
 html {
     box-sizing: border-box;
+    font-family: var(--fuente-parrafos);
 }
  
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-body {
+.body {
     min-height: 100vh;
     display: grid;
     grid-template-areas:    "header"
                             "main"
                             "aside"
                             "footer";
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
 }
