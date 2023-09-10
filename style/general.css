@@ -40,3 +40,20 @@
     --letra-p-pequeño: .875rem;
 
 }
+
+html {
+    box-sizing: border-box;
+}
+ 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:    "header"
+                            "main"
+                            "aside"
+                            "footer";
+}

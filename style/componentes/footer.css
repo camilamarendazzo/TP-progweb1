@@ -12,6 +12,7 @@
     text-align: center;
     background-color: var(--color-negro);
     color: var(--color-blanco);
+    grid-area: footer;
 }
 
 .footer-nombre {
