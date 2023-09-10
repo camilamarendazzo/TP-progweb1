@@ -10,6 +10,33 @@
 */
 
 :root {
-
+    /*Colores*/
     --color-principal: #FFA500;
+    --color-principal-claro: #ffa529;
+    --color-principal-oscuro: #e17600;
+    --color-exito: #3FE1B0;
+    --color-error: #FF6A75;
+    --color-informacion: #FFEA80;
+    --color-blanco: #FFFFFF;
+    --color-negro: #101010;
+    --color-gris: #a0a0a0;
+    --color-gris-claro: #eeeeee;
+    --color-gris-oscuro: #454545;
+
+    /*Tipografia*/
+    --fuente-encabezados: Verdana, Geneva, Tahoma, sans-serif;
+    --fuente-parrafos: Verdana, Geneva, Tahoma, sans-serif;
+
+    /*Tamaños*/
+    --letra-h1: 3.5rem;
+    --letra-h2: 3rem;
+    --letra-h3: 2.5rem;
+    --letra-h4: 2rem;
+    --letra-h5: 1.5rem;
+    --letra-h6: 1.25rem;
+
+    --letra-p-grande: 1.125rem;
+    --letra-p: 1rem;
+    --letra-p-pequeño: .875rem;
+
 }
