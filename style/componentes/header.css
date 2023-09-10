@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     color: var(--color-blanco);
+    grid-area: header;
 }
 
 .header-menu-mobile .fa-bars,

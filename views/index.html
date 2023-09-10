@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../style/normalize.css">
     <link rel="stylesheet" href="../style/general.css">
 
+    <link rel="stylesheet" href="../style/componentes/header.css">
     <link rel="stylesheet" href="../style/componentes/footer.css">
 
 
@@ -24,33 +25,51 @@
 </head>
 <body class="body">
 
-    <!-- Tanto esta etiqueta HEADER y los BR son de prueba -->
+    <!-- Componente HEADER -->
     <header class="header">
-        <h1>Pantalla principal</h1>
+        <a href="#" class="header-menu-mobile">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <div class="header-titulo">
+            <h2 class="header-encabezado">SpotiLam</h2>
+        </div>
+        <div class="header-avatar">
+            <a href="paginas/iniciar-sesion.html" class="header-cerrar-mobile">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+            <div class="header-texto">
+                <p class="header-usuario">Nombre Usuario</p>
+                <a href="paginas/iniciar-sesion.html" class="header-cerrar">Cerrar Sesion</a>
+            </div>
+            <a href="paginas/perfil.html" class="header-perfil">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </header>
+    <!-- Componente HEADER -->    
     
-        <a href="paginas/perfil.html">Perfil de usuario</a>
-        <br>
-        <a href="paginas/iniciar-sesion.html">Cerrar sesion</a>
-        <br>
+    <main>
+        <h1>Pantalla principal</h1>
+        
         <h2>Menu</h2>
-            <a href="index.html">Home</a>
-            <br>
-            <a href="paginas/buscar.html">Buscar</a>
+        <a href="index.html">Home</a>
+        <br>
+        <a href="paginas/buscar.html">Buscar</a>
             <br>
             <a href="paginas/mis-albums.html">Mis Albums</a>
             <br>
             <a href="paginas/canciones-favoritas.html">Mis Favoritas</a>
             <br>
         <h2>Albums</h2>
-            <a href="paginas/musica-sonando.html">Album 1</a>
-            <br>
-
-    </header>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
+        <a href="paginas/musica-sonando.html">Album 1</a>
+        <br>
+    </main>
+    
+    <!-- los BR son de prueba -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    
+    
     <!-- Componente FOOTER -->
     <footer class="footer">
         <div class="footer-integrante">
