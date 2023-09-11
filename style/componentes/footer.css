@@ -1,0 +1,59 @@
+/*
+
+    En este archivos creamos los estilos del componente footer. 
+
+*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    grid-area: footer;
+}
+
+.footer-nombre {
+    color: var(--color-principal);
+    text-transform: uppercase;
+    font-family: var(--fuente-encabezados);
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+}
+
+.footer-dni {
+    font-size: var(--letra-p-grande);
+    font-family: var(--fuente-parrafos);
+}
+
+.footer-icono .fa-github {
+    font-size: 2.5rem;
+    color: var(--color-blanco);
+}
+
+/* Media Queries */
+
+@media screen and (width >= 768px) { 
+    
+    .footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer-integrante {
+        flex: 30%;
+    }
+
+  }
+
+
+  @media screen and (width >= 1024px) { 
+
+    .footer-integrante {
+        flex: 1;
+    }
+
+  }
