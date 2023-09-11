@@ -1,0 +1,76 @@
+/*
+
+    En este archivos creamos los estilos del componente header. 
+
+*/
+
+.header {
+    background-color: var(--color-negro);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-blanco);
+    grid-area: header;
+}
+
+.header-menu-mobile .fa-bars,
+.header-avatar .header-cerrar-mobile,
+.header-avatar .header-perfil {
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+.header-encabezado {
+    text-transform: uppercase;
+    font-family: var(--fuente-encabezados);
+    font-size: var(--letra-h6);
+}
+
+.header-texto {
+    display: none;
+}
+
+/* Media Queries */
+
+@media screen and (width >= 1024px) { 
+    
+    .header-menu-mobile,
+    .header-cerrar-mobile {
+        display: none;
+    }
+
+    .header-perfil{
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        border: medium solid var(--color-principal);
+        border-radius: 50%;
+    }
+
+    .header-avatar {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .header-texto {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .header-usuario {
+        margin: 0;
+        font-size: var(--letra-p-grande);
+        font-weight: bolder;
+    }
+    
+    .header-cerrar {
+        font-size: var(--letra-p-pequeño);
+        color: var(--color-principal);
+    }
+
+  }
