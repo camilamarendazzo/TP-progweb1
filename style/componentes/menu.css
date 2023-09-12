@@ -3,3 +3,32 @@
     En este archivos creamos los estilos del componente menu. 
 
 */
+
+.menu {
+    background-color: cornflowerblue;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 0;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-link{
+    display: block;
+    text-decoration: none;
+    background-color: var(--color-negro);
+    padding: 2rem;
+    color: var(--color-blanco);
+    font-weight: bolder;
+    font-size: var(--letra-p-grande);
+    border-bottom: thin solid var(--color-gris);
+}
+
+.menu-link:active,
+.menu-link:hover,
+.menu-link.active {
+    background-color: var(--color-principal-oscuro);
+}
