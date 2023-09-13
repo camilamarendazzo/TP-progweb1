@@ -5,13 +5,14 @@
 */
 
 .menu {
-    background-color: cornflowerblue;
+    background-color: var(--color-negro);
+    grid-area: menu;
 }
 
 .menu-lista {
     list-style: none;
     padding: 0;
-    background-color: aqua;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }

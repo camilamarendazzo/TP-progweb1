@@ -54,6 +54,7 @@ html {
     min-height: 100vh;
     display: grid;
     grid-template-areas:    "header"
+                            "menu"
                             "main"
                             "aside"
                             "footer";
@@ -62,4 +63,26 @@ html {
 img {
     max-width: 100%;
     object-fit: cover;
+}
+
+
+@media screen and (width >= 768px) {
+    .body {
+        grid-template-areas:    "header      header      header       header"
+                                "menu        main        main         main"
+                                "aside       main        main         main"
+                                "footer      footer      footer       footer";
+    }
+
+}
+
+
+@media screen and (width >= 768px) {
+    .body {
+        grid-template-areas:    "header      header      header       header      header"
+                                "menu        main        main         main        main"
+                                "aside       main        main         main        main"
+                                "footer      footer      footer       footer      footer";
+    }
+
 }
