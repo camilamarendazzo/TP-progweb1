@@ -5,8 +5,6 @@
 */
 
 .aside {
-    grid-area: aside;
-    align-self: end;
     display: flex;
     flex-direction: column;
     background-color: var(--color-negro);
