@@ -51,6 +51,7 @@ html {
 }
 
 .body {
+    background-color: var(--color-negro);
     min-height: 100vh;
     display: grid;
     grid-template-areas:    "header"
@@ -68,17 +69,19 @@ img {
 
 @media screen and (width >= 768px) {
     .body {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:    "header      header      header       header"
-                                "menu        main        main         main"
-                                "aside       main        main         main"
-                                "footer      footer      footer       footer";
+        "menu        main        main         main"
+        "aside       main        main         main"
+        "footer      footer      footer       footer";
     }
-
+    
 }
 
 
 @media screen and (width >= 768px) {
     .body {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:    "header      header      header       header      header"
                                 "menu        main        main         main        main"
                                 "aside       main        main         main        main"

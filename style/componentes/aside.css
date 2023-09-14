@@ -3,3 +3,34 @@
     En este archivos creamos los estilos del componente aside. 
 
 */
+
+.aside {
+    grid-area: aside;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-negro);
+}
+
+.aside-foto {
+    position: relative;
+}
+
+.aside-texto {
+    line-height: 1.75;
+    padding: .5rem;
+    font-size: var(--letra-p);
+    color: var(--color-blanco);
+}
+
+.aside-texto p {
+    margin: 0;
+}
+
+.aside-estrella {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--color-principal);
+}
