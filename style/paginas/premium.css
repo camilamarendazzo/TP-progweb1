@@ -3,3 +3,8 @@
     En este archivo creamos los estilos especificos de la pagina premium. 
 
 */
+
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+}
