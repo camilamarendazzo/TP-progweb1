@@ -6,7 +6,6 @@
 
 .menu {
     background-color: var(--color-negro);
-    grid-area: menu;
 }
 
 .menu-lista {
