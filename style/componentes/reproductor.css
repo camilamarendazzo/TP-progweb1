@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
-    border: medium solid var(--color-principal);
+    border: thin solid var(--color-principal);
     background-color: var(--color-negro);
 }
 
