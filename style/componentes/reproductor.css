@@ -3,3 +3,28 @@
     En este archivos creamos los estilos del componente reproductor. 
 
 */
+
+.reproductor {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    border: medium solid var(--color-principal);
+    background-color: var(--color-negro);
+}
+
+.reproductor i {
+    color: var(--color-principal);
+    font-size: var(--letra-p-grande);
+}
+
+.reproductor-contador {
+    flex: 1;
+}
+
+.reproductor-contador [type="range"] {
+    width: 100%;
+    accent-color: var(--color-principal);
+    cursor: pointer;
+}
