@@ -3,3 +3,39 @@
     En este archivos creamos los estilos del componente grilla. 
 
 */
+
+.grilla {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+}
+
+.grilla-album {
+    position: relative;
+}
+
+.grilla-estrella {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--color-principal);
+}
+
+@media screen and (min-width: 768px){
+    
+    .grilla {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media screen and (min-width: 1024px){
+    
+    .grilla {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
