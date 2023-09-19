@@ -7,4 +7,26 @@
 .contenedor{
     display: flex;
     justify-content: space-around;
+    text-align: center;
+}
+
+.plan{
+    background-color: gainsboro;
+    border-radius: 20px;
+    width: 250px;
+    padding: 25px;
+}
+
+img{
+    border-radius: 20px;
+    width: 200px;
+}
+
+.precio{
+    font-size:30px;
+    font-weight: bold;
+}
+
+.descripcion{
+    text-align: justify;
 }
