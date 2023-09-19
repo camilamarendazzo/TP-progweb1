@@ -3,3 +3,34 @@
     En este archivo creamos los estilos especificos de la pagina registro. 
 
 */
+.contenedor {
+    margin: 50px 200px;
+}
+
+.caja{
+
+    display: flex;
+    
+}
+
+.celda1{
+    background-color: rgb(167, 167, 201) ;
+    margin-left: 300px;
+    margin-top: 50px;
+    
+
+}
+
+.celda2{
+    margin-left: 350px;
+    margin-top: 50px;
+    background-color:rgb(167, 167, 201) ;
+}
+
+h1{
+
+    color:#e17600;
+}
+
+
+
