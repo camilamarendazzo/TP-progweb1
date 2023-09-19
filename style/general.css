@@ -64,6 +64,10 @@ html {
     grid-area: barra-lateral;
 }
 
+main {
+    grid-area: main;
+}
+
 img {
     max-width: 100%;
     object-fit: cover;
