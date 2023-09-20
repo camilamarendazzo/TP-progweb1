@@ -18,8 +18,11 @@
     --color-error: #FF6A75;
     --color-informacion: #FFEA80;
     --color-blanco: #FFFFFF;
+    --color-blanco-opacidad-1: #ffffff1a;
+    --color-blanco-opacidad-2: #ffffff33;
+    
     --color-negro: #101010;
-    --color-gris: #a0a0a0;
+    --color-gris: #727272;
     --color-gris-claro: #eeeeee;
     --color-gris-oscuro: #454545;
 
@@ -62,6 +65,10 @@ html {
 
 .barra-lateral {
     grid-area: barra-lateral;
+}
+
+main {
+    grid-area: main;
 }
 
 img {
