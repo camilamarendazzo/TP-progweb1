@@ -65,3 +65,15 @@ img{
 .boton:hover {
     background-color: var(--color-gris); /* Color de fondo más claro en el hover */
 }
+
+@media screen and (max-width: 768px){
+
+    .contenedor{
+        flex-direction: column;
+    }
+    .plan{
+        align-self: center;
+        margin: 20px;
+        width: 90%;
+    }
+}
