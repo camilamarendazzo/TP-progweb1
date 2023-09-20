@@ -9,7 +9,7 @@ body{
 }
 
 .contenedor{
-    color: #eeeeee;
+    color: var(--color-gris-claro);
     display: flex;
     justify-content: space-evenly;
     text-align: center;
@@ -54,8 +54,8 @@ img{
 }
 
 .boton{
-    background-color: #444; /* Color de fondo gris oscuro */
-    color: #fff; /* Color de texto blanco */
+    background-color: var(--color-gris-oscuro); /* Color de fondo gris oscuro */
+    color: var(--color-gris-claro); /* Color de texto blanco */
     border: none; /* Sin bordes */
     border-radius: 10px; /* Bordes redondeados */
     margin: 20px;
@@ -63,5 +63,5 @@ img{
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 .boton:hover {
-    background-color: #666; /* Color de fondo más claro en el hover */
+    background-color: var(--color-gris); /* Color de fondo más claro en el hover */
 }
