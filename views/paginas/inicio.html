@@ -4,6 +4,7 @@
         header, menu, aside, reproductor, grilla, footer
 
 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +13,10 @@
     <title>Inicio</title>
 
     <!-- Estilos -->
+   
     <link rel="stylesheet" href="../../style/normalize.css">
     <link rel="stylesheet" href="../../style/general.css">
+    <link rel="stylesheet" href="../../style/index.css">
 
     <link rel="stylesheet" href="../../style/componentes/header.css">
     <link rel="stylesheet" href="../../style/componentes/menu.css">
@@ -21,7 +24,6 @@
     <link rel="stylesheet" href="../../style/componentes/reproductor.css">
     <link rel="stylesheet" href="../../style/componentes/grilla.css">
     <link rel="stylesheet" href="../../style/componentes/footer.css">
-
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/ed2ba7d635.js" crossorigin="anonymous"></script>
@@ -34,22 +36,24 @@
             <i class="fa-solid fa-bars"></i>
         </a>
         <div class="header-titulo">
-            <input type="search">
+            <a href="#">
+                <h2 class="header-encabezado">SpotiLam</h2>
+            </a>
         </div>
         <div class="header-avatar">
-            <a href="views/paginas/iniciar-sesion.html" class="header-cerrar-mobile">
+            <a href="iniciar-sesion.html" class="header-cerrar-mobile">
                 <i class="fa-solid fa-right-from-bracket"></i>
             </a>
             <div class="header-texto">
                 <p class="header-usuario">Nombre Usuario</p>
-                <a href="views/paginas/iniciar-sesion.html" class="header-cerrar">Cerrar Sesion</a>
+                <a href="iniciar-sesion.html" class="header-cerrar">Cerrar Sesion</a>
             </div>
-            <a href="views/paginas/perfil.html" class="header-perfil">
+            <a href="perfil.html" class="header-perfil">
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
     </header>
-    <!-- Componente HEADER --> 
+    <!-- Componente HEADER -->
     
     <section class="barra-lateral">
         
@@ -57,16 +61,44 @@
         <nav class="menu">
             <ul class="menu-lista">
                 <li class="menu-item">
-                    <a href="index.html" class="menu-link active">Home</a>
+                    <a href="#" class="menu-link active">
+                        <div class="menu-icono">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div class="menu-texto">
+                            <span>Home</span>
+                        </div>
+                    </a>
                 </li>
-                <li>
-                    <a href="views/paginas/buscar.html" class="menu-link">Buscar</a>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div class="menu-icono">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="menu-texto">
+                            <span>Buscar</span>
+                        </div>
+                    </a>
                 </li>
-                <li>
-                    <a href="views/paginas/mis-albums.html" class="menu-link">Mis Albums</a>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div class="menu-icono">
+                            <i class="fa-solid fa-compact-disc"></i>
+                        </div>
+                        <div class="menu-texto">
+                            <span>Albums</span>
+                        </div>
+                    </a>
                 </li>
-                <li>
-                    <a href="views/paginas/canciones-favoritas.html" class="menu-link">Mis Favoritos</a>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div class="menu-icono">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="menu-texto">
+                            <span>Favoritos</span>
+                        </div>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -92,22 +124,32 @@
     
     
     
-    <main style="grid-area: main;">
+    <main>
         
         <!-- Componente REPRODUCTOR --> 
         <section class="reproductor">
-            <a href="#" class="reproductor-play">
-                <i class="fa-solid fa-play"></i>
-            </a href="#">
-            <div class="reproductor-contador">
-                <input type="range" name="" id="" value="25" min="0" max="100">
-            </div>
-            <a href="#" class="reproductor-sonido">
-                <i class="fa-solid fa-volume-high"></i>
-            </a href="#">
-            <a href="#" class="reproductor-ampliar">
-                <i class="fa-solid fa-expand"></i>
-            </a href="#">
+            <article class="reproductor-botones">
+                <a href="#" class="reproductor-pause">
+                    <i class="fa-solid fa-pause"></i>
+                </a>
+                <a href="#" class="reproductor-play">
+                    <i class="fa-solid fa-play"></i>
+                </a>
+                <a href="#" class="reproductor-stop">
+                    <i class="fa-solid fa-stop"></i>
+                </a>
+            </article>
+            <article class="reproductor-controles">
+                <a href="#" class="reproductor-sonido">
+                    <i class="fa-solid fa-volume-high"></i>
+                </a>
+                <div class="reproductor-contador">
+                    <input type="range" name="" id="" value="25" min="0" max="100">
+                </div>
+                <a href="#" class="reproductor-ampliar">
+                    <i class="fa-solid fa-expand"></i>
+                </a>
+            </article>
         </section>
         <!-- Componente REPRODUCTOR --> 
         
@@ -115,12 +157,15 @@
         <!-- Componente CUADRICULA --> 
         <section class="grilla">
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-1.jpg" alt="">
+                </a>
+                <a href="#" class="grilla-estrella">
+                    <i class="fa-solid fa-star"></i>
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-2.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -128,7 +173,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-3.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -136,7 +181,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-4.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -144,7 +189,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-5.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -152,7 +197,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-6.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -160,7 +205,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-7.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -168,7 +213,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-8.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -176,7 +221,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-9.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -184,7 +229,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-10.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -192,7 +237,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-11.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">
@@ -200,7 +245,7 @@
                 </a>
             </article>
             <article class="grilla-album">
-                <a href="../paginas/musica-sonando.html">
+                <a href="musica-sonando.html">
                     <img src="../../assets/img/album-12.jpg" alt="">
                 </a>
                 <a href="#" class="grilla-estrella">

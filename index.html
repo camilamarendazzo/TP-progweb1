@@ -1,7 +1,9 @@
 <!--
 
     En esta pagina, van a estar los componentes:
-        header, menu, aside, reproductor, grilla, footer
+        footer
+
+    pero ademas creamos el formulario en la misma pagina
 
 -->
 
@@ -10,189 +12,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Iniciar Sesion</title>
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="../style/normalize.css">
-    <link rel="stylesheet" href="../style/general.css">
-
-    <link rel="stylesheet" href="../style/componentes/header.css">
-    <link rel="stylesheet" href="../style/componentes/menu.css">
-    <link rel="stylesheet" href="../style/componentes/aside.css">
-    <link rel="stylesheet" href="style/componentes/reproductor.css">
-    <link rel="stylesheet" href="../style/componentes/footer.css">
-
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/general.css">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/ed2ba7d635.js" crossorigin="anonymous"></script>
 </head>
-<body class="body">
+<body>
 
-    <!-- Componente HEADER -->
-    <header class="header">
-        <a href="#" class="header-menu-mobile">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-        <div class="header-titulo">
-            <h2 class="header-encabezado">SpotiLam</h2>
-        </div>
-        <div class="header-avatar">
-            <a href="views/paginas/iniciar-sesion.html" class="header-cerrar-mobile">
-                <i class="fa-solid fa-right-from-bracket"></i>
-            </a>
-            <div class="header-texto">
-                <p class="header-usuario">Nombre Usuario</p>
-                <a href="views/paginas/iniciar-sesion.html" class="header-cerrar">Cerrar Sesion</a>
-            </div>
-            <a href="views/paginas/perfil.html" class="header-perfil">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
-    </header>
-    <!-- Componente HEADER --> 
-    
-    <section class="barra-lateral">
-        
-        <!-- Componente MENU -->
-        <nav class="menu">
-            <ul class="menu-lista">
-                <li class="menu-item">
-                    <a href="index.html" class="menu-link active">Home</a>
-                </li>
-                <li>
-                    <a href="views/paginas/buscar.html" class="menu-link">Buscar</a>
-                </li>
-                <li>
-                    <a href="views/paginas/mis-albums.html" class="menu-link">Mis Albums</a>
-                </li>
-                <li>
-                    <a href="views/paginas/canciones-favoritas.html" class="menu-link">Mis Favoritos</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- Componente MENU -->
+    <h1>Iniciar Sesion</h1>
 
-        <!-- Componente ASIDE -->
-        <aside class="aside">
-            <div class="aside-foto">
-                <img src="../../assets/img/album.jpg" alt="Album Cover">
-                <a href="#" class="aside-estrella">
-                    <i class="fa-solid fa-star"></i>
-                </a>
-            </div>
-            <div class="aside-texto">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eos dolore, iste incidunt vel laboriosam culpa provident quam ex cupiditate!</p>
-            </div>
-        </aside>
-        <!-- Componente ASIDE -->
-        
-        
-    </section>
-    
-    
-    
-    
-    <main style="grid-area: main;">
-
-        
-        <!-- Componente REPRODUCTOR --> 
-        <section class="reproductor">
-            <a href="#" class="reproductor-play">
-                <i class="fa-solid fa-play"></i>
-            </a href="#">
-            <div class="reproductor-contador">
-                <input type="range" name="" id="" value="25" min="0" max="100">
-            </div>
-            <a href="#" class="reproductor-sonido">
-                <i class="fa-solid fa-volume-high"></i>
-            </a href="#">
-            <a href="#" class="reproductor-ampliar">
-                <i class="fa-solid fa-expand"></i>
-            </a href="#">
-        </section>
-        <!-- Componente REPRODUCTOR --> 
-
-
-        
-        <h1>Pantalla principal</h1>
-        
-        <h2>Menu</h2>
-        <a href="index.html">Home</a>
+    <form action="../../index.html" method="post">
+        <label for="email">Usuario</label>
+        <input type="email" name="email" id="email" placeholder="test@gmail.com">
         <br>
-        <a href="paginas/buscar.html">Buscar</a>
-            <br>
-            <a href="paginas/mis-albums.html">Mis Albums</a>
-            <br>
-            <a href="paginas/canciones-favoritas.html">Mis Favoritas</a>
-            <br>
-        <h2>Albums</h2>
-        <a href="paginas/musica-sonando.html">Album 1</a>
+        <label for="password">Contraseña</label>
+        <input type="password" name="password" id="password" placeholder="Ingrese contraseña">
         <br>
-        <h1>ESTO ES UNA PRUEBA</h1>
-        
-        <!-- los BR son de prueba -->
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        
-        
-        
-    </main>
-
+        <!-- <input type="submit" value="Iniciar sesión"> -->
+        <input type="submit">
+    </form>
+    <a href="buscar.html">
+        <button>Iniciar sesión</button>
+    </a>
+    <a href="views/paginas/inicio.html">Iniciar Sesion</a>
+    <br>
+    <a href="views/paginas/registro.html">Registrarme</a>
     
-    
-    
-    <!-- Componente FOOTER -->
-    <footer class="footer">
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Brian</h3>
-            <h3 class="footer-nombre">Klehr</h3>
-            <p class="footer-dni">41.026.580</p>
-            <a href="#" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Alexander</h3>
-            <h3 class="footer-nombre">Funes</h3>
-            <p class="footer-dni">34.117.699</p>
-            <a href="#" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Antonella</h3>
-            <h3 class="footer-nombre">Politi</h3>
-            <p class="footer-dni">31.492.164</p>
-            <a href="#" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Nahuel</h3>
-            <h3 class="footer-nombre">Esposito</h3>
-            <p class="footer-dni">43.862.624</p>
-            <a href="#" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Gustavo</h3>
-            <h3 class="footer-nombre">Miño</h3>
-            <p class="footer-dni">38.126.357</p>
-            <a href="https://github.com/gus-emma-uni" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Camila</h3>
-            <h3 class="footer-nombre">Marendazzo</h3>
-            <p class="footer-dni">43.054.264</p>
-            <a href="#" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-    </footer>
-    <!-- Componente FOOTER -->
-
 </body>
 </html>

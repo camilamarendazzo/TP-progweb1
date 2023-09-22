@@ -5,18 +5,36 @@
 */
 
 .reproductor {
-    padding: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 5px;
+    background-color: var(--color-negro);
+}
+
+.reproductor-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.reproductor-controles {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
-    border: thin solid var(--color-principal);
-    background-color: var(--color-negro);
+    gap: 1rem;
 }
 
 .reproductor i {
     color: var(--color-principal);
     font-size: var(--letra-p-grande);
+    padding: .5rem;
+}
+
+.reproductor-play .fa-play{
+    font-size: 2.5rem;
 }
 
 .reproductor-contador {
@@ -27,4 +45,27 @@
     width: 100%;
     accent-color: var(--color-principal);
     cursor: pointer;
+}
+
+@media screen and (min-width: 1024px){
+
+    .reproductor {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .reproductor-sonido,
+    .reproductor-ampliar {
+        order: 1;
+    }
+
+    .reproductor-botones {
+        gap: 2rem;
+    }
+
+    .reproductor-controles {
+        flex: 1;
+    }
+
+
 }

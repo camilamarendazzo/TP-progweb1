@@ -4,7 +4,76 @@
 
 */
 
+body{
+    background-color: var(--color-negro);/* background-color: black; */
+}
+
 .contenedor{
+    color: var(--color-gris-claro);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.plan{
+    background-color: #353535;
+    border-radius: 10px;
+    width: 30%;
+    padding: 25px;
+}
+
+.descripcion{
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.item{
+    text-align: left;
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+
+img{
+    border-radius: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.precio{
+    font-size:40px;
+    font-weight: bold;
+    color: #e17600;
+    margin-top: 0;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.boton{
+    background-color: var(--color-gris-oscuro); /* Color de fondo gris oscuro */
+    color: var(--color-gris-claro); /* Color de texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px;
+    padding: 20px 50px; /* Espaciado interior */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+.boton:hover {
+    background-color: var(--color-gris); /* Color de fondo más claro en el hover */
+}
+
+@media screen and (max-width: 768px){
+
+    .contenedor{
+        flex-direction: column;
+    }
+    .plan{
+        align-self: center;
+        margin: 20px;
+        width: 90%;
+    }
 }
