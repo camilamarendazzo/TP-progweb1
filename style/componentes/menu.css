@@ -6,6 +6,8 @@
 
 .menu {
     background-color: var(--color-negro);
+    margin-bottom: .5rem;
+    border-radius: 5px;
 }
 
 .menu-lista {

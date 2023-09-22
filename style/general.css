@@ -54,9 +54,13 @@ html {
 }
 
 .body {
-    background-color: var(--color-negro);
+    background: rgb(17,17,17);
+background: radial-gradient(circle, rgba(17,17,17,1) 50%, rgba(34,34,34,1) 100%);
+
     min-height: 100vh;
+    margin: .5rem;
     display: grid;
+    gap: .5rem;
     grid-template-areas:    "header"
                             "barra-lateral"
                             "main"
