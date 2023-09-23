@@ -58,7 +58,7 @@ img{
     color: var(--color-gris-claro); /* Color de texto blanco */
     border: none; /* Sin bordes */
     border-radius: 10px; /* Bordes redondeados */
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     padding: 20px 50px; /* Espaciado interior */
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
@@ -66,14 +66,25 @@ img{
     background-color: var(--color-gris); /* Color de fondo más claro en el hover */
 }
 
+@media screen and (max-width: 1024px) {
+    .contenedor{
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan{
+        margin-bottom: 50px;;
+        width: 70%;
+    }
+}
+
 @media screen and (max-width: 768px){
 
     .contenedor{
         flex-direction: column;
+        align-items: center;
     }
     .plan{
-        align-self: center;
-        margin: 20px;
+        margin-bottom: 30px;
         width: 90%;
     }
 }
