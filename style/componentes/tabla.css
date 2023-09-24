@@ -130,7 +130,7 @@
     .favoritos-cancion-head{
         background-color: var(--color-negro);
         color: var(--color-blanco);
-        border: thin solid white;
+        border: .5px solid var(--color-principal);
         display: grid;
         justify-items: center;
         align-items: center;
@@ -140,7 +140,7 @@
     }
     
     .favoritos-cancion {
-        border: thin solid white;
+        border: .5px solid var(--color-principal);
         
     }
     
