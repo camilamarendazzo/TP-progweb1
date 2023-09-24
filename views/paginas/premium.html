@@ -40,16 +40,18 @@
             </a>
             <div class="header-texto">
                 <p class="header-usuario">Nombre Usuario</p>
-                <a href="views/paginas/iniciar-sesion.html" class="header-cerrar">Cerrar Sesion</a>
+                <a href="../../index.html" class="header-cerrar">Cerrar Sesion</a>
             </div>
-            <a href="views/paginas/perfil.html" class="header-perfil">
+            <a href="perfil.html" class="header-perfil">
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
     </header>
 
     <main>
+        <form>
         <section class="contenedor">
+            
             <div class="plan">
                 <img src="../../assets/img/PlanMensual.jpg" alt="Plan mensual">
                 <p class="descripcion">Disfrutá de tus albumes y canciones favoritas sin anuncios</p>
@@ -61,7 +63,7 @@
                 </div>
                 <p>abono mensual final de solo</p>
                 <p class="precio">$900</p>
-                <input type="radio">
+                <input type="radio" name="plan">
             </div>
             <div class="plan">
                 <img src="../../assets/img/PlanAnual.jpg" alt="Plan anual">
@@ -74,7 +76,7 @@
                 </div>
                 <p>abono mensual anual de solo</p>
                 <p class="precio">$9000</p>
-                <input type="radio">
+                <input type="radio" name="plan">
             </div>
             <div class="plan">
                 <img src="../../assets/img/PlanInfinito.jpg" alt="Plan infinito">
@@ -87,19 +89,20 @@
                 </div>
                 <p>abono único de solo</p>
                 <p class="precio">$15000</p>
-                <input type="radio">
+                <input type="radio" name="plan">
             </div>
         </section>
 
         <section class="botones">
             <a href="inicio.html">
-                <button class="boton">Cancelar</button>
+                <input type="button" class="boton" value="Cancelar">
             </a>
             <a href="pagar.html">
-                <button class="boton">Avanzar</button>
+                <!-- <button class="boton">Avanzar</button> -->
+                <input type="button" class="boton" value="Avanzar">
             </a>
         </section>
-
+    </form>
     </main>
 
         <footer class="footer">
