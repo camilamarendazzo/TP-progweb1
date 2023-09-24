@@ -17,39 +17,123 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="../../style/normalize.css">
     <link rel="stylesheet" href="../../style/general.css">
+    <link rel="stylesheet" href="../../style/paginas/pagar.css">
+    <link rel="stylesheet" href="../../style/componentes/footer.css">
+    <link rel="stylesheet" href="../../style/componentes/header.css">
 </head>
-<body>
+<body class="relleno">
+    <header class="header">
+        <a href="#" class="header-menu-mobile">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <div class="header-titulo">
+            <h2 class="header-encabezado">SpotiLam</h2>
+        </div>
+        <div class="header-avatar">
+            <a href="../paginas/iniciar-sesion.html" class="header-cerrar-mobile">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+            <div class="header-texto">
+                <p class="header-usuario">Nombre Usuario</p>
+                <a href="../paginas/iniciar-sesion.html" class="header-cerrar">Cerrar Sesion</a>
+            </div>
+            <a href="../paginas/perfil.html" class="header-perfil">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </header>
+    <div class="cajaCentrada">
+    <section class="planPagar">
+        <div class="tituloCentrado">
+        <article><h3>Elegiste el plan *nombre del plan*</h3></article>
+        <img src="img/foto.jpg">
+      
+        <article><b>Música sin anuncios.</b></article>
+ 
+        <article><b>Escucha tus canciones en cualquier lugar.</b></article>
+       
+        <article><b>Reproducción on-demand.</b></article>
+      
+        <article><b>Prepaga o suscribite.</b></article>  
+        </div>
+        <br>
+        <section class="cajitas">
+            <article>
+                <label for="Tarjeta">Tarjeta</label>
+                <input type="number" name="Numero de tarjeta" placeholder="Numero de tarjeta" class="cajasValue">
+            </article>
+           
+            <article>
+                <label for="VTO">VTO</label>
+                <input type="date" name="Fecha de vencimiento" class="cajasValue">
+            </article>
+          
+            <article>
+                <label for="CVC">CVC</label>
+                <input type="number" name="Codigo de seguridad" placeholder="Codigo de seguridad" class="cajasValue">
+            </article>
     
-    <h1>Pagar</h1>
-
-    <a href="perfil.html">Perfil de usuario</a>
-    <br>
-    <a href="iniciar-sesion.html">Cerrar sesion</a>
-    <br>
-
-    <h3>Elegiste el plan *nombre del plan*</h3>
-    <img src="img/foto.jpg">
-    <p>Descripcion del plan elegido</p>
-
-    <label for="Tarjeta">Tarjeta</label>
-    <input type="number" name="Numero de tarjeta" placeholder="Numero de tarjeta">
-    <br>
-    <label for="VTO">VTO</label>
-    <input type="date" name="Fecha de vencimiento">
-    <br>
-    <label for="CVC">CVC</label>
-    <input type="number" name="Codigo de seguridad" placeholder="Codigo de seguridad">
-    <br>
-    <label for="Nombre y apellido">Nombre y apellido</label>
-    <input type="text" name="Nombre y apellido" placeholder="Ingrese nombre y apellido">
-    <br>
-
-
-    <h2>Botones</h2>
-        <a href="../../index.html">Cancelar</a>
-        <br>
-        <a href="../../index.html">Pagar</a>
-        <br>
-
+            <article>
+                <label for="Nombre y apellido">Nombre y apellido</label>
+                <input type="text" name="Nombre y apellido" placeholder="Ingrese nombre y apellido" class="cajasValue">
+            </article>
+        </section>
+        <div class="cajota">
+            <article><button href="../../index.html" class="boton">Cancelar</button></article>
+            <article><button href="../../index.html" class="boton">Pagar</button></article>
+        </div>
+    
+    </div>
+    <footer class="footer">
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Brian</h3>
+            <h3 class="footer-nombre">Klehr</h3>
+            <p class="footer-dni">41.026.580</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Alexander</h3>
+            <h3 class="footer-nombre">Funes</h3>
+            <p class="footer-dni">34.117.699</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Antonella</h3>
+            <h3 class="footer-nombre">Politi</h3>
+            <p class="footer-dni">31.492.164</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Nahuel</h3>
+            <h3 class="footer-nombre">Esposito</h3>
+            <p class="footer-dni">43.862.624</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Gustavo</h3>
+            <h3 class="footer-nombre">Miño</h3>
+            <p class="footer-dni">38.126.357</p>
+            <a href="https://github.com/gus-emma-uni" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Camila</h3>
+            <h3 class="footer-nombre">Marendazzo</h3>
+            <p class="footer-dni">43.054.264</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </footer>
+        
 </body>
 </html>

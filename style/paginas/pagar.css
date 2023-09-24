@@ -3,3 +3,144 @@
     En este archivo creamos los estilos especificos de la pagina pagar. 
 
 */
+
+
+.relleno{
+    background-color: #a0a0a0;
+}
+
+.cajaCentrada{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.planPagar{
+    background-color: #454545;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 550px;
+    width: 70%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #101010;
+}
+
+.cajitas{
+    display: grid;
+    grid-template-columns: 270px 270px;
+    grid-template-rows: 50px 50px;
+}
+
+.tituloCentrado{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.boton{
+    background-color: var(--color-negro); 
+    color: var(--color-gris-claro);
+    border: none; 
+    border-radius: 10px; 
+    margin: 20px;
+    padding: 20px; 
+    cursor: pointer;
+    width: 150px;
+}
+.boton:hover {
+    background-color: var(--color-gris);
+}
+
+.cajota{
+    display: flex;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+}
+
+.cajasValue{
+    background-color: #a0a0a0;
+    border-color: #101010;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article{
+    padding: 10px;
+}
+
+input{
+    margin-top: 5px;
+}
+ 
+::placeholder{
+    color: #454545;
+}
+
+@media screen and (width <= 1024px) { 
+    .planPagar{
+        width: 600px;
+        height: 900px;
+        padding-left: 25px;
+        justify-content: center;
+        padding-right: 0px;
+    }
+
+    .cajasValue{
+        display: flex;
+        flex-wrap: wrap;
+        width: 240px;
+    }
+
+    .boton{
+        border-radius: 10px; 
+        margin: 15px;
+        padding: 20px; 
+        cursor: pointer;
+        width: 100px;
+    }
+
+    .cajitas{
+        display: grid;
+        grid-template-columns: 270px 270px;
+        grid-template-rows: 50px 50px;
+    }
+}
+
+@media screen and (width <= 768px) { 
+    .planPagar{
+        width: 300px;
+        height: 900px;
+        padding-left: 25px;
+        justify-content: center;
+        padding-right: 0px;
+    }
+
+    .cajasValue{
+        display: flex;
+        flex-wrap: wrap;
+        width: 240px;
+    }
+
+    .boton{
+        border-radius: 10px; 
+        margin: 15px;
+        padding: 20px; 
+        cursor: pointer;
+        width: 100px;
+    }
+
+    .cajitas{
+        display: grid;
+        grid-template-columns: 270px;
+        grid-template-rows: 50px;
+    }
+}
