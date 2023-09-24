@@ -14,6 +14,7 @@
 .favoritos-cancion {
     background-color: var(--color-negro);
     padding: 1rem;
+    border: thin solid var(--color-principal);
     border-radius: 10px;
     display: grid;
     column-gap: 2rem;
