@@ -59,13 +59,13 @@ img{
 }
 
 .boton{
-    background-color: var(--color-gris-oscuro); /* Color de fondo gris oscuro */
-    color: var(--color-gris-claro); /* Color de texto blanco */
-    border: none; /* Sin bordes */
-    border-radius: 10px; /* Bordes redondeados */
+    background-color: var(--color-gris-oscuro); 
+    color: var(--color-gris-claro); 
+    border: none; 
+    border-radius: 10px; 
     margin: 0 20px 20px;
-    padding: 20px 50px; /* Espaciado interior */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    padding: 20px 50px; 
+    cursor: pointer;
 }
 .boton:hover {
     background-color: var(--color-gris); /* Color de fondo más claro en el hover */
