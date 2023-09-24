@@ -80,6 +80,10 @@ img{
         margin-bottom: 50px;;
         width: 70%;
     }
+    .botones{
+        margin: 0;
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -91,5 +95,13 @@ img{
     .plan{
         margin-bottom: 30px;
         width: 90%;
+    }
+    
+    .botones{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .boton{
+        width: 300px;
     }
 }
