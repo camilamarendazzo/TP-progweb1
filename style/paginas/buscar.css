@@ -26,3 +26,21 @@
     } 
 }
 
+.formulario{
+    display: flex;
+
+}
+
+.header{
+    background-color: #101010;
+    display: flex;
+
+}
+
+.search-container{
+    width: 10%;
+}
+
+.formulario input{
+    font-size: 12px;
+}
