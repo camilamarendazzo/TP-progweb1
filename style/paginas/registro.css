@@ -4,14 +4,18 @@
 
 */
 .contenedor {
-    margin: 50px 200px;
+    display: grid;
+    margin: auto;
+    justify-content: center; 
+    align-items: center;
+    
 }
 
 .caja{
 
     display: flex;
     gap: 1rem;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
@@ -47,3 +51,15 @@ h1{
 
 
 
+ .boton{
+    background-color: var(--color-gris-oscuro); /* Color de fondo gris oscuro */
+    color: var(--color-gris-claro); /* Color de texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px;
+    padding: 20px 50px; /* Espaciado interior */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+.boton:hover {
+    background-color: var(--color-gris); /* Color de fondo más claro en el hover */
+}
