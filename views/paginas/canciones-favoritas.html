@@ -13,29 +13,648 @@
     <title>Canciones Favoritas</title>
 
     <!-- Estilos -->
+   
     <link rel="stylesheet" href="../../style/normalize.css">
     <link rel="stylesheet" href="../../style/general.css">
+    <link rel="stylesheet" href="../../style/index.css">
+
+    <link rel="stylesheet" href="../../style/componentes/header.css">
+    <link rel="stylesheet" href="../../style/componentes/menu.css">
+    <link rel="stylesheet" href="../../style/componentes/aside.css">
+    <link rel="stylesheet" href="../../style/componentes/reproductor.css">
+    <link rel="stylesheet" href="../../style/componentes/tabla.css">
+    <link rel="stylesheet" href="../../style/componentes/footer.css">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/ed2ba7d635.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="body">
 
-    <h1>Canciones Favoritas</h1>
-
-    <a href="perfil.html">Perfil de usuario</a>
-    <br>
-    <a href="iniciar-sesion.html">Cerrar sesion</a>
-    <br>
-    <h2>Menu</h2>
-        <a href="../../index.html">Home</a>
-        <br>
-        <a href="buscar.html">Buscar</a>
-        <br>
-        <a href="mis-albums.html">Mis Albums</a>
-        <br>
-        <a href="canciones-favoritas.html">Mis Favoritas</a>
-        <br>
-    <h2>Canciones</h2>
-        <a href="#">Cancion 1</a><!--Deberia cambiar el contenido del aside-->
-        <br>
+    <!-- Componente HEADER -->
+    <header class="header">
+        <a href="#" class="header-menu-mobile">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <div class="header-titulo">
+            <a href="#">
+                <h2 class="header-encabezado">Favoritos</h2>
+            </a>
+        </div>
+        <div class="header-avatar">
+            <a href="iniciar-sesion.html" class="header-cerrar-mobile">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+            <div class="header-texto">
+                <p class="header-usuario">Nombre Usuario</p>
+                <a href="iniciar-sesion.html" class="header-cerrar">Cerrar Sesion</a>
+            </div>
+            <a href="perfil.html" class="header-perfil">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </header>
+    <!-- Componente HEADER --> 
     
+    
+    <section class="barra-lateral">
+        
+        <!-- Componente MENU -->
+        <nav class="menu">
+            <ul class="menu-lista">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div class="menu-icono">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div class="menu-texto">
+                            <span>Home</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div class="menu-icono">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="menu-texto">
+                            <span>Buscar</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div class="menu-icono">
+                            <i class="fa-solid fa-compact-disc"></i>
+                        </div>
+                        <div class="menu-texto">
+                            <span>Albums</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link active">
+                        <div class="menu-icono">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="menu-texto">
+                            <span>Favoritos</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Componente MENU -->
+
+        <!-- Componente ASIDE -->
+        <aside class="aside">
+            <div class="aside-foto">
+                <img src="../../assets/img/album.jpg" alt="Album Cover">
+                <a href="#" class="aside-estrella">
+                    <i class="fa-solid fa-star"></i>
+                </a>
+            </div>
+            <div class="aside-texto">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eos dolore, iste incidunt vel laboriosam culpa provident quam ex cupiditate!</p>
+            </div>
+        </aside>
+        <!-- Componente ASIDE -->
+        
+        
+    </section>
+    
+    
+    
+    
+    <main>
+        
+        <!-- Componente REPRODUCTOR --> 
+        <section class="reproductor">
+            <article class="reproductor-botones">
+                <a href="#" class="reproductor-pause">
+                    <i class="fa-solid fa-pause"></i>
+                </a>
+                <a href="#" class="reproductor-play">
+                    <i class="fa-solid fa-play"></i>
+                </a>
+                <a href="#" class="reproductor-stop">
+                    <i class="fa-solid fa-stop"></i>
+                </a>
+            </article>
+            <article class="reproductor-controles">
+                <a href="#" class="reproductor-sonido">
+                    <i class="fa-solid fa-volume-high"></i>
+                </a>
+                <div class="reproductor-contador">
+                    <input type="range" name="" id="" value="25" min="0" max="100">
+                </div>
+                <a href="#" class="reproductor-ampliar">
+                    <i class="fa-solid fa-expand"></i>
+                </a>
+            </article>
+        </section>
+        <!-- Componente REPRODUCTOR --> 
+        
+        
+        <!-- Componente TABLA --> 
+        <section class="favoritos">
+            <article class="favoritos-cancion-head">
+                <div class="favoritos-titulo favoritos-titulo-cancion">
+                    <p>Cancion</p>
+                </div>
+                <div class="favoritos-titulo favoritos-titulo-album">
+                    <p>Album</p>
+                </div>
+                <div class="favoritos-titulo favoritos-titulo-duracion">
+                    <p>Duracion</p>
+                </div>
+                <div class="favoritos-titulo favoritos-titulo-visualizacion">
+                    <p>Views</p>
+                </div>
+            </article>
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 1</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 1</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">1574</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">03:48</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 2</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 2</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">5678</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">02:29</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 3</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 3</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">3451</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">02:35</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 4</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 4</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">3545</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">02:19</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 5</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 5</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">7561</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">03:15</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 6</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 6</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">4351</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">03:36</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 7</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 7</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">2394</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">02:55</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 8</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 8</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">9614</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">03:11</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 9</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 9</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">6515</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">03:27</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 10</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 10</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">8013</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">02:59</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 11</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 11</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">7561</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">03:41</span>
+                </div>
+            </article>
+            
+            <article class="favoritos-cancion">
+                <div class="favoritos-caja favoritos-caja-1">
+                    <a href="#" class="favoritos-play">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-2">
+                    <h3 class="favoritos-album">Album 12</h3>
+                </div>
+                <div class="favoritos-caja favoritos-caja-3">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-4">
+                    <h2 class="favoritos-canciones">Cancion 12</h2>
+                </div>
+                <div class="favoritos-caja favoritos-caja-5">
+                    <a href="#" class="favoritos-estrella">
+                        <i class="fa-solid fa-star"></i>
+                    </a>
+                </div>
+                <div class="favoritos-caja favoritos-caja-6">
+                    <span class="favoritos-visualizaciones">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                    <span class="favoritos-visualizaciones">
+                        <p class="favoritos-views">2162</p>
+                    </span>
+                </div>
+                <div class="favoritos-caja favoritos-caja-7">
+                    <span class="favoritos-duracion">02:39</span>
+                </div>
+            </article>
+            
+            
+            
+        </section>
+        <!-- Componente TABLA --> 
+        
+        
+        
+    </main>
+
+    
+    
+    
+    <!-- Componente FOOTER -->
+    <footer class="footer">
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Brian</h3>
+            <h3 class="footer-nombre">Klehr</h3>
+            <p class="footer-dni">41.026.580</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Alexander</h3>
+            <h3 class="footer-nombre">Funes</h3>
+            <p class="footer-dni">34.117.699</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Antonella</h3>
+            <h3 class="footer-nombre">Politi</h3>
+            <p class="footer-dni">31.492.164</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Nahuel</h3>
+            <h3 class="footer-nombre">Esposito</h3>
+            <p class="footer-dni">43.862.624</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Gustavo</h3>
+            <h3 class="footer-nombre">Miño</h3>
+            <p class="footer-dni">38.126.357</p>
+            <a href="https://github.com/gus-emma-uni" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-integrante">
+            <h3 class="footer-nombre">Camila</h3>
+            <h3 class="footer-nombre">Marendazzo</h3>
+            <p class="footer-dni">43.054.264</p>
+            <a href="#" target="_blank" class="footer-icono">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </footer>
+    <!-- Componente FOOTER -->
+
 </body>
 </html>
