@@ -3,3 +3,12 @@
     En este archivo creamos los estilos especificos de la pagina principal. 
 
 */
+
+.barra-lateral {
+    border-radius: 5px;
+}
+
+main {
+    background-color: var(--color-negro);
+    border-radius: 5px;
+}

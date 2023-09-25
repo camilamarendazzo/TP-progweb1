@@ -3,3 +3,47 @@
     En este archivo creamos los estilos especificos de la pagina registro. 
 
 */
+.contenedor {
+    margin: 50px 200px;
+}
+
+.caja{
+
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    
+}
+
+.celda1{
+    background-color: rgb(167, 167, 201) ;
+    margin-left: 300px;
+    margin-top: 50px;
+
+    border: 2px solid var(--color-principal-oscuro) ;
+    padding: 2%;
+    
+
+}
+
+.celda2{
+   margin-left: 350px;
+    margin-top: 50px;
+    background-color:rgb(167, 167, 201) ;
+    border: 2px solid var(--color-principal-oscuro);
+    padding: 2%;
+}
+
+h1{
+
+    color:#e17600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+ .estilo{
+
+    color: #ffa529;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+
+

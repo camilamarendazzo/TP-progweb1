@@ -12,6 +12,7 @@
     align-items: center;
     color: var(--color-blanco);
     grid-area: header;
+    border-radius: 5px;
 }
 
 .header-menu-mobile .fa-bars,
@@ -23,8 +24,12 @@
     text-decoration: none;
 }
 
+.header-titulo a {
+    text-decoration: none;
+}
 
 .header-encabezado {
+    color: var(--color-blanco);
     text-transform: uppercase;
     font-family: var(--fuente-encabezados);
     font-size: var(--letra-h6);

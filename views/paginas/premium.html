@@ -18,46 +18,145 @@
     <link rel="stylesheet" href="../../style/normalize.css">
     <link rel="stylesheet" href="../../style/general.css">
     <link rel="stylesheet" href="../../style/paginas/premium.css">
+
+    <link rel="stylesheet" href="../../style/componentes/header.css">
+    <link rel="stylesheet" href="../../style/componentes/footer.css">
+
+    <script src="https://kit.fontawesome.com/ed2ba7d635.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     
-    <h1>Premium</h1>
-
-    <a href="perfil.html">Perfil de usuario</a>
-    <br>
-    <a href="iniciar-sesion.html">Cerrar sesion</a>
-    <br>
-
-    <section class="contenedor">
-        <div class="plan">  
-            <h3>PLAN MENSUAL</h3>
-            <img src="../../assets/img/disco1.jpg" alt="Plan mensual">
-            <p class="descripcion">Disfrutá de tus albumes y canciones favoritas sin anuncios con un abono mensual final de solo</p>
-            <p class="precio">$900</p>
-            <input type="radio">
+    <header class="header">
+        <a href="#" class="header-menu-mobile">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <div class="header-titulo">
+            <a href="#">
+                <h2 class="header-encabezado">Planes premium</h2>
+            </a>
         </div>
-        <div class="plan">  
-            <h3>PLAN ANUAL</h3>
-            <img src="../../assets/img/disco2.jpg" alt="Plan anual">
-            <p class="descripcion">Disfrutá de tus albumes y canciones favoritas sin anuncios con un abono anual final de solo</p>
-            <p class="precio">$9000</p>
-            <input type="radio">
+        <div class="header-avatar">
+            <a href="views/paginas/iniciar-sesion.html" class="header-cerrar-mobile">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+            <div class="header-texto">
+                <p class="header-usuario">Nombre Usuario</p>
+                <a href="../../index.html" class="header-cerrar">Cerrar Sesion</a>
+            </div>
+            <a href="perfil.html" class="header-perfil">
+                <i class="fa-solid fa-user"></i>
+            </a>
         </div>
-        <div class="plan">  
-            <h3>PLAN INFINITO</h3>
-            <img src="../../assets/img/disco3.jpg" alt="Plan infinito">
-            <p class="descripcion">Disfrutá de tus albumes y canciones favoritas sin anuncios con un abono único de solo</p>
-            <p class="precio">$15000</p>
-            <input type="radio">
-        </div>
-    </section>
+    </header>
 
-    <h2>Botones</h2>
-        <a href="../../index.html">Cancelar</a>
-        <br>
-        <a href="pagar.html">Avanzar</a>
-        <br>
+    <main>
+        <form>
+        <section class="contenedor">
+            
+            <div class="plan">
+                <img src="../../assets/img/PlanMensual.jpg" alt="Plan mensual">
+                <p class="descripcion">Disfrutá de tus albumes y canciones favoritas sin anuncios</p>
+                <div class="item">
+                    <p>✓ Música sin anuncios</p>
+                    <p>✓ Escuchá tus canciones en cualquier lugar, incluso sin conexión</p>
+                    <p>✓ Reproducción on-demand</p> 
+                    <p>✓ Prepagá o suscribite</p>
+                </div>
+                <p>abono mensual final de solo</p>
+                <p class="precio">$900</p>
+                <input type="radio" name="plan">
+            </div>
+            <div class="plan">
+                <img src="../../assets/img/PlanAnual.jpg" alt="Plan anual">
+                <p class="descripcion">Disfrutá de tus albumes y canciones favoritas sin anuncios</p>
+                <div class="item">
+                    <p>✓ Música sin anuncios</p>
+                    <p>✓ Escuchá tus canciones en cualquier lugar, incluso sin conexión</p>
+                    <p>✓ Reproducción on-demand</p> 
+                    <p>✓ Prepagá o suscribite</p>
+                </div>
+                <p>abono mensual anual de solo</p>
+                <p class="precio">$9000</p>
+                <input type="radio" name="plan">
+            </div>
+            <div class="plan">
+                <img src="../../assets/img/PlanInfinito.jpg" alt="Plan infinito">
+                <p class="descripcion">Disfrutá de tus albumes y canciones favoritas sin anuncios </p>
+                <div class="item">
+                    <p>✓ Música sin anuncios</p>
+                    <p>✓ Escuchá tus canciones en cualquier lugar, incluso sin conexión</p>
+                    <p>✓ Reproducción on-demand</p> 
+                    <p>✓ Prepagá o suscribite</p>
+                </div>
+                <p>abono único de solo</p>
+                <p class="precio">$15000</p>
+                <input type="radio" name="plan">
+            </div>
+        </section>
+
+        <section class="botones">
+            <a href="inicio.html">
+                <input type="button" class="boton" value="Cancelar">
+            </a>
+            <a href="pagar.html">
+                <!-- <button class="boton">Avanzar</button> -->
+                <input type="button" class="boton" value="Avanzar">
+            </a>
+        </section>
+    </form>
+    </main>
+
+        <footer class="footer">
+            <div class="footer-integrante">
+                <h3 class="footer-nombre">Brian</h3>
+                <h3 class="footer-nombre">Klehr</h3>
+                <p class="footer-dni">41.026.580</p>
+                <a href="#" target="_blank" class="footer-icono">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="footer-integrante">
+                <h3 class="footer-nombre">Alexander</h3>
+                <h3 class="footer-nombre">Funes</h3>
+                <p class="footer-dni">34.117.699</p>
+                <a href="#" target="_blank" class="footer-icono">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="footer-integrante">
+                <h3 class="footer-nombre">Antonella</h3>
+                <h3 class="footer-nombre">Politi</h3>
+                <p class="footer-dni">31.492.164</p>
+                <a href="#" target="_blank" class="footer-icono">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="footer-integrante">
+                <h3 class="footer-nombre">Nahuel</h3>
+                <h3 class="footer-nombre">Esposito</h3>
+                <p class="footer-dni">43.862.624</p>
+                <a href="#" target="_blank" class="footer-icono">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="footer-integrante">
+                <h3 class="footer-nombre">Gustavo</h3>
+                <h3 class="footer-nombre">Miño</h3>
+                <p class="footer-dni">38.126.357</p>
+                <a href="https://github.com/gus-emma-uni" target="_blank" class="footer-icono">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="footer-integrante">
+                <h3 class="footer-nombre">Camila</h3>
+                <h3 class="footer-nombre">Marendazzo</h3>
+                <p class="footer-dni">43.054.264</p>
+                <a href="#" target="_blank" class="footer-icono">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </footer>
         
 
 </body>

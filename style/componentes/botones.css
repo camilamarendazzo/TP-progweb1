@@ -3,3 +3,18 @@
     En este archivos creamos los estilos del componente botones. 
 
 */
+
+
+/* Estilos del botón que usé en la vista PREMIUM */
+.boton{
+    background-color: var(--color-gris-oscuro); /* Color de fondo gris oscuro */
+    color: var(--color-gris-claro); /* Color de texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px;
+    padding: 20px 50px; /* Espaciado interior */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+.boton:hover {
+    background-color: var(--color-gris); /* Color de fondo más claro en el hover */
+}

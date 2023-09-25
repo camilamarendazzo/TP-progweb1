@@ -33,6 +33,10 @@
     color: var(--color-blanco);
 }
 
+.footer-icono .fa-github:hover {
+    color: var(--color-principal);
+}
+
 /* Media Queries */
 
 @media screen and (width >= 768px) { 

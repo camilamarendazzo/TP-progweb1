@@ -18,9 +18,12 @@
     --color-error: #FF6A75;
     --color-informacion: #FFEA80;
     --color-blanco: #FFFFFF;
+    --color-blanco-opacidad-1: #ffffff1a;
+    --color-blanco-opacidad-2: #ffffff33;
+    
     --color-negro: #101010;
-    --color-gris: #a0a0a0;
-    --color-gris-claro: #eeeeee;
+    --color-gris: #727272;
+    --color-gris-claro: #d6d6d6;
     --color-gris-oscuro: #454545;
 
     /*Tipografia*/
@@ -51,9 +54,13 @@ html {
 }
 
 .body {
-    background-color: var(--color-negro);
+    background: rgb(17,17,17);
+background: radial-gradient(circle, rgba(17,17,17,1) 50%, rgba(34,34,34,1) 100%);
+
     min-height: 100vh;
+    margin: .5rem;
     display: grid;
+    gap: .5rem;
     grid-template-areas:    "header"
                             "barra-lateral"
                             "main"
@@ -62,6 +69,10 @@ html {
 
 .barra-lateral {
     grid-area: barra-lateral;
+}
+
+main {
+    grid-area: main;
 }
 
 img {
