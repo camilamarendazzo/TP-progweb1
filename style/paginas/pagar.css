@@ -6,7 +6,7 @@
 
 
 .relleno{
-    background-color: #a0a0a0;
+    background-color: var(--color-gris-oscuro);
 }
 
 .cajaCentrada{
@@ -16,7 +16,7 @@
 }
 
 .planPagar{
-    background-color: #454545;
+    background-color: #101010;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -26,7 +26,9 @@
     height: 550px;
     width: 70%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #101010;
+    color: var(--color-informacion);
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .cajitas{
@@ -43,7 +45,7 @@
 }
 
 .boton{
-    background-color: var(--color-negro); 
+    background-color: var(--color-gris-oscuro); 
     color: var(--color-gris-claro);
     border: none; 
     border-radius: 10px; 
