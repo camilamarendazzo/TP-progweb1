@@ -23,6 +23,7 @@
     text-decoration: none;
 }
 
+
 .header-encabezado {
     text-transform: uppercase;
     font-family: var(--fuente-encabezados);
@@ -41,7 +42,7 @@
     .header-cerrar-mobile {
         display: none;
     }
-
+    
     .header-perfil{
         text-align: center;
         width: 50px;
@@ -72,5 +73,6 @@
         font-size: var(--letra-p-pequeño);
         color: var(--color-principal);
     }
+
 
   }
