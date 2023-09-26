@@ -84,9 +84,9 @@ img {
     .body {
         grid-template-columns: 1fr 2fr;
         grid-template-areas:    "header      header"
-        "barra-lateral        main"
-        "barra-lateral       main"
-        "footer      footer";
+                                "barra-lateral        main"
+                                "barra-lateral       main"
+                                "footer      footer";
     }
     
 }
