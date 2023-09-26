@@ -23,7 +23,7 @@
     
     --color-negro: #101010;
     --color-gris: #727272;
-    --color-gris-claro: #eeeeee;
+    --color-gris-claro: #d6d6d6;
     --color-gris-oscuro: #454545;
 
     /*Tipografia*/
@@ -84,9 +84,9 @@ img {
     .body {
         grid-template-columns: 1fr 2fr;
         grid-template-areas:    "header      header"
-        "barra-lateral        main"
-        "barra-lateral       main"
-        "footer      footer";
+                                "barra-lateral        main"
+                                "barra-lateral       main"
+                                "footer      footer";
     }
     
 }

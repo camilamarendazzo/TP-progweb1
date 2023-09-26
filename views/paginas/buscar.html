@@ -11,16 +11,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
 
+    <!-- comentario-->
     <!-- Estilos -->
     <link rel="stylesheet" href="../../style/normalize.css">
     <link rel="stylesheet" href="../../style/general.css">
-
+    
     <link rel="stylesheet" href="../../style/componentes/header.css">
     <link rel="stylesheet" href="../../style/componentes/menu.css">
     <link rel="stylesheet" href="../../style/componentes/aside.css">
     <link rel="stylesheet" href="../../style/componentes/reproductor.css">
     <link rel="stylesheet" href="../../style/componentes/grilla.css">
     <link rel="stylesheet" href="../../style/componentes/footer.css">
+
+    <link rel="stylesheet" href="/style/paginas/buscar.css">
 
 
     <!-- Font Awesome Icons -->
@@ -30,11 +33,11 @@
 
     <!-- Componente HEADER -->
     <header class="header">
-        <a href="#" class="header-menu-mobile">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-        <div class="header-titulo">
-            <input type="search">
+        <div class="search-container">
+            <form class="formulario" action="#">
+              <input type="text" placeholder="Busca algo.." name="search">
+              <button type="submit"><i class="fa fa-search"></i> </button>
+            </form>
         </div>
         <div class="header-avatar">
             <a href="views/paginas/iniciar-sesion.html" class="header-cerrar-mobile">
@@ -48,6 +51,7 @@
                 <i class="fa-solid fa-user"></i>
             </a>
         </div>
+        
     </header>
     <!-- Componente HEADER --> 
     
@@ -57,10 +61,10 @@
         <nav class="menu">
             <ul class="menu-lista">
                 <li class="menu-item">
-                    <a href="index.html" class="menu-link active">Home</a>
+                    <a href="index.html" class="menu-link">Home</a>
                 </li>
                 <li>
-                    <a href="views/paginas/buscar.html" class="menu-link">Buscar</a>
+                    <a href="views/paginas/buscar.html" class="menu-link active">Buscar</a>
                 </li>
                 <li>
                     <a href="views/paginas/mis-albums.html" class="menu-link">Mis Albums</a>
@@ -92,7 +96,7 @@
     
     
     
-    <main style="grid-area: main;">
+    <main style="grid-area: main" class="scrol">
         
         <!-- Componente REPRODUCTOR --> 
         <section class="reproductor">
@@ -123,89 +127,57 @@
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-2.jpg" alt="">
                 </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
-                </a>
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-3.jpg" alt="">
-                </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
                 </a>
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-4.jpg" alt="">
                 </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
-                </a>
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-5.jpg" alt="">
-                </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
                 </a>
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-6.jpg" alt="">
                 </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
-                </a>
+
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-7.jpg" alt="">
-                </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
                 </a>
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-8.jpg" alt="">
                 </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
-                </a>
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-9.jpg" alt="">
-                </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
                 </a>
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-10.jpg" alt="">
                 </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
-                </a>
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-11.jpg" alt="">
                 </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
-                </a>
             </article>
             <article class="grilla-album">
                 <a href="../paginas/musica-sonando.html">
                     <img src="../../assets/img/album-12.jpg" alt="">
-                </a>
-                <a href="#" class="grilla-estrella">
-                    <i class="fa-solid fa-star"></i>
-                </a>
+                </a>>
             </article>
             
         </section>

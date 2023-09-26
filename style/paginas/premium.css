@@ -4,8 +4,13 @@
 
 */
 
+header{
+    margin: .5rem;
+}
+
 body{
-    background-color: var(--color-negro);/* background-color: black; */
+    background: rgb(17,17,17);
+    background: radial-gradient(circle, rgba(17,17,17,1) 50%, rgba(34,34,34,1) 100%);
 }
 
 .contenedor{
@@ -13,7 +18,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    margin: 30px 0;
+    margin-top: 20px;
 }
 
 .plan{
@@ -47,6 +52,12 @@ img{
     margin-top: 0;
 }
 
+.caja{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
 .botones{
     display: flex;
     justify-content: center;
@@ -54,26 +65,49 @@ img{
 }
 
 .boton{
-    background-color: var(--color-gris-oscuro); /* Color de fondo gris oscuro */
-    color: var(--color-gris-claro); /* Color de texto blanco */
-    border: none; /* Sin bordes */
-    border-radius: 10px; /* Bordes redondeados */
-    margin: 20px;
-    padding: 20px 50px; /* Espaciado interior */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    background-color: var(--color-gris-oscuro); 
+    color: var(--color-gris-claro); 
+    border: none; 
+    border-radius: 10px; 
+    margin: 0 20px 20px;
+    padding: 20px 50px; 
+    cursor: pointer;
 }
 .boton:hover {
     background-color: var(--color-gris); /* Color de fondo más claro en el hover */
+}
+
+@media screen and (max-width: 1024px) {
+    .contenedor{
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan{
+        margin-bottom: 50px;;
+        width: 70%;
+    }
+    .botones{
+        margin: 0;
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 768px){
 
     .contenedor{
         flex-direction: column;
+        align-items: center;
     }
     .plan{
-        align-self: center;
-        margin: 20px;
+        margin-bottom: 30px;
         width: 90%;
+    }
+    
+    .botones{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .boton{
+        width: 300px;
     }
 }
