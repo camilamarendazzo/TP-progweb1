@@ -44,3 +44,15 @@
 .formulario input{
     font-size: 12px;
 }
+
+.fa-search{
+    font-size: 1.5rem; 
+    color: var(--color-blanco);
+    background-color: var(--color-principal);
+}
+
+.formulario button{
+    background-color: var(--color-principal);
+    border: 0;
+    padding: 0.25rem;
+}
