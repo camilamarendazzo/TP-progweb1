@@ -46,6 +46,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: var(--fuente-parrafos);
 }
  
@@ -84,9 +85,9 @@ img {
     .body {
         grid-template-columns: 1fr 2fr;
         grid-template-areas:    "header      header"
-        "barra-lateral        main"
-        "barra-lateral       main"
-        "footer      footer";
+                                "barra-lateral        main"
+                                "barra-lateral       main"
+                                "footer      footer";
     }
     
 }

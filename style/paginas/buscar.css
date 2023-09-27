@@ -3,3 +3,56 @@
     En este archivo creamos los estilos especificos de la pagina buscar. 
 
 */
+
+
+.body {
+    background-color: var(--color-negro);
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:    "header"
+                            "barra-lateral"
+                            "main"
+                            "footer";
+}
+
+
+@media screen and (width >= 768px) {
+    .body {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:    "barra-lateral      header"
+                                "barra-lateral        main"
+                                "barra-lateral       main"
+                                "footer      footer";
+    } 
+}
+
+.formulario{
+    display: flex;
+
+}
+
+.header{
+    background-color: #101010;
+    display: flex;
+
+}
+
+.search-container{
+    width: 10%;
+}
+
+.formulario input{
+    font-size: 12px;
+}
+
+.fa-search{
+    font-size: 1.5rem; 
+    color: var(--color-blanco);
+    background-color: var(--color-principal);
+}
+
+.formulario button{
+    background-color: var(--color-principal);
+    border: 0;
+    padding: 0.25rem;
+}

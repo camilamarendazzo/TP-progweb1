@@ -47,7 +47,7 @@
     .header-cerrar-mobile {
         display: none;
     }
-
+    
     .header-perfil{
         text-align: center;
         width: 50px;
@@ -78,5 +78,6 @@
         font-size: var(--letra-p-pequeño);
         color: var(--color-principal);
     }
+
 
   }
