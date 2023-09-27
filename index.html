@@ -9,118 +9,144 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesion</title>
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="../../style/paginas/index-registro.css">
-    <link rel="stylesheet" href="../../style/normalize.css">
-    <link rel="stylesheet" href="../../style/general.css">
-    <link rel="stylesheet" href="../../style/componentes/footer.css">
-    <link rel="stylesheet" href="../../style/componentes/header.css">
- 
- <!-- Font Awesome Icons -->
- <script src="https://kit.fontawesome.com/ed2ba7d635.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="../../style/normalize.css" />
+    <link rel="stylesheet" href="../../style/general.css" />
 
-<body class="body">
+    <link rel="stylesheet" href="../../style/componentes/header.css" />
+    <link rel="stylesheet" href="../../style/paginas/index-registro.css" />
+    <link rel="stylesheet" href="../../style/componentes/footer.css" />
 
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/ed2ba7d635.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="body">
+    <!-- Componente HEADER -->
     <header class="header">
-        <a href="#" class="header-menu-mobile">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-        <div class="header-titulo">
-            <h2 class="header-encabezado">SpotiLam</h2>
-        </div>
+      <a href="#" class="header-menu-mobile">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <div class="header-titulo">
+        <h2 class="header-encabezado">SpotiLam</h2>
+      </div>
     </header>
+    <!-- Componente HEADER -->
 
+    <main>
+      <div class="contenedor">
+        <h1>Inicio Sesión</h1>
+        <div class="estilo">
+          <form action="iniciar-sesion.html" method="post" class="index-form">
+            <label for="NombreDeUsuario">Usuario</label>
+            <input
+              type="text"
+              name="Nombre de usuario"
+              id="NombreDeUsuario"
+              placeholder="Nombre de usuario"
+            />
 
-    
-   <main class="contenedor">
-    <h1>Inicio Sesión</h1>
-    <div class="estilo">
-    <form action="iniciar-sesion.html" method="post">
-        <label for="Nombre de usuario">Usuario</label>
-        <p></p>
-        <input type="text" name="Nombre de usuario" placeholder="Nombre de usuario">
-        <br>
-        <p>
-
-
-        </p>
-        <label for="password">Contraseña</label>
-        <p></p>
-        <input type="password" name="password" id="password" placeholder="Ingrese contraseña">
-        <br>
-        <p>
-
-        <!-- <input type="submit" value="Iniciar sesión"> -->
-    </form>
-    </div>
-    <!-- <h2>Formulario</h2> -->
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Ingrese contraseña"
+            />
+          </form>
+        </div>
+        <!-- <h2>Formulario</h2> -->
 
         <div class="caja">
-        <div class="boton"> <a href="/views/paginas/inicio.html">Inicio Sesión</a> </div>
+          <div class="boton">
+            <a class="index-enlace" href="/views/paginas/inicio.html">Inicio Sesión</a>
+          </div>
         </div>
-        <p></p>
-         <a style="margin: auto;" href="views/paginas/registro.html">Registrarme</a> 
-
+        <a class="index-enlace" href="views/paginas/registro.html"
+          >Registrarme</a
+        >
+      </div>
     </main>
 
-
-     <footer class="footer"> 
-    <div class="footer-integrante">
+    <!-- Componente FOOTER -->
+    <footer class="footer">
+      <div class="footer-integrante">
         <h3 class="footer-nombre">Brian</h3>
         <h3 class="footer-nombre">Klehr</h3>
         <p class="footer-dni">41.026.580</p>
-        <a href="#" target="_blank" class="footer-icono">
-            <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/Sur4x" target="_blank" class="footer-icono">
+          <i class="fa-brands fa-github"></i>
         </a>
-    </div>
-    <div class="footer-integrante">
+      </div>
+      <div class="footer-integrante">
         <h3 class="footer-nombre">Alexander</h3>
         <h3 class="footer-nombre">Funes</h3>
         <p class="footer-dni">34.117.699</p>
-        <a href="#" target="_blank" class="footer-icono">
-            <i class="fa-brands fa-github"></i>
+        <a
+          href="https://github.com/javierfunes2018"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
         </a>
-    </div>
-    <div class="footer-integrante">
+      </div>
+      <div class="footer-integrante">
         <h3 class="footer-nombre">Antonella</h3>
         <h3 class="footer-nombre">Politi</h3>
         <p class="footer-dni">31.492.164</p>
-        <a href="#" target="_blank" class="footer-icono">
-            <i class="fa-brands fa-github"></i>
+        <a
+          href="https://github.com/AntonellaPoliti"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
         </a>
-    </div>
-    <div class="footer-integrante">
+      </div>
+      <div class="footer-integrante">
         <h3 class="footer-nombre">Nahuel</h3>
         <h3 class="footer-nombre">Esposito</h3>
         <p class="footer-dni">43.862.624</p>
-        <a href="#" target="_blank" class="footer-icono">
-            <i class="fa-brands fa-github"></i>
+        <a
+          href="https://github.com/Nahuel0911"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
         </a>
-    </div>
-    <div class="footer-integrante">
+      </div>
+      <div class="footer-integrante">
         <h3 class="footer-nombre">Gustavo</h3>
         <h3 class="footer-nombre">Miño</h3>
         <p class="footer-dni">38.126.357</p>
-        <a href="https://github.com/gus-emma-uni" target="_blank" class="footer-icono">
-            <i class="fa-brands fa-github"></i>
+        <a
+          href="https://github.com/gus-emma-uni"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
         </a>
-    </div>
-    <div class="footer-integrante">
+      </div>
+      <div class="footer-integrante">
         <h3 class="footer-nombre">Camila</h3>
         <h3 class="footer-nombre">Marendazzo</h3>
         <p class="footer-dni">43.054.264</p>
-        <a href="#" target="_blank" class="footer-icono">
-            <i class="fa-brands fa-github"></i>
+        <a
+          href="https://github.com/camilamarendazzo"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
         </a>
-    </div>
-</footer> 
-</body>
-
-
+      </div>
+    </footer>
+    <!-- Componente FOOTER -->
+  </body>
 </html>
