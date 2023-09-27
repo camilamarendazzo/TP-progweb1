@@ -3,63 +3,65 @@
     En este archivo creamos los estilos especificos de la pagina registro. 
 
 */
+.body {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
 .contenedor {
-    display: grid;
-    margin: auto;
-    justify-content: center; 
-    align-items: center;
-    
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
 }
 
-.caja{
-
-    display: flex;
-    gap: 1rem;
-    justify-content: space-around;
-    
+.index-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.celda1{
-    background-color: rgb(167, 167, 201) ;
-    margin-left: 300px;
-    margin-top: 50px;
-
-    border: 2px solid var(--color-principal-oscuro) ;
-    padding: 2%;
-    
-
+.index-form input {
+  padding: 1rem 0.5rem;
 }
 
-.celda2{
-   margin-left: 350px;
-    margin-top: 50px;
-    background-color:rgb(167, 167, 201) ;
-    border: 2px solid var(--color-principal-oscuro);
-    padding: 2%;
+.caja {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
 }
 
-h1{
-
-    color:#e17600;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+h1 {
+  color: #e17600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
- .estilo{
+.estilo {
+  color: #ffa529;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-    color: #ffa529;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
-
-
-
- .boton{
-    background-color: var(--color-gris-oscuro); /* Color de fondo gris oscuro */
-    color: var(--color-gris-claro); /* Color de texto blanco */
-    border: none; /* Sin bordes */
-    border-radius: 10px; /* Bordes redondeados */
-    margin: 20px;
-    padding: 20px 50px; /* Espaciado interior */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+.boton {
+  background-color: var(--color-gris-oscuro); /* Color de fondo gris oscuro */
+  color: var(--color-gris-claro); /* Color de texto blanco */
+  border: none; /* Sin bordes */
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 20px;
+  padding: 20px 50px; /* Espaciado interior */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 .boton:hover {
-    background-color: var(--color-gris); /* Color de fondo más claro en el hover */
+  background-color: var(
+    --color-gris
+  ); /* Color de fondo más claro en el hover */
+}
+
+.index-enlace {
+  color: var(--color-principal);
+  text-decoration: none;
+  text-align: center;
 }
