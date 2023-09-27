@@ -1,40 +1,159 @@
-<!--
-
-    En esta pagina, van a estar los componentes:
-        header, footer
-
-    pero ademas creamos el formulario de perfil en la misma pagina
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Registro</title>
 
     <!-- Estilos -->
+    <link rel="stylesheet" href="../../style/paginas/registro.css">
     <link rel="stylesheet" href="../../style/normalize.css">
     <link rel="stylesheet" href="../../style/general.css">
+    <link rel="stylesheet" href="../../style/componentes/footer.css">
+    <link rel="stylesheet" href="../../style/componentes/header.css">
+ 
+ <!-- Font Awesome Icons -->
+ <script src="https://kit.fontawesome.com/ed2ba7d635.js" crossorigin="anonymous"></script>
 </head>
-<body>
 
-    <h1>Perfil</h1>
+<body class="body">
 
-    <a href="perfil.html">Perfil de usuario</a>
-    <br>
-    <a href="iniciar-sesion.html">Cerrar sesion</a>
-    <br>
-    <h2>Formulario</h2>
-        <a href="premium.html">Premium</a>
-        <br>
-        <a href="iniciar-sesion.html">Eliminar Usuario</a>
-        <br>
-        <a href="../../index.html">Volver al home</a>
-        <br>
-        <a href="perfil.html">Guardar</a>
-        <br>
+    <header class="header">
+        <a href="#" class="header-menu-mobile">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <div class="header-titulo">
+            <h2 class="header-encabezado">SpotiLam</h2>
+        </div>
+        <div class="header-avatar">
+            <a href="../paginas/iniciar-sesion.html" class="header-cerrar-mobile">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+            <div class="header-texto">
+                <p class="header-usuario">Nombre Usuario</p>
+                <a href="../paginas/iniciar-sesion.html" class="header-cerrar">Cerrar Sesion</a>
+            </div>
+            <a href="../paginas/perfil.html" class="header-perfil">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+
     
-    
+   <main class="contenedor">
+    <h1>Registrarse</h1>
+    <div class="estilo">
+    <form action="iniciar-sesion.html" method="post">
+        <label for="Nombre de usuario">Usuario</label>
+        <p></p>
+        <input type="text" name="Nombre de usuario" placeholder="Nombre de usuario">
+        <br>
+        <p>
+
+
+        </p>
+        <label for="password">Contraseña</label>
+        <p></p>
+        <input type="password" name="password" id="password" placeholder="Ingrese contraseña">
+        <br>
+        <p>
+
+
+        </p>
+        <label for="password">Repetir contraseña</label>
+        <p></p>
+        <input type="password" name="password" id="password" placeholder="Repita contraseña">
+        <br>
+        <p>
+
+
+        </p>
+        
+        <label for="fecha">Fecha de Nacimiento</label>
+        <p></p>
+        <input type="date" id="fecha" name="fecha">
+        <br>
+        <p>
+
+
+        </p>
+        <label for="email">E-mail</label>
+        <p></p>
+        <input type="text" name="email" id="email" placeholder="Ingrese su email">
+        <br>
+        <p>
+
+
+        </p>
+        <!-- <input type="submit" value="Iniciar sesión"> -->
+    </form>
+    </div>
+    <!-- <h2>Formulario</h2> -->
+        <a href="./premium.html">Premium</a>
+   
+        <a href="../../index.html">Eliminar usuario</a>
+        <br>
+
+        <div class="caja">
+        <div class="boton"> <a href="./mis-albums.html">Guardar</a> </div>
+       <div class="boton"> <a href="./mis-albums.html">Volver al Home</a> </div>
+        </div>
+
+    </main>
+
+
+     <footer class="footer"> 
+    <div class="footer-integrante">
+        <h3 class="footer-nombre">Brian</h3>
+        <h3 class="footer-nombre">Klehr</h3>
+        <p class="footer-dni">41.026.580</p>
+        <a href="#" target="_blank" class="footer-icono">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+    <div class="footer-integrante">
+        <h3 class="footer-nombre">Alexander</h3>
+        <h3 class="footer-nombre">Funes</h3>
+        <p class="footer-dni">34.117.699</p>
+        <a href="#" target="_blank" class="footer-icono">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+    <div class="footer-integrante">
+        <h3 class="footer-nombre">Antonella</h3>
+        <h3 class="footer-nombre">Politi</h3>
+        <p class="footer-dni">31.492.164</p>
+        <a href="#" target="_blank" class="footer-icono">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+    <div class="footer-integrante">
+        <h3 class="footer-nombre">Nahuel</h3>
+        <h3 class="footer-nombre">Esposito</h3>
+        <p class="footer-dni">43.862.624</p>
+        <a href="#" target="_blank" class="footer-icono">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+    <div class="footer-integrante">
+        <h3 class="footer-nombre">Gustavo</h3>
+        <h3 class="footer-nombre">Miño</h3>
+        <p class="footer-dni">38.126.357</p>
+        <a href="https://github.com/gus-emma-uni" target="_blank" class="footer-icono">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+    <div class="footer-integrante">
+        <h3 class="footer-nombre">Camila</h3>
+        <h3 class="footer-nombre">Marendazzo</h3>
+        <p class="footer-dni">43.054.264</p>
+        <a href="#" target="_blank" class="footer-icono">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </div>
+</footer> 
 </body>
+
+
 </html>
