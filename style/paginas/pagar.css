@@ -23,18 +23,19 @@
     justify-content: center;
     padding-left: 50px;
     padding-right: 50px;
-    height: 550px;
     width: 70%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--color-informacion);
     margin-top: 2px;
     margin-bottom: 2px;
+    border-radius: 5px;
 }
 
 .cajitas{
     display: grid;
     grid-template-columns: 270px 270px;
     grid-template-rows: 50px 50px;
+    margin: 40px;
 }
 
 .tituloCentrado{
@@ -42,6 +43,11 @@
     width: 40%;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+img{
+    width: 300px;
+    border-radius: 5px;
 }
 
 .boton{
@@ -90,7 +96,6 @@ input{
 @media screen and (width <= 1024px) { 
     .planPagar{
         width: 600px;
-        height: 900px;
         padding-left: 25px;
         justify-content: center;
         padding-right: 0px;
@@ -120,7 +125,6 @@ input{
 @media screen and (width <= 768px) { 
     .planPagar{
         width: 300px;
-        height: 900px;
         padding-left: 25px;
         justify-content: center;
         padding-right: 0px;
