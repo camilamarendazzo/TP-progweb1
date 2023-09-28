@@ -1,0 +1,10 @@
+.caja {
+    display: block;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+    .caja {
+        display: flex;
+    }
+}
