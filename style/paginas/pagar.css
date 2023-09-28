@@ -7,6 +7,7 @@
 
 .relleno{
     background-color: var(--color-gris-oscuro);
+    min-height: 100vh;
 }
 
 .cajaCentrada{
