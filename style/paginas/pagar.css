@@ -45,6 +45,11 @@
     flex-wrap: wrap;
 }
 
+img{
+    width: 300px;
+    border-radius: 5px;
+}
+
 .boton{
     background-color: var(--color-gris-oscuro); 
     color: var(--color-gris-claro);
@@ -91,7 +96,6 @@ input{
 @media screen and (width <= 1024px) { 
     .planPagar{
         width: 600px;
-        height: 900px;
         padding-left: 25px;
         justify-content: center;
         padding-right: 0px;
@@ -121,7 +125,6 @@ input{
 @media screen and (width <= 768px) { 
     .planPagar{
         width: 300px;
-        height: 900px;
         padding-left: 25px;
         justify-content: center;
         padding-right: 0px;
