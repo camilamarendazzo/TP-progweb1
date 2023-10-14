@@ -4,11 +4,101 @@
 
 */
 
-.barra-lateral {
-    border-radius: 5px;
+body {
+  background: radial-gradient(
+    circle,
+    rgba(17, 17, 17, 1) 50%,
+    rgba(34, 34, 34, 1) 100%
+  );
+
+  min-height: 100vh;
 }
 
 main {
-    background-color: var(--color-negro);
-    border-radius: 5px;
+  min-height: 100vh;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sesion {
+  width: 90vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sesion-titulo {
+  margin: 0;
+  color: var(--color-principal);
+}
+
+.sesion-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sesion-label {
+  color: var(--color-blanco);
+}
+
+.sesion-input {
+  padding: 0.875rem;
+}
+
+.sesion-btn {
+  margin-top: 0.75rem;
+  padding: 0.875rem;
+  color: var(--color-blanco);
+  background-color: var(--color-principal);
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sesion-btn:hover {
+  color: var(--color-principal);
+  background-color: var(--color-blanco);
+}
+
+.sesion-link {
+  margin-top: 0;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-principal);
+  background-color: var(--color-blanco);
+}
+
+.sesion-link:hover {
+  color: var(--color-blanco);
+  background-color: var(--color-principal);
+}
+
+.sesion-mensaje {
+  display: none;
+  color: var(--color-error);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .sesion {
+    width: 50vw;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .sesion {
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .sesion {
+    width: 30vw;
+  }
 }
