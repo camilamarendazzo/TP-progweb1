@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../style/general.css" />
 
     <link rel="stylesheet" href="../../style/componentes/header.css" />
-    <link rel="stylesheet" href="../../style/paginas/index-registro.css" />
+    <link rel="stylesheet" href="style/index.css" />
     <link rel="stylesheet" href="../../style/componentes/footer.css" />
 
     <!-- Font Awesome Icons -->
@@ -29,50 +29,21 @@
     ></script>
   </head>
 
-  <body class="body">
-    <!-- Componente HEADER -->
-    <header class="header">
-      <a href="#" class="header-menu-mobile">
-        <i class="fa-solid fa-bars"></i>
-      </a>
-      <div class="header-titulo">
-        <h2 class="header-encabezado">SpotiLam</h2>
-      </div>
-    </header>
-    <!-- Componente HEADER -->
-
+  <body>
     <main>
-      <div class="contenedor">
-        <h1>Inicio Sesión</h1>
-        <div class="estilo">
-          <form action="iniciar-sesion.html" method="post" class="index-form">
-            <label for="NombreDeUsuario">Usuario</label>
-            <input
-              type="text"
-              name="Nombre de usuario"
-              id="NombreDeUsuario"
-              placeholder="Nombre de usuario"
-            />
-
-            <label for="password">Contraseña</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Ingrese contraseña"
-            />
+      <div class="container">
+        <section class="sesion">
+          <h1 class="sesion-titulo">Iniciar Sesión</h1>
+          <form class="sesion-formulario">
+            <label for="sesion-usuario" class="sesion-label"> Usuario </label>
+            <input type="text" name="nombre" id="sesion-usuario" class="sesion-input" placeholder="ej: gusemma23"/>
+            <label for="sesion-contraseña" class="sesion-label"> Contraseña </label>
+            <input type="password" name="contraseña" id="sesion-contraseña" class="sesion-input" placeholder="ej: #e2wZ2t6"/>
+            <input type="submit" value="Iniciar Sesión" class="sesion-btn" />
           </form>
-        </div>
-        <!-- <h2>Formulario</h2> -->
-
-        <div class="caja">
-          <div class="boton">
-            <a class="index-enlace" href="/views/paginas/inicio.html">Inicio Sesión</a>
-          </div>
-        </div>
-        <a class="index-enlace" href="views/paginas/registro.html"
-          >Registrarme</a
-        >
+          <span class="sesion-mensaje">El usuario y/o la contraseña es incorrecta</span>
+          <a href="views/paginas/registro.html" class="sesion-btn sesion-link">Registrarme</a>
+        </section>
       </div>
     </main>
 
@@ -148,5 +119,23 @@
       </div>
     </footer>
     <!-- Componente FOOTER -->
+
+    <script>
+
+      const d = document;
+      const boton = d.querySelector(".sesion-btn");
+
+      d.addEventListener("DOMContentLoaded", (e) => {
+        
+        d.addEventListener("click", (e) => {
+          if(e.target == boton){
+            e.preventDefault();
+            location.href = "views/paginas/inicio.html";
+          }
+        })
+
+      });
+
+    </script>
   </body>
 </html>
