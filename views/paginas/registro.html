@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../../style/general.css" />
 
     <link rel="stylesheet" href="../../style/componentes/header.css" />
-    <link rel="stylesheet" href="../../style/paginas/index-registro.css" />
+    <!--<link rel="stylesheet" href="../../style/paginas/index-registro.css" />-->
     <link rel="stylesheet" href="../../style/paginas/registro.css" />
     <link rel="stylesheet" href="../../style/componentes/footer.css" />
 
@@ -29,10 +29,47 @@
     ></script>
   </head>
 
-  <body class="body">
-    
-
+  <body>
     <main>
+
+      <div class="container">
+        <section class="registro">
+
+          <h2 class="registro-titulo">Registrarse</h2>
+
+          <form method="post" class="registro-formulario" data-id="registro-formulario">
+
+            <label class="registro-label" for="usuario">Usuario</label>
+            <input class="registro-input" type="text" name="usuario" id="usuario" placeholder="ej: gusemma23">
+
+            <label class="registro-label" for="contraseña">Contraseña</label>
+            <input class="registro-input" type="password" name="contraseña" id="contraseña" placeholder="ej: #2wZ2t6">
+
+            <label class="registro-label" for="repetirContraseña">Repetir Contraseña</label>
+            <input class="registro-input" type="password" name="repetirContraseña" id="repetirContraseña" placeholder="repetir contraseña">
+
+            <label class="registro-label" for="nacimiento">Fecha de Nacimiento</label>
+            <input class="registro-input" type="date" name="nacimiento" id="nacimiento">
+
+            <label class="registro-label" for="email">E-mail</label>
+            <input class="registro-input" type="email" name="email" id="email" placeholder="ej: gusemma23@gmail.com">
+
+            <input type="button" value="Premium" class="registro-premium" data-id="registro-premium">
+
+          
+
+          <div class="registro-btns">
+            <input type="submit" value="Registrarse">
+            <input type="button" value="Iniciar Sesion" data-id="registro-sesion">
+          </div>
+
+        </form>
+
+        </section>
+      </div>
+
+
+      <!--
       <div class="contenedor">
         <h1>Registrarse</h1>
         <div class="estilo">
@@ -78,15 +115,15 @@
         </div>
         <a href="./premium.html" class="index-enlace">Premium</a>
 
-        
-
         <div class="caja">
-          <div class="boton"><a href="../../index.html" class="index-enlace">Registrarse</a></div>
+          <div class="boton">
+            <a href="../../index.html" class="index-enlace">Registrarse</a>
+          </div>
           <div class="boton">
             <a href="../../index.html" class="index-enlace">Iniciar Sesion</a>
           </div>
         </div>
-      </div>
+      </div>-->
     </main>
 
     <!-- Componente FOOTER -->
@@ -161,5 +198,40 @@
       </div>
     </footer>
     <!-- Componente FOOTER -->
+
+
+    <script>
+      const d = document;
+      const $btnPremium = d.querySelector(`[data-id="registro-premium"]`);
+      const $btnSesion = d.querySelector(`[data-id="registro-sesion"]`);
+      const $formulario = d.querySelector(`[data-id="registro-formulario"]`);
+      
+      d.addEventListener("DOMContentLoaded", (e)=> {
+        
+        d.addEventListener("click", (e) => {
+          if(e.target == $btnPremium){
+            e.preventDefault();
+            location.href = "premium.html";
+          }
+
+          if(e.target == $btnSesion){
+            e.preventDefault();
+            location.href = "../../index.html";
+          }
+        })
+
+        d.addEventListener("submit", (e)=> {
+          if(e.target == $formulario){
+            e.preventDefault();
+            alert("Datos Guardados")
+          }
+        })
+
+        
+
+      })
+    </script>
+
+
   </body>
 </html>
