@@ -31,43 +31,86 @@
 
   <body>
     <main>
-
       <div class="container">
         <section class="registro">
-
           <h2 class="registro-titulo">Registrarse</h2>
 
-          <form method="post" class="registro-formulario" data-id="registro-formulario">
-
+          <form
+            method="post"
+            class="registro-formulario"
+            data-id="registro-formulario"
+          >
             <label class="registro-label" for="usuario">Usuario</label>
-            <input class="registro-input" type="text" name="usuario" id="usuario" placeholder="ej: gusemma23">
+            <input
+              class="registro-input"
+              type="text"
+              name="usuario"
+              id="usuario"
+              placeholder="ej: gusemma23"
+              data-usuario
+            />
 
             <label class="registro-label" for="contraseña">Contraseña</label>
-            <input class="registro-input" type="password" name="contraseña" id="contraseña" placeholder="ej: #2wZ2t6">
+            <input
+              class="registro-input"
+              type="password"
+              name="contraseña"
+              id="contraseña"
+              placeholder="ej: #2wZ2t6"
+              data-contraseña
+            />
 
-            <label class="registro-label" for="repetirContraseña">Repetir Contraseña</label>
-            <input class="registro-input" type="password" name="repetirContraseña" id="repetirContraseña" placeholder="repetir contraseña">
+            <label class="registro-label" for="repetirContraseña"
+              >Repetir Contraseña</label
+            >
+            <input
+              class="registro-input"
+              type="password"
+              name="repetirContraseña"
+              id="repetirContraseña"
+              placeholder="repetir contraseña"
+              data-repetir-contraseña
+            />
 
-            <label class="registro-label" for="nacimiento">Fecha de Nacimiento</label>
-            <input class="registro-input" type="date" name="nacimiento" id="nacimiento">
+            <label class="registro-label" for="nacimiento"
+              >Fecha de Nacimiento</label
+            >
+            <input
+              class="registro-input"
+              type="date"
+              name="nacimiento"
+              id="nacimiento"
+              data-nacimiento
+            />
 
             <label class="registro-label" for="email">E-mail</label>
-            <input class="registro-input" type="email" name="email" id="email" placeholder="ej: gusemma23@gmail.com">
+            <input
+              class="registro-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="ej: gusemma23@gmail.com"
+              data-email
+            />
 
-            <input type="button" value="Premium" class="registro-premium" data-id="registro-premium">
+            <input
+              type="button"
+              value="Premium"
+              class="registro-premium"
+              data-id="registro-premium"
+            />
 
-          
-
-          <div class="registro-btns">
-            <input type="submit" value="Registrarse">
-            <input type="button" value="Iniciar Sesion" data-id="registro-sesion">
-          </div>
-
-        </form>
-
+            <div class="registro-btns">
+              <input type="submit" value="Registrarse" />
+              <input
+                type="button"
+                value="Iniciar Sesion"
+                data-id="registro-sesion"
+              />
+            </div>
+          </form>
         </section>
       </div>
-
 
       <!--
       <div class="contenedor">
@@ -199,39 +242,72 @@
     </footer>
     <!-- Componente FOOTER -->
 
-
     <script>
+
       const d = document;
+      const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
       const $btnPremium = d.querySelector(`[data-id="registro-premium"]`);
       const $btnSesion = d.querySelector(`[data-id="registro-sesion"]`);
       const $formulario = d.querySelector(`[data-id="registro-formulario"]`);
-      
-      d.addEventListener("DOMContentLoaded", (e)=> {
-        
+
+      d.addEventListener("DOMContentLoaded", (e) => {
         d.addEventListener("click", (e) => {
-          if(e.target == $btnPremium){
+          if (e.target == $btnPremium) {
             e.preventDefault();
             location.href = "premium.html";
           }
 
-          if(e.target == $btnSesion){
+          if (e.target == $btnSesion) {
             e.preventDefault();
             location.href = "../../index.html";
           }
-        })
+        });
 
-        d.addEventListener("submit", (e)=> {
-          if(e.target == $formulario){
+        d.addEventListener("submit", (e) => {
+          if (e.target == $formulario) {
             e.preventDefault();
-            alert("Datos Guardados")
+            alert("Datos Guardados");
+
+            const dataUsuario = d.querySelector(`[data-usuario]`).value;
+            const dataContraseña = d.querySelector(`[data-contraseña]`).value;
+            const dataRepetirContraseña = d.querySelector(
+              `[data-repetir-contraseña]`
+            ).value;
+            const dataNacimiento = d.querySelector(`[data-nacimiento]`).value;
+            const dataEmail = d.querySelector(`[data-email]`).value;
+
+            //Almacenar la contraseña con requisitos
+            
+            const mitad = dataContraseña.length / 2;
+
+            const parte1 = dataContraseña.slice(0, mitad);
+            const parte2 = dataContraseña.slice(mitad, dataContraseña.length);
+
+            const dataContraseñaFinal = parte2 + parte1;
+
+            const datosUsuario = {
+              id_usuario: `${datosDesdeLS.usuarios.length + 1}`,
+              usuario: `${dataUsuario}`,
+              contraseña: `${dataContraseñaFinal}`,
+              repetirContraseña: `${dataContraseñaFinal}`,
+              estado: false,
+              nacimiento: `${dataNacimiento}`,
+              email: `${dataEmail}`,
+              escuchando: {},
+              favoritos: {
+                albums: [],
+                canciones: [],
+              },
+            };
+
+            datosDesdeLS.usuarios.push(datosUsuario);
+
+            localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
+
+            $formulario.reset();
           }
-        })
-
-        
-
-      })
+        });
+      });
     </script>
-
-
   </body>
 </html>

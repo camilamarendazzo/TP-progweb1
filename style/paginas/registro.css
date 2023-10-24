@@ -81,6 +81,13 @@ main {
     /*justify-content: center;
     gap: 4rem;*/
   }
+
+  .registro-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .registro {

@@ -85,6 +85,10 @@ main {
   text-align: center;
 }
 
+.mostrar {
+  display: block;
+}
+
 @media screen and (min-width: 768px) {
   .sesion {
     width: 50vw;
