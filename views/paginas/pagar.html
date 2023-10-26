@@ -49,16 +49,16 @@
     <main class="cajaCentrada">
     <section class="planPagar">
         <div class="tituloCentrado">
-        <h3>Elegiste el plan infinito</h3>
-        <img src="../../assets/img/PlanInfinito.jpg">
+        <h3 class="plan-elegido"></h3>
+        <!-- <img src="../../assets/img/PlanInfinito.jpg"> -->
       
-        <article><b>Música sin anuncios.</b></article>
+        <article><b>✓ Música sin anuncios</b></article>
  
-        <article><b>Escucha tus canciones en cualquier lugar.</b></article>
+        <article><b>✓ Escucha tus canciones en cualquier lugar</b></article>
        
-        <article><b>Reproducción on-demand.</b></article>
+        <article><b>✓ Reproducción on-demand</b></article>
       
-        <article><b>Prepaga o suscribite.</b></article>  
+        <article><b>✓ Prepaga o suscribite</b></article>  
         </div>
 
 
@@ -144,5 +144,24 @@
     </footer>
     <!-- Componente FOOTER -->
         
+
+    <script>
+
+        var URLActual = window.location.search;
+        // console.log(URLActual);
+
+        var pathActual = window.location.pathname;
+        // console.log(pathActual);
+
+        var URLPartida = URLActual.split("=");
+        const NOMBRE_PLAN = URLPartida[1].toUpperCase();
+        // console.log(NOMBRE_PLAN);
+
+        const TITULO = document.querySelector(".plan-elegido").innerHTML="Ha elegido el PLAN " + NOMBRE_PLAN;
+        console.log(TITULO)
+        
+
+    </script>
+
 </body>
 </html>
