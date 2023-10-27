@@ -53,7 +53,7 @@
     </header>
 
     <main>
-        <form>
+        <form action="pagar.html" method="get">
         <section class="contenedor">
             
             <div class="plan">
@@ -65,9 +65,9 @@
                     <p>✓ Reproducción on-demand</p> 
                     <p>✓ Prepagá o suscribite</p>
                 </div>
-                <p>abono mensual final de solo</p>
+                <p>abono mensual de solo</p>
                 <p class="precio">$900</p>
-                <input type="radio" name="plan">
+                <input type="radio" name="plan" value="mensual">
             </div>
             <div class="plan">
                 <img src="../../assets/img/PlanAnual.jpg" alt="Plan anual">
@@ -78,9 +78,9 @@
                     <p>✓ Reproducción on-demand</p> 
                     <p>✓ Prepagá o suscribite</p>
                 </div>
-                <p>abono mensual anual de solo</p>
+                <p>abono anual de solo</p>
                 <p class="precio">$9000</p>
-                <input type="radio" name="plan">
+                <input type="radio" name="plan" value="anual">
             </div>
             <div class="plan">
                 <img src="../../assets/img/PlanInfinito.jpg" alt="Plan infinito">
@@ -93,7 +93,7 @@
                 </div>
                 <p>abono único de solo</p>
                 <p class="precio">$15000</p>
-                <input type="radio" name="plan">
+                <input type="radio" name="plan" value="infinito">
             </div>
         </section>
 
@@ -101,10 +101,10 @@
             <a href="inicio.html">
                 <input type="button" class="boton" value="Cancelar">
             </a>
-            <a href="pagar.html">
+            <!-- <a href="pagar.html"> -->
                 <!-- <button class="boton">Avanzar</button> -->
-                <input type="button" class="boton" value="Avanzar">
-            </a>
+                <input type="submit" class="boton" value="Avanzar">
+            <!-- </a> -->
         </section>
     </form>
     </main>
