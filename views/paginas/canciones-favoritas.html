@@ -16,7 +16,7 @@
    
     <link rel="stylesheet" href="../../style/normalize.css">
     <link rel="stylesheet" href="../../style/general.css">
-    <link rel="stylesheet" href="../../style/index.css">
+    <!--<link rel="stylesheet" href="../../style/index.css">-->
 
     <link rel="stylesheet" href="../../style/componentes/header.css">
     <link rel="stylesheet" href="../../style/componentes/menu.css">
@@ -45,9 +45,11 @@
                 <i class="fa-solid fa-right-from-bracket"></i>
             </a>
             <div class="header-texto">
-                <p class="header-usuario">Nombre Usuario</p>
-                <a href="../../index.html" class="header-cerrar">Cerrar Sesion</a>
-            </div>
+                <p class="header-usuario" data-nombre-usuario>Nombre Usuario</p>
+                <a href="../../index.html" class="header-cerrar" data-cerrar-sesion
+                  >Cerrar Sesion</a
+                >
+              </div>
             <a href="perfil.html" class="header-perfil">
                 <i class="fa-solid fa-user"></i>
             </a>
@@ -106,18 +108,25 @@
         <!-- Componente MENU -->
 
         <!-- Componente ASIDE -->
-        <aside class="aside">
-            <div class="aside-foto">
-                <img src="../../assets/img/album.jpg" alt="Album Cover">
-                <a href="#" class="aside-estrella">
-                    <i class="fa-solid fa-star"></i>
-                </a>
-            </div>
-            <div class="aside-texto">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eos dolore, iste incidunt vel laboriosam culpa provident quam ex cupiditate!</p>
-            </div>
-        </aside>
-        <!-- Componente ASIDE -->
+      <aside class="aside">
+        <div class="aside-foto">
+          <div class="aside-foto-div">
+            <img src="../../assets/img/album.jpg" alt="Album Cover" />
+            <span class="aside-estrella">
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+          </div>
+        </div>
+        <div class="aside-texto">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eos
+            dolore, iste incidunt vel laboriosam culpa provident quam ex
+            cupiditate!
+          </p>
+        </div>
+      </aside>
+      <!-- Componente ASIDE -->
         
         
     </section>
@@ -655,6 +664,39 @@
         </div>
     </footer>
     <!-- Componente FOOTER -->
+
+    <script>
+        const d = document;
+        const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
+        const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
+  
+        d.addEventListener("DOMContentLoaded", (e) => {
+          const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
+  
+          console.log(datosDesdeLS);
+  
+          datosDesdeLS.usuarios.forEach((e) => {
+            if (e.estado) {
+              $nombreUsuario.textContent = e.usuario;
+            }
+          });
+  
+          d.addEventListener("click", (e) => {
+            if (e.target == $cerrarSesion) {
+              e.preventDefault();
+              console.log("cerraste sesion");
+              datosDesdeLS.usuarios.forEach((e) => {
+                if (e.estado) {
+                  e.estado = false;
+                }
+              });
+  
+              localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
+              location.href = "../../index.html";
+            }
+          });
+        });
+      </script>
 
 </body>
 </html>

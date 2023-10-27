@@ -94,19 +94,13 @@ img {
     margin-right: auto;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (width >= 1024px) {
   .body {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 350px 3fr;
     grid-template-areas:
       "header      header"
       "barra-lateral        main"
       "barra-lateral       main"
       "footer      footer";
-  }
-}
-
-@media screen and (width >= 1024px) {
-  .body {
-    grid-template-columns: 0.5fr 3fr;
   }
 }
