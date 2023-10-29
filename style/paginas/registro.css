@@ -75,11 +75,23 @@ main {
   background-color: var(--color-blanco);
 }
 
+.registro-exito {
+  text-align: center;
+  color: var(--color-exito);
+  padding: 1rem;
+}
+
+.mostrar {
+  display: block;
+}
+
+.ocultar {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .registro {
     width: 50vw;
-    /*justify-content: center;
-    gap: 4rem;*/
   }
 
   .registro-btns {
