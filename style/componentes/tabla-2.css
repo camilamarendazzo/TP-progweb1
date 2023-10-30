@@ -1,0 +1,153 @@
+/*
+
+    En este archivos creamos los estilos del componente tabla. 
+
+*/
+
+* {
+  border-collapse: collapse;
+}
+table {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+tr {
+  border: 1px solid black;
+}
+
+thead {
+  display: none;
+}
+
+tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.favoritos-fila {
+  padding: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  grid-template-areas:
+    "play cancion cancion"
+    "play album album"
+    "play views duracion";
+  border: thin solid var(--color-principal);
+  border-radius: 5px;
+  row-gap: 0.5rem;
+}
+
+.favoritos-play {
+  grid-area: play;
+}
+.favoritos-play i {
+  font-size: 1.5rem;
+  color: var(--color-principal);
+  cursor: pointer;
+}
+.favoritos-cancion {
+  grid-area: cancion;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.favoritos-cancion span {
+  font-size: 1.25rem;
+}
+.favoritos-cancion i {
+  color: var(--color-principal);
+  cursor: pointer;
+}
+.favoritos-album {
+  grid-area: album;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.favoritos-album i {
+  color: var(--color-principal);
+  cursor: pointer;
+}
+.favoritos-duracion {
+  grid-area: duracion;
+}
+.favoritos-views {
+  grid-area: views;
+  color: var(--color-gris);
+  font-size: 0.875rem;
+}
+
+.favoritos-play,
+.favoritos-duracion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  thead {
+    display: block;
+  }
+  td,
+  th {
+    border: thin solid var(--color-principal);
+  }
+  tr {
+    border: none;
+  }
+
+  tr td,
+  tr th {
+    padding: 1rem;
+  }
+
+  tbody {
+    gap: 0;
+  }
+  .favoritos-fila,
+  .favoritos-hfila {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr 120px 120px;
+    grid-template-areas: "play cancion album duracion views";
+    border: none;
+    border-radius: 0;
+  }
+  .favoritos-views {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-blanco);
+    font-size: 1rem;
+  }
+
+  .favoritos-hplay {
+    grid-area: play;
+  }
+  .favoritos-hcancion {
+    grid-area: cancion;
+  }
+  .favoritos-halbum {
+    grid-area: album;
+  }
+  .favoritos-hduracion {
+    grid-area: duracion;
+  }
+  .favoritos-hviews {
+    grid-area: views;
+  }
+
+  .favoritos-hplay,
+  .favoritos-hduracion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -5,31 +5,65 @@
 */
 
 .aside {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-negro);
-    border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-negro);
+  border-radius: 5px;
+  padding: 1rem;
 }
 
 .aside-foto {
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside-foto-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.aside-foto img {
+  height: 300px;
 }
 
 .aside-texto {
-    line-height: 1.75;
-    padding: .5rem;
-    font-size: var(--letra-p);
-    color: var(--color-blanco);
+  line-height: 1.75;
+  padding: 0.5rem;
+  font-size: var(--letra-p);
+  color: var(--color-blanco);
 }
 
 .aside-texto p {
-    margin: 0;
+  margin: 0;
 }
 
 .aside-estrella {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    color: var(--color-principal);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--color-principal);
+  cursor: pointer;
 }
+
+@media screen and (min-width: 768px) {
+  .aside {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .aside-foto,
+  .aside-texto {
+    flex: 1;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .aside {
+      flex-direction: column;
+    }
+  }
+  

@@ -26,13 +26,15 @@
             <h2 class="header-encabezado">SpotiLam</h2>
         </div>
         <div class="header-avatar">
-            <a href="../../index.html" class="header-cerrar-mobile">
+            <a href="../../index.html" class="header-cerrar-mobile" data-cerrar-sesion>
                 <i class="fa-solid fa-right-from-bracket"></i>
             </a>
             <div class="header-texto">
-                <p class="header-usuario">Nombre Usuario</p>
-                <a href="../../index.html" class="header-cerrar">Cerrar Sesion</a>
-            </div>
+                <p class="header-usuario" data-nombre-usuario></p>
+                <a href="../../index.html" class="header-cerrar" data-cerrar-sesion
+                  >Cerrar Sesion</a
+                >
+              </div>
             <a href="../paginas/perfil.html" class="header-perfil">
                 <i class="fa-solid fa-user"></i>
             </a>
@@ -155,6 +157,39 @@
         </div>
     </footer>
     <!-- Componente FOOTER -->
+
+    <script>
+        const d = document;
+        const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
+        const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
+  
+        d.addEventListener("DOMContentLoaded", (e) => {
+          const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
+  
+          console.log(datosDesdeLS);
+  
+          datosDesdeLS.usuarios.forEach((e) => {
+            if (e.estado) {
+              $nombreUsuario.textContent = e.usuario;
+            }
+          });
+  
+          d.addEventListener("click", (e) => {
+            if (e.target == $cerrarSesion) {
+              e.preventDefault();
+              console.log("cerraste sesion");
+              datosDesdeLS.usuarios.forEach((e) => {
+                if (e.estado) {
+                  e.estado = false;
+                }
+              });
+  
+              localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
+              location.href = "../../index.html";
+            }
+          });
+        });
+      </script>
 </body>
 
 

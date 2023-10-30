@@ -34,13 +34,15 @@
             <h2 class="header-encabezado">SpotiLam</h2>
         </div>
         <div class="header-avatar">
-            <a href="../../index.html" class="header-cerrar-mobile">
+            <a href="../../index.html" class="header-cerrar-mobile" data-cerrar-sesion>
                 <i class="fa-solid fa-right-from-bracket"></i>
             </a>
             <div class="header-texto">
-                <p class="header-usuario">Nombre Usuario</p>
-                <a href="../../index.html" class="header-cerrar">Cerrar Sesion</a>
-            </div>
+                <p class="header-usuario" data-nombre-usuario></p>
+                <a href="../../index.html" class="header-cerrar" data-cerrar-sesion
+                  >Cerrar Sesion</a
+                >
+              </div>
             <a href="../paginas/perfil.html" class="header-perfil">
                 <i class="fa-solid fa-user"></i>
             </a>
@@ -49,44 +51,49 @@
     <main class="cajaCentrada">
     <section class="planPagar">
         <div class="tituloCentrado">
-        <h3>Elegiste el plan infinito</h3>
-        <img src="../../assets/img/PlanInfinito.jpg">
+        <h3 class="plan-elegido"></h3>
+        <div class="img"></div>
       
-        <article><b>Música sin anuncios.</b></article>
- 
-        <article><b>Escucha tus canciones en cualquier lugar.</b></article>
-       
-        <article><b>Reproducción on-demand.</b></article>
-      
-        <article><b>Prepaga o suscribite.</b></article>  
+        <article><b>✓ Música sin anuncios</b></article>
+        <article><b>✓ Escucha tus canciones en cualquier lugar</b></article>
+        <article><b>✓ Reproducción on-demand</b></article>
+        <article><b>✓ Prepaga o suscribite</b></article>  
+
+        <div class="precio"></div>
+
         </div>
 
 
         <section class="cajitas">
             
             <article>
-                <label for="Tarjeta">Tarjeta</label>
-                <input type="number" name="Numero de tarjeta" placeholder="Numero de tarjeta" class="cajasValue">
+                <label for="Tarjeta" class="nombreCampo">Tarjeta</label>
+                <input type="number" id="Tarjeta" placeholder="Numero de tarjeta" class="cajasValue">
+                <p class="alertaTarjeta"></p>
+
             </article>
            
             <article>
-                <label for="VTO">VTO</label>
-                <input type="date" name="Fecha de vencimiento" class="cajasValue">
+                <label for="VTO" class="nombreCampo">VTO</label>
+                <input type="date" id="VTO" class="cajasValue">
+                <p class="alertaVTO"></p>
             </article>
           
             <article>
-                <label for="CVC">CVC</label>
-                <input type="number" name="Codigo de seguridad" placeholder="Codigo de seguridad" class="cajasValue">
+                <label for="CVC" class="nombreCampo">CVC</label>
+                <input type="number" id="CVC" placeholder="Codigo de seguridad" class="cajasValue">
+                <p class="alertaCod"></p>
             </article>
     
             <article>
-                <label for="Nombre y apellido">Nombre y apellido</label>
-                <input type="text" name="Nombre y apellido" placeholder="Ingrese nombre y apellido" class="cajasValue">
+                <label for="NombreYApellido" class="nombreCampo">Nombre y apellido</label>
+                <input type="text" id="NombreYApellido" placeholder="Ingrese nombre y apellido" class="cajasValue">
+                <p class="alertaNombre"></p>
             </article>
         </section>
         <form method="get" action="../paginas/inicio.html" class="cajota">
             <article><button type="submit" class="boton">Cancelar</button></article>
-            <article><button type="submit" class="boton">Pagar</button></article>
+            <article><button type="submit" class="boton btnPagar">Pagar</button></article>
         </form>
     
     </main>
@@ -143,6 +150,110 @@
         </div>
     </footer>
     <!-- Componente FOOTER -->
+
+    <script>
+        const d = document;
+        const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
+        const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
+  
+        d.addEventListener("DOMContentLoaded", (e) => {
+          const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
+  
+          console.log(datosDesdeLS);
+  
+          datosDesdeLS.usuarios.forEach((e) => {
+            if (e.estado) {
+              $nombreUsuario.textContent = e.usuario;
+            }
+          });
+  
+          d.addEventListener("click", (e) => {
+            if (e.target == $cerrarSesion) {
+              e.preventDefault();
+              console.log("cerraste sesion");
+              datosDesdeLS.usuarios.forEach((e) => {
+                if (e.estado) {
+                  e.estado = false;
+                }
+              });
+  
+              localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
+              location.href = "../../index.html";
+            }
+          });
+        });
+      </script>
         
+
+    <script>
+
+        let URLActual = window.location.search;
+        // console.log(URLActual);
+
+        let pathActual = window.location.pathname;
+        // console.log(pathActual);
+
+        let URLPartida = URLActual.split("=");
+        const NOMBRE_PLAN = URLPartida[1].toUpperCase();
+        // console.log(NOMBRE_PLAN);
+
+        const TITULO = document.querySelector(".plan-elegido").innerHTML="Ha elegido el PLAN " + NOMBRE_PLAN;
+        // console.log(TITULO)
+        
+        // const IMAGEN = "<img src=\"../../assets/img/PlanInfinito.jpg\">"
+        if(NOMBRE_PLAN == "MENSUAL"){
+            document.querySelector(".img").innerHTML = "<img src=\"../../assets/img/PlanMensual.jpg\">";
+            document.querySelector(".precio").innerHTML = "Total: $900";
+            
+        } else if (NOMBRE_PLAN == "ANUAL"){
+            document.querySelector(".img").innerHTML = "<img src=\"../../assets/img/PlanAnual.jpg\">";
+            document.querySelector(".precio").innerHTML = "Total: $9000";
+
+        } else if (NOMBRE_PLAN == "INFINITO"){
+            document.querySelector(".img").innerHTML = "<img src=\"../../assets/img/PlanInfinito.jpg\">";
+            document.querySelector(".precio").innerHTML = "Total: $15000";
+
+        }
+        
+
+
+        const BTN_PAGAR = document.querySelector(".btnPagar");
+        
+        BTN_PAGAR.addEventListener("click", (e) => {
+
+            let nroTarjeta = document.querySelector("#Tarjeta").value;
+            let cod = document.querySelector("#CVC").value; 
+            let vto = document.querySelector("#VTO").value;
+            let nombre = document.querySelector("#NombreYApellido").value;
+
+            document.querySelector(".alertaTarjeta").innerHTML = ""
+            document.querySelector(".alertaCod").innerHTML = ""
+            document.querySelector(".alertaVTO").innerHTML = ""
+            document.querySelector(".alertaNombre").innerHTML = ""
+
+            if(nroTarjeta.length != 16){
+                e.preventDefault();
+                document.querySelector(".alertaTarjeta").innerHTML = "Número de tarjeta inválido"
+            } 
+            if (cod.length != 3 || cod == '000' || cod == '999'){
+                e.preventDefault();
+                document.querySelector(".alertaCod").innerHTML = "Código de seguridad inválido"
+            }   
+            if (vto.length == 0){
+                e.preventDefault();
+                document.querySelector(".alertaVTO").innerHTML = "Fecha de vencimiento inválida"
+            }
+            if (nombre.length == 0){
+                e.preventDefault();
+                document.querySelector(".alertaNombre").innerHTML = "Nombre y apellido inválidos"
+            }
+
+        })
+
+
+
+
+    </script>
+
 </body>
 </html>

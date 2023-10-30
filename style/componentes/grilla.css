@@ -8,11 +8,18 @@
 .grilla {
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr;
     margin: 1rem;
+    grid-template-columns: 1fr;
 }
 
 .grilla-album {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grilla-album a {
     position: relative;
 }
 
@@ -37,8 +44,6 @@
     
     .grilla {
         grid-template-columns: 1fr 1fr 1fr;
-        margin: 2rem;
-        gap: 2rem;
     }
 
 }
@@ -47,6 +52,7 @@
     
     .grilla {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
     }
 
 }
