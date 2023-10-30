@@ -40,7 +40,7 @@
         </div>
         <div class="search-container">
             <form class="formulario" action="#">
-              <input type="text" placeholder="Busca algo.." name="search">
+              <input type="text" placeholder="Busca algo.." name="search" data-loQueElUserBusca>
               <button type="submit"><i class="fa fa-search"></i> </button>
             </form>
         </div>
@@ -285,6 +285,19 @@
         </div>
     </footer>
     <!-- Componente FOOTER -->
+    <script>
+        const d = document;
+        const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
+        /* escucho lo que el user escribe */
+        const laBusqueda = d.querySelector(`[data-loQueElUserBusca]`);
 
+        laBusqueda.addEventListener('keyup', (e) =>  {
+            console.log(laBusqueda.value);
+        })
+
+        d.addEventListener("DOMContentLoaded", (e) => 
+        {    }        
+        )
+    </script>
 </body>
 </html>
