@@ -41,7 +41,7 @@
       </div>
       <div class="search-container">
         <form class="formulario" action="#">
-          <input type="text" placeholder="Busca algo.." name="search" />
+          <input type="text" placeholder="Busca algo.." name="search"  data-busqueda/>
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
@@ -306,7 +306,7 @@
       d.addEventListener("DOMContentLoaded", (e) => {
         const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
 
-        console.log(datosDesdeLS);
+      
 
         datosDesdeLS.usuarios.forEach((e) => {
           if (e.estado) {
@@ -328,7 +328,30 @@
             location.href = "../../index.html";
           }
         });
-      });
+      })
+      
+      
+      d.addEventListener("keyup", (e) => {
+        const palabraBuscada = document.querySelector(`[data-busqueda]`).value;
+        
+
+        const datosDesdeLS2 = JSON.parse(localStorage.getItem("datos"));
+        const albunesFIltrados = datosDesdeLS2.catalogo.filter( (e) => e.album.includes(palabraBuscada) )
+        
+
+        const dondeVoyaDejarsoloLosFIltrados = d.querySelector('.grilla')
+        
+        dondeVoyaDejarsoloLosFIltrados.innerHTML = [];
+        for (const e of albunesFIltrados) {
+        `<article class="grilla-album">
+          <a href="../paginas/musica-sonando.html?album="${e.id_album}">
+            <img src="${e.imagen}" alt="" />
+          </a>
+        </article>`
+      }
+      })
+   
+   
     </script>
   </body>
 </html>
