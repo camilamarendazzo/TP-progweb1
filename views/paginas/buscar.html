@@ -41,7 +41,7 @@
       </div>
       <div class="search-container">
         <form class="formulario" action="#">
-          <input type="text" placeholder="Busca algo.." name="search" />
+          <input type="text" placeholder="Busca algo.." name="search"  data-busqueda/>
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
@@ -55,10 +55,32 @@
             >Cerrar Sesion</a
           >
         </div>
+<<<<<<< HEAD
+        <div class="search-container">
+            <form class="formulario" action="#">
+              <input type="text" placeholder="Busca algo.." name="search" data-loQueElUserBusca>
+              <button type="submit"><i class="fa fa-search"></i> </button>
+            </form>
+        </div>
+        <div class="header-avatar">
+            <a href="../../index.html" class="header-cerrar-mobile">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+            <div class="header-texto">
+                <p class="header-usuario">Nombre Usuario</p>
+                <a href="../../index.html" class="header-cerrar">Cerrar Sesion</a>
+            </div>
+            <a href="perfil.html" class="header-perfil">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+        
+=======
         <a href="perfil.html" class="header-perfil">
           <i class="fa-solid fa-user"></i>
         </a>
       </div>
+>>>>>>> dad35e38128a3fd7143a8a2bf993b9417da977c4
     </header>
     <!-- Componente HEADER -->
 
@@ -297,7 +319,24 @@
       </div>
     </footer>
     <!-- Componente FOOTER -->
+    <script>
+        const d = document;
+        const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
+        /* escucho lo que el user escribe */
+        const laBusqueda = d.querySelector(`[data-loQueElUserBusca]`);
 
+<<<<<<< HEAD
+        laBusqueda.addEventListener('keyup', (e) =>  {
+            console.log(laBusqueda.value);
+        })
+
+        d.addEventListener("DOMContentLoaded", (e) => 
+        {    }        
+        )
+    </script>
+</body>
+</html>
+=======
     <script>
       const d = document;
       const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
@@ -306,7 +345,7 @@
       d.addEventListener("DOMContentLoaded", (e) => {
         const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
 
-        console.log(datosDesdeLS);
+      
 
         datosDesdeLS.usuarios.forEach((e) => {
           if (e.estado) {
@@ -328,7 +367,31 @@
             location.href = "../../index.html";
           }
         });
-      });
+      })
+      
+      
+      d.addEventListener("keyup", (e) => {
+        const palabraBuscada = document.querySelector(`[data-busqueda]`).value;
+        
+
+        const datosDesdeLS2 = JSON.parse(localStorage.getItem("datos"));
+        const albunesFIltrados = datosDesdeLS2.catalogo.filter( (e) => e.album.includes(palabraBuscada) )
+        
+
+        const dondeVoyaDejarsoloLosFIltrados = d.querySelector('.grilla')
+        
+        dondeVoyaDejarsoloLosFIltrados.innerHTML = [];
+        for (const e of albunesFIltrados) {
+        `<article class="grilla-album">
+          <a href="../paginas/musica-sonando.html?album="${e.id_album}">
+            <img src="${e.imagen}" alt="" />
+          </a>
+        </article>`
+      }
+      })
+   
+   
     </script>
   </body>
 </html>
+>>>>>>> dad35e38128a3fd7143a8a2bf993b9417da977c4
