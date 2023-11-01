@@ -4,7 +4,7 @@ const data = {
     {
       "id_album": "1",
       "album": "La última misión",
-      "imagen": "imagen La última misión"", 
+      "imagen": "imagen La última misión", 
       "descripcion":
         "La última misión es el décimo y último álbum de estudio del dúo puertorriqueño de reguetón Wisin & Yandel. Fue publicado el 30 de septiembre de 2022. El primer sencillo inédito de este álbum, «Recordar», fue lanzado en diciembre de 2021. También incluyó canciones lanzadas en años previos, como «Chica bombastic» y «Ganas de ti».",
       "canciones": [
