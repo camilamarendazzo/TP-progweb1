@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario</title>
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="../../style/paginas/index-registro.css">
-    <link rel="stylesheet" href="../../style/normalize.css">
-    <link rel="stylesheet" href="../../style/general.css">
-    <link rel="stylesheet" href="../../style/componentes/footer.css">
-    <link rel="stylesheet" href="../../style/componentes/header.css">
- 
- <!-- Font Awesome Icons -->
- <script src="https://kit.fontawesome.com/ed2ba7d635.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="../../style/normalize.css" />
+    <link rel="stylesheet" href="../../style/general.css" />
 
-<body class="body">
+    <link rel="stylesheet" href="../../style/componentes/header.css" />
+    <link rel="stylesheet" href="../../style/paginas/index-registro.css" />
+    <link rel="stylesheet" href="../../style/paginas/registro.css" />
+    <link rel="stylesheet" href="../../style/componentes/footer.css" />
 
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/ed2ba7d635.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="body">
+    
     <header class="header">
-        <a href="#" class="header-menu-mobile">
-            <i class="fa-solid fa-bars"></i>
-        </a>
         <div class="header-titulo">
-            <h2 class="header-encabezado">SpotiLam</h2>
+            <a href="#">
+                <h2 class="header-encabezado">Perfil de Usuario</h2>
+            </a>
         </div>
         <div class="header-avatar">
             <a href="../../index.html" class="header-cerrar-mobile" data-cerrar-sesion>
@@ -41,155 +45,136 @@
         </div>
     </header>
 
+    <main>
+      <div class="contenedor">
+        <h1>Información Personal</h1>
+        <div class="estilo">
+          <form action="iniciar-sesion.html" method="post" class="index-form">
+            <label for="Nombre de usuario">Usuario</label>
+            <input
+              type="text"
+              name="Nombre de usuario"
+              placeholder="Nombre de usuario"
+            />
 
-    
-   <main class="contenedor">
-    <h1>Perfil de Usuario</h1>
-    <div class="estilo">
-    <form action="iniciar-sesion.html" method="post">
-        <label for="Nombre de usuario ">Usuario</label>
-        <p></p>
-        <input type="text" name="Nombre de usuario" placeholder="Nombre de usuario">
-        <br>
-        <p>
+            <label for="password">Contraseña</label>
 
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Ingrese contraseña"
+            />
 
-        </p>
-        <label for="password">Contraseña</label>
-        <p></p>
-        <input type="password" name="password" id="password" placeholder="Ingrese contraseña">
-        <br>
-        <p>
+            <label for="password">Repetir contraseña</label>
 
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Repita contraseña"
+            />
 
-        </p>
-        <label for="password">Repetir contraseña</label>
-        <p></p>
-        <input type="password" name="password" id="password" placeholder="Repita contraseña">
-        <br>
-        <p>
+            <label for="fecha">Fecha de Nacimiento</label>
 
+            <input type="date" id="fecha" name="fecha" />
 
-        </p>
+            <label for="email">E-mail</label>
+
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Ingrese su email"
+            />
+          </form>
+        </div>
+        <a href="./premium.html" class="index-enlace">Premium</a>
+        <a href="../../index.html" class="index-enlace">Eliminar Usuario</a>
+
         
-        <label for="fecha">Fecha de Nacimiento</label>
-        <p></p>
-        <input type="date" id="fecha" name="fecha">
-        <br>
-        <p>
-
-
-        </p>
-        <label for="email">E-mail</label>
-        <p></p>
-        <input type="text" name="email" id="email" placeholder="Ingrese su email">
-        <br>
-        <p>
-
-
-        </p>
-        <!-- <input type="submit" value="Iniciar sesión"> -->
-    </form>
-    </div>
-    <!-- <h2>Formulario</h2> -->
-        <a style="color: var(--color-principal) ;" href="./premium.html">Premium</a>
-   
-        <a style="color: var(--color-principal) ;" href="../../index.html">Eliminar usuario</a>
-        <br>
 
         <div class="caja">
-        <div class="boton "> <a class="index-enlace" href="../../index.html">Guardar</a> </div>
-       <div class="boton"> <a  class="index-enlace" href="./mis-albums.html">Volver al Home</a> </div>
+          <div class="boton"><a href="../../index.html" class="index-enlace">Registrarse</a></div>
+          <div class="boton">
+            <a href="../../index.html" class="index-enlace">Iniciar Sesion</a>
+          </div>
         </div>
-
+      </div>
     </main>
 
-
-     <!-- Componente FOOTER -->
+    <!-- Componente FOOTER -->
     <footer class="footer">
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Brian</h3>
-            <h3 class="footer-nombre">Klehr</h3>
-            <p class="footer-dni">41.026.580</p>
-            <a href="https://github.com/Sur4x" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Alexander</h3>
-            <h3 class="footer-nombre">Funes</h3>
-            <p class="footer-dni">34.117.699</p>
-            <a href="https://github.com/javierfunes2018" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Antonella</h3>
-            <h3 class="footer-nombre">Politi</h3>
-            <p class="footer-dni">31.492.164</p>
-            <a href="https://github.com/AntonellaPoliti" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Nahuel</h3>
-            <h3 class="footer-nombre">Esposito</h3>
-            <p class="footer-dni">43.862.624</p>
-            <a href="https://github.com/Nahuel0911" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Gustavo</h3>
-            <h3 class="footer-nombre">Miño</h3>
-            <p class="footer-dni">38.126.357</p>
-            <a href="https://github.com/gus-emma-uni" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Camila</h3>
-            <h3 class="footer-nombre">Marendazzo</h3>
-            <p class="footer-dni">43.054.264</p>
-            <a href="https://github.com/camilamarendazzo" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Brian</h3>
+        <h3 class="footer-nombre">Klehr</h3>
+        <p class="footer-dni">41.026.580</p>
+        <a href="https://github.com/Sur4x" target="_blank" class="footer-icono">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Alexander</h3>
+        <h3 class="footer-nombre">Funes</h3>
+        <p class="footer-dni">34.117.699</p>
+        <a
+          href="https://github.com/javierfunes2018"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Antonella</h3>
+        <h3 class="footer-nombre">Politi</h3>
+        <p class="footer-dni">31.492.164</p>
+        <a
+          href="https://github.com/AntonellaPoliti"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Nahuel</h3>
+        <h3 class="footer-nombre">Esposito</h3>
+        <p class="footer-dni">43.862.624</p>
+        <a
+          href="https://github.com/Nahuel0911"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Gustavo</h3>
+        <h3 class="footer-nombre">Miño</h3>
+        <p class="footer-dni">38.126.357</p>
+        <a
+          href="https://github.com/gus-emma-uni"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Camila</h3>
+        <h3 class="footer-nombre">Marendazzo</h3>
+        <p class="footer-dni">43.054.264</p>
+        <a
+          href="https://github.com/camilamarendazzo"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
     </footer>
     <!-- Componente FOOTER -->
-
-    <script>
-        const d = document;
-        const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
-        const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
-  
-        d.addEventListener("DOMContentLoaded", (e) => {
-          const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
-  
-          console.log(datosDesdeLS);
-  
-          datosDesdeLS.usuarios.forEach((e) => {
-            if (e.estado) {
-              $nombreUsuario.textContent = e.usuario;
-            }
-          });
-  
-          d.addEventListener("click", (e) => {
-            if (e.target == $cerrarSesion) {
-              e.preventDefault();
-              console.log("cerraste sesion");
-              datosDesdeLS.usuarios.forEach((e) => {
-                if (e.estado) {
-                  e.estado = false;
-                }
-              });
-  
-              localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
-              location.href = "../../index.html";
-            }
-          });
-        });
-      </script>
 </body>
 
 

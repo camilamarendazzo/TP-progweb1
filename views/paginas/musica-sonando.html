@@ -7,107 +7,111 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Musica Sonando</title>
 
     <!-- Estilos -->
-   
-    <link rel="stylesheet" href="../../style/normalize.css">
-    <link rel="stylesheet" href="../../style/general.css">
+
+    <link rel="stylesheet" href="../../style/normalize.css" />
+    <link rel="stylesheet" href="../../style/general.css" />
     <!--<link rel="stylesheet" href="../../style/index.css">-->
 
-    <link rel="stylesheet" href="../../style/componentes/header.css">
-    <link rel="stylesheet" href="../../style/componentes/menu.css">
-    <link rel="stylesheet" href="../../style/componentes/aside.css">
-    <link rel="stylesheet" href="../../style/componentes/reproductor.css">
-    <link rel="stylesheet" href="../../style/componentes/tabla-2.css">
-    <link rel="stylesheet" href="../../style/componentes/footer.css">
+    <link rel="stylesheet" href="../../style/componentes/header.css" />
+    <link rel="stylesheet" href="../../style/componentes/menu.css" />
+    <link rel="stylesheet" href="../../style/componentes/aside.css" />
+    <link rel="stylesheet" href="../../style/componentes/reproductor.css" />
+    <link rel="stylesheet" href="../../style/componentes/tabla-2.css" />
+    <link rel="stylesheet" href="../../style/componentes/footer.css" />
 
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/ed2ba7d635.js" crossorigin="anonymous"></script>
-</head>
-<body class="body">
-
+    <script
+      src="https://kit.fontawesome.com/ed2ba7d635.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="body">
     <!-- Componente HEADER -->
     <header class="header">
-        <a href="#" class="header-menu-mobile">
-            <i class="fa-solid fa-bars"></i>
+      <a href="#" class="header-menu-mobile">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <div class="header-titulo">
+        <a href="#">
+          <h2 class="header-encabezado"></h2>
         </a>
-        <div class="header-titulo">
-            <a href="#">
-                <h2 class="header-encabezado"></h2>
-            </a>
+      </div>
+      <div class="header-avatar">
+        <a
+          href="../../index.html"
+          class="header-cerrar-mobile"
+          data-cerrar-sesion
+        >
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+        <div class="header-texto">
+          <p class="header-usuario" data-nombre-usuario></p>
+          <a href="../../index.html" class="header-cerrar" data-cerrar-sesion
+            >Cerrar Sesion</a
+          >
         </div>
-        <div class="header-avatar">
-            <a href="../../index.html" class="header-cerrar-mobile" data-cerrar-sesion>
-                <i class="fa-solid fa-right-from-bracket"></i>
-            </a>
-            <div class="header-texto">
-                <p class="header-usuario" data-nombre-usuario></p>
-                <a href="../../index.html" class="header-cerrar" data-cerrar-sesion
-                  >Cerrar Sesion</a
-                >
-              </div>
-            <a href="perfil.html" class="header-perfil">
-                <i class="fa-solid fa-user"></i>
-            </a>
-        </div>
+        <a href="perfil.html" class="header-perfil">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
     </header>
-    <!-- Componente HEADER --> 
-    
-    
-    <section class="barra-lateral">
-        
-        <!-- Componente MENU -->
-        <nav class="menu">
-            <ul class="menu-lista">
-                <li class="menu-item">
-                    <a href="inicio.html" class="menu-link">
-                        <div class="menu-icono">
-                            <i class="fa-solid fa-house"></i>
-                        </div>
-                        <div class="menu-texto">
-                            <span>Home</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="buscar.html" class="menu-link">
-                        <div class="menu-icono">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                        <div class="menu-texto">
-                            <span>Buscar</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="mis-albums.html" class="menu-link">
-                        <div class="menu-icono">
-                            <i class="fa-solid fa-compact-disc"></i>
-                        </div>
-                        <div class="menu-texto">
-                            <span>Albums</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="canciones-favoritas.html" class="menu-link">
-                        <div class="menu-icono">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                        <div class="menu-texto">
-                            <span>Favoritos</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- Componente MENU -->
+    <!-- Componente HEADER -->
 
-        <!-- Componente ASIDE -->
+    <section class="barra-lateral">
+      <!-- Componente MENU -->
+      <nav class="menu">
+        <ul class="menu-lista">
+          <li class="menu-item">
+            <a href="inicio.html" class="menu-link">
+              <div class="menu-icono">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <div class="menu-texto">
+                <span>Home</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="buscar.html" class="menu-link">
+              <div class="menu-icono">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="menu-texto">
+                <span>Buscar</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="mis-albums.html" class="menu-link">
+              <div class="menu-icono">
+                <i class="fa-solid fa-compact-disc"></i>
+              </div>
+              <div class="menu-texto">
+                <span>Albums</span>
+              </div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="canciones-favoritas.html" class="menu-link">
+              <div class="menu-icono">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="menu-texto">
+                <span>Favoritos</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Componente MENU -->
+
+      <!-- Componente ASIDE -->
       <aside class="aside">
         <div class="aside-foto">
           <div class="aside-foto-div">
@@ -115,7 +119,6 @@
             <span class="aside-estrella">
               <i class="fa-solid fa-star"></i>
             </span>
-
           </div>
         </div>
         <div class="aside-texto">
@@ -127,443 +130,216 @@
         </div>
       </aside>
       <!-- Componente ASIDE -->
-        
-        
     </section>
-    
-    
-    
-    
+
     <main>
-        
-        <!-- Componente REPRODUCTOR --> 
-        <section class="reproductor">
-            <article class="reproductor-botones">
-                <a href="#" class="reproductor-pause">
-                    <i class="fa-solid fa-pause"></i>
-                </a>
-                <a href="#" class="reproductor-play">
-                    <i class="fa-solid fa-play"></i>
-                </a>
-                <a href="#" class="reproductor-stop">
-                    <i class="fa-solid fa-stop"></i>
-                </a>
-            </article>
-            <article class="reproductor-controles">
-                <a href="#" class="reproductor-sonido">
-                    <i class="fa-solid fa-volume-high"></i>
-                </a>
-                <div class="reproductor-contador">
-                    <input type="range" name="" id="" value="25" min="0" max="100">
-                </div>
-                <a href="#" class="reproductor-ampliar">
-                    <i class="fa-solid fa-expand"></i>
-                </a>
-            </article>
-        </section>
-        <!-- Componente REPRODUCTOR --> 
-        
-        
-        <!-- Componente TABLA --> 
-        <section class="favoritos">
-            <table>
-                <thead>
-                  <tr class="favoritos-hfila">
-                    <th class="favoritos-hplay"></th>
-                    <th class="favoritos-hcancion">Canción</th>
-                    <th class="favoritos-halbum">Album</th>
-                    <th class="favoritos-hduracion">Duración</th>
-                    <th class="favoritos-hviews">Views</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 1</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 1</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 2</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 2</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 3</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 3</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 4</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 4</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 5</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 5</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 6</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 6</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 7</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 7</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 8</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 8</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 9</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 9</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 10</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 10</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 11</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 11</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                  <tr class="favoritos-fila">
-                    <td class="favoritos-play">
-                      <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td class="favoritos-cancion">
-                      <span>Canción 12</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-album">
-                      <span>Album 12</span>
-                      <span>
-                        <i class="fa-regular fa-star"></i>
-                      </span>
-                    </td>
-                    <td class="favoritos-duracion">2:30</td>
-                    <td class="favoritos-views">
-                      <span>
-                        <i class="fa-solid fa-eye"></i>
-                      </span>
-                      <span>12594</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+      <!-- Componente REPRODUCTOR -->
+      <section class="reproductor">
+        <article class="reproductor-botones">
+          <a href="#" class="reproductor-pause">
+            <i class="fa-solid fa-pause"></i>
+          </a>
+          <a href="#" class="reproductor-play">
+            <i class="fa-solid fa-play"></i>
+          </a>
+          <a href="#" class="reproductor-stop">
+            <i class="fa-solid fa-stop"></i>
+          </a>
+        </article>
+        <article class="reproductor-controles">
+          <a href="#" class="reproductor-sonido">
+            <i class="fa-solid fa-volume-high"></i>
+          </a>
+          <div class="reproductor-contador">
+            <input type="range" name="" id="" value="25" min="0" max="100" />
+          </div>
+          <a href="#" class="reproductor-ampliar">
+            <i class="fa-solid fa-expand"></i>
+          </a>
+        </article>
+      </section>
+      <!-- Componente REPRODUCTOR -->
+
+      <!-- Componente TABLA -->
+      <section class="favoritos">
+        <table>
+          <thead>
+            <tr class="favoritos-hfila">
+              <th class="favoritos-hplay"></th>
+              <th class="favoritos-hcancion">Canción</th>
+              <th class="favoritos-halbum">Album</th>
+              <th class="favoritos-hduracion">Duración</th>
+              <th class="favoritos-hviews">Views</th>
+            </tr>
+          </thead>
+          <tbody data-tbody>
             
-            
-        </section>
-        <!-- Componente TABLA --> 
-        
-        
-        
+          </tbody>
+        </table>
+      </section>
+      <!-- Componente TABLA -->
     </main>
 
-    
-    
-    
     <!-- Componente FOOTER -->
     <footer class="footer">
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Brian</h3>
-            <h3 class="footer-nombre">Klehr</h3>
-            <p class="footer-dni">41.026.580</p>
-            <a href="https://github.com/Sur4x" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Alexander</h3>
-            <h3 class="footer-nombre">Funes</h3>
-            <p class="footer-dni">34.117.699</p>
-            <a href="https://github.com/javierfunes2018" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Antonella</h3>
-            <h3 class="footer-nombre">Politi</h3>
-            <p class="footer-dni">31.492.164</p>
-            <a href="https://github.com/AntonellaPoliti" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Nahuel</h3>
-            <h3 class="footer-nombre">Esposito</h3>
-            <p class="footer-dni">43.862.624</p>
-            <a href="https://github.com/Nahuel0911" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Gustavo</h3>
-            <h3 class="footer-nombre">Miño</h3>
-            <p class="footer-dni">38.126.357</p>
-            <a href="https://github.com/gus-emma-uni" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Camila</h3>
-            <h3 class="footer-nombre">Marendazzo</h3>
-            <p class="footer-dni">43.054.264</p>
-            <a href="https://github.com/camilamarendazzo" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Brian</h3>
+        <h3 class="footer-nombre">Klehr</h3>
+        <p class="footer-dni">41.026.580</p>
+        <a href="https://github.com/Sur4x" target="_blank" class="footer-icono">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Alexander</h3>
+        <h3 class="footer-nombre">Funes</h3>
+        <p class="footer-dni">34.117.699</p>
+        <a
+          href="https://github.com/javierfunes2018"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Antonella</h3>
+        <h3 class="footer-nombre">Politi</h3>
+        <p class="footer-dni">31.492.164</p>
+        <a
+          href="https://github.com/AntonellaPoliti"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Nahuel</h3>
+        <h3 class="footer-nombre">Esposito</h3>
+        <p class="footer-dni">43.862.624</p>
+        <a
+          href="https://github.com/Nahuel0911"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Gustavo</h3>
+        <h3 class="footer-nombre">Miño</h3>
+        <p class="footer-dni">38.126.357</p>
+        <a
+          href="https://github.com/gus-emma-uni"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="footer-integrante">
+        <h3 class="footer-nombre">Camila</h3>
+        <h3 class="footer-nombre">Marendazzo</h3>
+        <p class="footer-dni">43.054.264</p>
+        <a
+          href="https://github.com/camilamarendazzo"
+          target="_blank"
+          class="footer-icono"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
     </footer>
     <!-- Componente FOOTER -->
 
-    <script>
-        const d = document;
-        const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
-        const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
-  
-        d.addEventListener("DOMContentLoaded", (e) => {
-          const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
-  
-          console.log(datosDesdeLS);
-  
-          datosDesdeLS.usuarios.forEach((e) => {
-            if (e.estado) {
-              $nombreUsuario.textContent = e.usuario;
-            }
-          });
-  
-          d.addEventListener("click", (e) => {
-            if (e.target == $cerrarSesion) {
-              e.preventDefault();
-              console.log("cerraste sesion");
-              datosDesdeLS.usuarios.forEach((e) => {
-                if (e.estado) {
-                  e.estado = false;
-                }
-              });
-  
-              localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
-              location.href = "../../index.html";
-            }
-          });
-        });
-      </script>
+    <template id="template-fila">
+      <tr class="favoritos-fila">
+        <td class="favoritos-play">
+          <i class="fa-solid fa-play"></i>
+        </td>
+        <td class="favoritos-cancion">
+          <span data-cancion>Canción 1</span>
+          <span>
+            <i class="fa-regular fa-star"></i>
+          </span>
+        </td>
+        <td class="favoritos-album">
+          <span data-album>Album 1</span>
+          <span>
+            <i class="fa-regular fa-star"></i>
+          </span>
+        </td>
+        <td class="favoritos-duracion" data-duracion>2:30</td>
+        <td class="favoritos-views">
+          <span>
+            <i class="fa-solid fa-eye"></i>
+          </span>
+          <span data-views>12594</span>
+        </td>
+      </tr>
+    </template>
 
-</body>
+    <script>
+      const d = document;
+      const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
+      const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
+
+      d.addEventListener("DOMContentLoaded", (e) => {
+        const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
+
+        //console.log(datosDesdeLS);
+
+        datosDesdeLS.usuarios.forEach((e) => {
+          if (e.estado) {
+            $nombreUsuario.textContent = e.usuario;
+          }
+        });
+
+        let albumActual = location.search.split("=").pop();
+        console.log(albumActual);
+
+        const $tbody = d.querySelector(`[data-tbody]`);
+        const $template = d.getElementById(`template-fila`).content;
+        const $fragment = d.createDocumentFragment();
+
+
+        console.log(datosDesdeLS.catalogo);
+
+        datosDesdeLS.catalogo.forEach((e) => {
+          if (e.id_album === albumActual) {
+            console.log(e.album);
+
+            e.canciones.forEach((cancion) => {
+              $template.querySelector(`[data-cancion]`).textContent = cancion.nombre
+              $template.querySelector(`[data-album]`).textContent = e.album
+              $template.querySelector(`[data-duracion]`).textContent = cancion.duracion
+              $template.querySelector(`[data-views]`).textContent = cancion.views
+
+              let $clone = d.importNode($template, true);
+              $fragment.appendChild($clone)
+            });
+
+            $tbody.appendChild($fragment)
+
+          }
+        });
+
+        d.addEventListener("click", (e) => {
+          if (e.target == $cerrarSesion) {
+            e.preventDefault();
+            console.log("cerraste sesion");
+            datosDesdeLS.usuarios.forEach((e) => {
+              if (e.estado) {
+                e.estado = false;
+              }
+            });
+
+            localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
+            location.href = "../../index.html";
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -4,7 +4,7 @@ const data = {
     {
       "id_album": "1",
       "album": "La última misión",
-      "imagen": "#", 
+      "imagen": "https://spotilam7.netlify.app/assets/img/la ultima mision - wisin y yandel.jpg", 
       "descripcion":
         "La última misión es el décimo y último álbum de estudio del dúo puertorriqueño de reguetón Wisin & Yandel. Fue publicado el 30 de septiembre de 2022. El primer sencillo inédito de este álbum, «Recordar», fue lanzado en diciembre de 2021. También incluyó canciones lanzadas en años previos, como «Chica bombastic» y «Ganas de ti».",
       "canciones": [
@@ -145,7 +145,7 @@ const data = {
     {
       "id_album": "2",
       "album": "Legendaddy",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/legendaddy - daddy yankee.jpg",
       "descripcion":
         "Legendaddy es el séptimo y último álbum de estudio del cantante puertorriqueño Daddy Yankee, lanzado el 24 de marzo de 2022 por El Cartel Records, Universal Music Group y Republic Records.",
       "canciones": [
@@ -268,7 +268,7 @@ const data = {
     {
       "id_album": "3",
       "album": "Forever King",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/forever king - don omar.jpeg",
       "descripcion":
         "Forever King es el octavo álbum de estudio del cantante puertorriqueño Don Omar, publicado de manera anticipada el 15 de junio de 2023 a través de los sellos discográficos Unisono y Saban Music Group.",
       "canciones": [
@@ -385,7 +385,7 @@ const data = {
     {
       "id_album": "4",
       "album": "Bien Arriba",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/bien arriba - banda xxi.jpg",
       "descripcion":
         "Un material variado, con sonidos modernos ,caribeño,  su habitual esencia del subgénero  merengue fusionado con cuarteto un arte entre sobrio y descontracturado, fondo de espacio con estrellas, su logo en dorado ubicado en medio y debajo el titulo 'Bien Arriba'",
       "canciones": [
@@ -490,7 +490,7 @@ const data = {
     {
       "id_album": "5",
       "album": "Sin Limites",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/sin limites - la konga.jpg",
       "descripcion":
         "La Konga continúa disfrutando de su éxito y demostrando por qué llena todos los recitales que programa. Ahora, la banda cordobesa presenta su nuevo disco 'Sin Límites (10 Noches Mágicas en el Gran Rex)', grabado en vivo durante los 10 shows en el Teatro Gran Rex.",
       "canciones": [
@@ -553,7 +553,7 @@ const data = {
     {
       "id_album": "6",
       "album": "Hoy y Siempre",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/hoy y siempre - dale q' va.jpg",
       "descripcion":
         "La banda Dale Q'Va estrenó su nuevo disco, que consta de 15 canciones y se transformó en el quinto material discográfico desde su creación. Todas las canciones fueron grabadas en vivo y lo hicieron en Córdoba, La Rioja y Catamarca.",
       "canciones": [
@@ -652,7 +652,7 @@ const data = {
     {
       "id_album": "7",
       "album": "A Kind Of Magic",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/a kind of magic - queen.jpeg",
       "descripcion":
         "A Kind of Magic es el duodécimo álbum de estudio de Queen, el cual se lanzó a la venta el 2 de junio de 1986 en el Reino Unido y al día siguiente en Estados Unidos. El álbum tuvo gran éxito en Reino Unido, alcanzando el primer puesto en las listas y manteniéndose en éstas unas 63 semanas.",
       "canciones": [
@@ -733,7 +733,7 @@ const data = {
     {
       "id_album": "8",
       "album": "Invincible",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/invincible - michael jackson.jpeg",
       "descripcion":
         "Invincible es el décimo y último álbum de estudio del cantante estadounidense Michael Jackson. Fue lanzado el 30 de octubre de 2001 por Epic Records.",
       "canciones": [
@@ -838,7 +838,7 @@ const data = {
     {
       "id_album": "9",
       "album": "Let It Be",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/let it be - the beatles.jpeg",
       "descripcion":
         "Let It Be es el duodécimo y último álbum de estudio de la banda de rock inglesa The Beatles. Fue lanzado el 8 de mayo de 1970, días después de que se hiciera oficial la salida de Paul McCartney de la banda, y con ella la disolución del grupo.",
       "canciones": [
@@ -919,7 +919,7 @@ const data = {
     {
       "id_album": "10",
       "album": "La Nena De Argentina",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/la nena de argentina - maria becerra.jpeg",
       "descripcion":
         "La Nena de Argentina es el segundo álbum de estudio de la cantante y compositora argentina María Becerra, lanzado mundialmente el 8 de diciembre de 2022 a través de 300 Entertainment.",
       "canciones": [
@@ -1000,7 +1000,7 @@ const data = {
     {
       "id_album": "11",
       "album": "Alma",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/alma - nicki nicole.jpeg",
       "descripcion":
         "Alma es el tercer álbum de estudio de la cantante argentina Nicki Nicole. Fue lanzado el 18 de mayo de 2023 a través de Dale Play Records y Sony Music Latin. El álbum cuenta con las colaboraciones de Milo J, Young Miko, YSY A y Rels B.",
       "canciones": [
@@ -1069,7 +1069,7 @@ const data = {
     {
       "id_album": "12",
       "album": "¿Tú Crees en mí?",
-      "imagen": "#",
+      "imagen": "https://spotilam7.netlify.app/assets/img/tu crees en mi - emilia mernes.jpeg",
       "descripcion":
         "¿Tú crees en mí? es el primer álbum de estudio de la cantante y compositora argentina Emilia, publicado el 31 de mayo de 2022 por la compañía Sony Music Latin. Musicalmente, el álbum abarca varios géneros, entre ellos, pop, R&B y urbano.",
       "canciones": [
