@@ -329,23 +329,24 @@
       })
       */
 
-      
+      const datosDesdeLS3 = JSON.parse(localStorage.getItem("datos"));
       
       d.addEventListener("keyup", (e) => {
-        const palabraBuscada = document.querySelector(`[data-busqueda]`).value;
+        const palabraBuscada = d.querySelector(`[data-busqueda]`).value;
           
 
         const datosDesdeLS2 = JSON.parse(localStorage.getItem("datos"));
-        const albunesFIltrados = datosDesdeLS2.catalogo.filter( (e) => e.album.includes(palabraBuscada) )
+        const albunesFIltrados = datosDesdeLS2.catalogo.filter( (e) => e.album.includes(palabraBuscada))
         const dondeVoyaDejarsoloLosFIltrados = d.querySelector('.grilla')
 
         dondeVoyaDejarsoloLosFIltrados.innerHTML = "";               
         for (const e of albunesFIltrados) {
-          //console.log(e.id_album,e.imagen)
+          const album = `../paginas/musica-sonando.html?album=`
+          const id_a = album.concat(e.id_album);
           dondeVoyaDejarsoloLosFIltrados.innerHTML +=
         `<article class="grilla-album">
-          <a href="../paginas/musica-sonando.html?album="${e.id_album}">
-            <img src="${e.imagen}" alt="" />
+          <a href="${id_a}">
+          <img src="${e.imagen}" alt="" />
           </a>
         </article>`
       }
