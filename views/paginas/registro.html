@@ -226,24 +226,11 @@
       };
 
       const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
+      const $btnPremium = d.querySelector(`[data-id="registro-premium"]`);
+      const $btnSesion = d.querySelector(`[data-id="registro-sesion"]`);
+      const $formulario = d.querySelector(`[data-id="registro-formulario"]`);
 
       d.addEventListener("DOMContentLoaded", (e) => {
-        const $btnPremium = d.querySelector(`[data-id="registro-premium"]`);
-        const $btnSesion = d.querySelector(`[data-id="registro-sesion"]`);
-        const $formulario = d.querySelector(`[data-id="registro-formulario"]`);
-        const dataUsuario = d.querySelector(`[data-usuario]`).value;
-        const dataContraseña = d.querySelector(`[data-contraseña]`).value;
-        const dataRepetirContraseña = d.querySelector(
-          `[data-repetir-contraseña]`
-        ).value;
-        const dataNacimiento = d.querySelector(`[data-nacimiento]`).value;
-        const dataEmail = d.querySelector(`[data-email]`).value;
-        const mensajeExito = d.querySelector(`[data-mensaje-exito]`);
-        const mensajeError = d.querySelector(`[data-mensaje-error]`);
-        const mensajeErrorUsuario = d.querySelector(
-          `[data-mensaje-error-usuario]`
-        );
-
         d.addEventListener("click", (e) => {
           if (e.target == $btnPremium) {
             e.preventDefault();
@@ -260,6 +247,18 @@
           if (e.target == $formulario) {
             e.preventDefault();
 
+            const dataUsuario = d.querySelector(`[data-usuario]`).value;
+            const dataContraseña = d.querySelector(`[data-contraseña]`).value;
+            const dataRepetirContraseña = d.querySelector(
+              `[data-repetir-contraseña]`
+            ).value;
+            const dataNacimiento = d.querySelector(`[data-nacimiento]`).value;
+            const dataEmail = d.querySelector(`[data-email]`).value;
+            const mensajeExito = d.querySelector(`[data-mensaje-exito]`);
+            const mensajeError = d.querySelector(`[data-mensaje-error]`);
+            const mensajeErrorUsuario = d.querySelector(
+              `[data-mensaje-error-usuario]`
+            );
             if (dataContraseña === dataRepetirContraseña) {
               const dataContraseñaFinal = dividirContraseña(dataContraseña);
 
@@ -282,6 +281,7 @@
                 datosDesdeLS.usuarios.forEach((el) => {
                   if (el.usuario !== datosUsuario.usuario) {
                     datosDesdeLS.usuarios.push(datosUsuario);
+
                     localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
                     mostrarMensaje(mensajeExito);
 
