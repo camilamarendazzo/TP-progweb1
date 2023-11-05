@@ -75,10 +75,15 @@ main {
   background-color: var(--color-blanco);
 }
 
-.registro-exito {
+.registro-exito,
+.registro-error {
   text-align: center;
   color: var(--color-exito);
   padding: 1rem;
+}
+
+.registro-error {
+  color: var(--color-error);
 }
 
 .mostrar {

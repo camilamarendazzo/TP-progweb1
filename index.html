@@ -42,7 +42,8 @@
               id="sesion-usuario"
               class="sesion-input"
               placeholder="ej: gusemma23"
-              data-usuario required
+              data-usuario
+              required
             />
             <label for="sesion-contraseña" class="sesion-label">
               Contraseña
@@ -53,7 +54,8 @@
               id="sesion-contraseña"
               class="sesion-input"
               placeholder="ej: #e2wZ2t6"
-              data-contraseña required
+              data-contraseña
+              required
             />
             <input
               type="submit"
@@ -64,6 +66,9 @@
           </form>
           <span class="sesion-mensaje" data-mensaje
             >El usuario y/o la contraseña es incorrecta</span
+          >
+          <span class="sesion-mensaje" data-mensaje-registrarse
+            >Primero debes registrarte</span
           >
           <a href="views/paginas/registro.html" class="sesion-btn sesion-link"
             >Registrarme</a
@@ -148,70 +153,68 @@
     <script src="bd.js"></script>
 
     <script>
-
-
-
       const d = document;
-      const numero = 45;
-      const boton = d.querySelector("[data-sesion]");
-      const $formulario = d.querySelector(`[data-formulario]`);
+
+      const dividirContraseña = (contraseña) => {
+        const mitad = contraseña.length / 2;
+
+        const parte1 = contraseña.slice(0, mitad);
+        const parte2 = contraseña.slice(mitad, contraseña.length);
+
+        return parte2 + parte1;
+      };
+
+      const mostrarMensajeError = (formulario, nodoMensaje) => {
+        nodoMensaje.classList.add("mostrar");
+
+        setTimeout(() => {
+          nodoMensaje.classList.remove("mostrar");
+          formulario.reset();
+        }, 3000);
+      };
 
       d.addEventListener("DOMContentLoaded", (e) => {
-        //obtener datos de localstorage
         const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
-        const mensajeError = d.querySelector(`[data-mensaje]`);
 
-        //validar si existe algun dato guardado
-        if (datosDesdeLS === null) {
-          //guardar datos en localstorage desde un archivo js
+        if (!datosDesdeLS) {
           localStorage.setItem("datos", JSON.stringify(data));
-        } else {
-          console.log(datosDesdeLS);
-          console.log(datosDesdeLS.catalogo);
+          location.reload();
+        }
+        const $formulario = d.querySelector(`[data-formulario]`);
+        const dataUsuario = d.querySelector(`[data-usuario]`).value;
+        const dataContraseña = d.querySelector(`[data-contraseña]`).value;
+        const $mensajeErrorIncorrecto = d.querySelector(`[data-mensaje]`);
+        const $mensajeError = d.querySelector(`[data-mensaje-registrarse]`);
 
-          d.addEventListener("submit", (e) => {
-            if (e.target == $formulario) {
-              e.preventDefault();
+        d.addEventListener("submit", (e) => {
+          e.preventDefault();
 
-              const dataUsuario = d.querySelector(`[data-usuario]`).value;
-              const dataContraseña = d.querySelector(`[data-contraseña]`).value;
+          if (datosDesdeLS.usuarios.length == 0) {
+            mostrarMensajeError($formulario, $mensajeError);
+          } else {
+            let bandera = true;
 
-              const mitad = dataContraseña.length / 2;
+            const dataContraseñaFinal = dividirContraseña(dataContraseña);
 
-              const parte1 = dataContraseña.slice(0, mitad);
-              const parte2 = dataContraseña.slice(mitad, dataContraseña.length);
-
-              const dataContraseñaFinal = parte2 + parte1;
-
-              let bandera = false;
-
-              //console.log(datosDesdeLS.usuarios)
-              datosDesdeLS.usuarios.forEach((e) => {
-                if (
-                  e.usuario === dataUsuario &&
-                  e.contraseña === dataContraseñaFinal
-                ) {
-                  bandera = true;
-                  e.estado = true;
-                }
-              });
-
-              if (bandera) {
+            datosDesdeLS.usuarios.forEach((el) => {
+              if (
+                dataUsuario === el.usuario &&
+                dataContraseñaFinal === el.contraseña
+              ) {
+                bandera = false;
+                el.estado = true;
                 $formulario.reset();
-                mensajeError.classList.remove('mostrar');
+
                 localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
                 location.href = "views/paginas/inicio.html";
-              } else {
-                console.log("DATOS ERRONEOS");
-                mensajeError.classList.add('mostrar');
-
               }
+            });
+            if (bandera) {
+              mostrarMensajeError($formulario, $mensajeErrorIncorrecto);
             }
-          });
-        }
+          }
+        });
       });
-
-
     </script>
   </body>
 </html>

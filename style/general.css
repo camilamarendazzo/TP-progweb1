@@ -96,7 +96,7 @@ img {
 
 @media screen and (width >= 1024px) {
   .body {
-    grid-template-columns: 350px 3fr;
+    grid-template-columns: 300px 3fr;
     grid-template-areas:
       "header      header"
       "barra-lateral        main"
