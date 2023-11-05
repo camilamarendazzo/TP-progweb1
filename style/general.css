@@ -87,6 +87,18 @@ img {
   object-fit: cover;
 }
 
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
 .container {
     max-width: 90%;
     overflow: hidden;

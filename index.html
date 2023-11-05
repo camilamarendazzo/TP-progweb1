@@ -180,15 +180,15 @@
           localStorage.setItem("datos", JSON.stringify(data));
           location.reload();
         }
-        const $formulario = d.querySelector(`[data-formulario]`);
-        const dataUsuario = d.querySelector(`[data-usuario]`).value;
-        const dataContraseña = d.querySelector(`[data-contraseña]`).value;
-        const $mensajeErrorIncorrecto = d.querySelector(`[data-mensaje]`);
-        const $mensajeError = d.querySelector(`[data-mensaje-registrarse]`);
 
         d.addEventListener("submit", (e) => {
           e.preventDefault();
 
+          const $formulario = d.querySelector(`[data-formulario]`);
+          const dataUsuario = d.querySelector(`[data-usuario]`).value;
+          const dataContraseña = d.querySelector(`[data-contraseña]`).value;
+          const $mensajeErrorIncorrecto = d.querySelector(`[data-mensaje]`);
+          const $mensajeError = d.querySelector(`[data-mensaje-registrarse]`);
           if (datosDesdeLS.usuarios.length == 0) {
             mostrarMensajeError($formulario, $mensajeError);
           } else {
