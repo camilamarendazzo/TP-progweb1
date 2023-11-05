@@ -36,20 +36,21 @@
                 <h2 class="header-encabezado">Planes premium</h2>
             </a>
         </div>
-        <div class="header-avatar">
-            <a href="views/paginas/iniciar-sesion.html" class="header-cerrar-mobile" data-cerrar-sesion>
-                <i class="fa-solid fa-right-from-bracket"></i>
+        <div class="header-avatar d-none" data-header-avatar>
+            <a class="header-cerrar-mobile">
+              <i
+                class="fa-solid fa-right-from-bracket"
+                data-cerrar-sesion-mobile
+              ></i>
             </a>
             <div class="header-texto">
-                <p class="header-usuario" data-nombre-usuario></p>
-                <a href="../../index.html" class="header-cerrar" data-cerrar-sesion
-                  >Cerrar Sesion</a
-                >
-              </div>
+              <p class="header-usuario" data-nombre-usuario></p>
+              <a class="header-cerrar" data-cerrar-sesion>Cerrar Sesion</a>
+            </div>
             <a href="perfil.html" class="header-perfil">
-                <i class="fa-solid fa-user"></i>
+              <i class="fa-solid fa-user"></i>
             </a>
-        </div>
+          </div>
     </header>
 
     <main>
@@ -166,18 +167,25 @@
         const d = document;
         const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
         const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
+        const $cerrarSesionMobile = d.querySelector(
+          `[data-cerrar-sesion-mobile]`
+        );
   
         d.addEventListener("DOMContentLoaded", (e) => {
           const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
   
           console.log(datosDesdeLS);
-  
+
+          const $headerAvatar = d.querySelector(`[data-header-avatar]`);
+
           datosDesdeLS.usuarios.forEach((e) => {
-            if (e.estado) {
-              $nombreUsuario.textContent = e.usuario;
-            }
-          });
-  
+          if (e.estado) {
+            $headerAvatar.classList.remove("d-none");
+            $headerAvatar.classList.add("d-flex");
+            $nombreUsuario.textContent = e.usuario;
+          }
+        });
+        
           d.addEventListener("click", (e) => {
             if (e.target == $cerrarSesion) {
               e.preventDefault();

@@ -33,20 +33,21 @@
         <div class="header-titulo">
             <h2 class="header-encabezado">SpotiLam</h2>
         </div>
-        <div class="header-avatar">
-            <a href="../../index.html" class="header-cerrar-mobile" data-cerrar-sesion>
-                <i class="fa-solid fa-right-from-bracket"></i>
+        <div class="header-avatar d-none" data-header-avatar>
+            <a class="header-cerrar-mobile">
+              <i
+                class="fa-solid fa-right-from-bracket"
+                data-cerrar-sesion-mobile
+              ></i>
             </a>
             <div class="header-texto">
-                <p class="header-usuario" data-nombre-usuario></p>
-                <a href="../../index.html" class="header-cerrar" data-cerrar-sesion
-                  >Cerrar Sesion</a
-                >
-              </div>
-            <a href="../paginas/perfil.html" class="header-perfil">
-                <i class="fa-solid fa-user"></i>
+              <p class="header-usuario" data-nombre-usuario></p>
+              <a class="header-cerrar" data-cerrar-sesion>Cerrar Sesion</a>
+            </div>
+            <a href="perfil.html" class="header-perfil">
+              <i class="fa-solid fa-user"></i>
             </a>
-        </div>
+          </div>
     </header>
     <main class="cajaCentrada">
     <section class="planPagar">
@@ -161,11 +162,18 @@
   
           console.log(datosDesdeLS);
   
-          datosDesdeLS.usuarios.forEach((e) => {
-            if (e.estado) {
-              $nombreUsuario.textContent = e.usuario;
-            }
-          });
+          const $cerrarSesionMobile = d.querySelector(
+          `[data-cerrar-sesion-mobile]`
+        );
+        const $headerAvatar = d.querySelector(`[data-header-avatar]`);
+
+        datosDesdeLS.usuarios.forEach((e) => {
+          if (e.estado) {
+            $headerAvatar.classList.remove("d-none");
+            $headerAvatar.classList.add("d-flex");
+            $nombreUsuario.textContent = e.usuario;
+          }
+        });
   
           d.addEventListener("click", (e) => {
             if (e.target == $cerrarSesion) {
