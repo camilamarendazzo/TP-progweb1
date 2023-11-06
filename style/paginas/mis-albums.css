@@ -3,3 +3,8 @@
     En este archivo creamos los estilos especificos de la pagina albums. 
 
 */
+
+.mensaje-album-vacio {
+    color: var(--color-informacion);
+    text-align: center;
+}

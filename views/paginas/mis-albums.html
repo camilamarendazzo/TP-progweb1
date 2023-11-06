@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="../../style/normalize.css" />
     <link rel="stylesheet" href="../../style/general.css" />
+    <link rel="stylesheet" href="../../style/paginas/mis-albums.css" />
     <!--<link rel="stylesheet" href="../../style/index.css">-->
 
     <link rel="stylesheet" href="../../style/componentes/header.css" />
@@ -160,6 +161,10 @@
       </section>
       <!-- Componente REPRODUCTOR -->
 
+      <h3 class="mensaje-album-vacio d-none" data-mensaje-vacio>
+        Todavia no agregaste ningun album a favoritos
+      </h3>
+
       <!-- Componente CUADRICULA -->
       <section class="grilla" data-grilla></section>
       <!-- Componente CUADRICULA -->
@@ -240,11 +245,8 @@
 
     <template id="template-album">
       <article class="grilla-album">
-        <a >
-          <img
-            
-            alt="Foto del album"
-          />
+        <a>
+          <img alt="Foto del album" />
           <span class="grilla-estrella">
             <i
               class="fa-regular fa-star"
@@ -294,13 +296,13 @@
 
       d.addEventListener("DOMContentLoaded", (e) => {
         const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
-        
 
         const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
         const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
         const $cerrarSesionMobile = d.querySelector(
           `[data-cerrar-sesion-mobile]`
         );
+        const $mensajeAlbumVacio = d.querySelector(`[data-mensaje-vacio]`);
         const $headerAvatar = d.querySelector(`[data-header-avatar]`);
 
         datosDesdeLS.usuarios.forEach((e) => {
@@ -318,23 +320,37 @@
         const $fragment = d.createDocumentFragment();
 
         let arrAlbums = [];
-        
-        datosDesdeLS.usuarios.forEach((usuario)=> {
-          if(usuario.estado){
-            arrAlbums = usuario.favoritos.albums
+
+        datosDesdeLS.usuarios.forEach((usuario) => {
+          if (usuario.estado) {
+            arrAlbums = usuario.favoritos.albums;
           }
-        })
-        
-        
+        });
+
+        console.log(arrAlbums);
+
+        if (arrAlbums.length == 0) {
+          $mensajeAlbumVacio.classList.remove(`d-none`);
+          $mensajeAlbumVacio.classList.add(`d-block`);
+        } else {
+          $mensajeAlbumVacio.classList.remove(`d-block`);
+          $mensajeAlbumVacio.classList.add(`d-none`);
+        }
 
         arrAlbums.forEach((albumFavorito) => {
-          const arrAlbumsFavoritos = datosDesdeLS.catalogo.filter(album => album.id_album == albumFavorito)
-          
+          const arrAlbumsFavoritos = datosDesdeLS.catalogo.filter(
+            (album) => album.id_album == albumFavorito
+          );
+
           $template.querySelector(
             "a"
           ).href = `musica-sonando.html?album=${arrAlbumsFavoritos[0].id_album}`;
-          $template.querySelector("img").src = `${arrAlbumsFavoritos[0].imagen}`;
-          $template.querySelector("i").dataset.idAlbum = `${arrAlbumsFavoritos[0].id_album}`;
+          $template.querySelector(
+            "img"
+          ).src = `${arrAlbumsFavoritos[0].imagen}`;
+          $template.querySelector(
+            "i"
+          ).dataset.idAlbum = `${arrAlbumsFavoritos[0].id_album}`;
 
           datosDesdeLS.usuarios.forEach((usu) => {
             if (usu.estado) {
@@ -350,11 +366,9 @@
 
           let $clone = d.importNode($template, true);
           $fragment.appendChild($clone);
-
-        })
+        });
 
         $grilla.appendChild($fragment);
-        
 
         //dibujar cuadricula
 
@@ -402,7 +416,7 @@
                     }
 
                     localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
-                    location.reload()
+                    location.reload();
                   }
                 });
               }
