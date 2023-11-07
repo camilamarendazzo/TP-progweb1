@@ -342,11 +342,12 @@
       const datosDesdeLS3 = JSON.parse(localStorage.getItem("datos"));
       
       d.addEventListener("keyup", (e) => {
-        const palabraBuscada = d.querySelector(`[data-busqueda]`).value;
+        const palabraBuscada = (d.querySelector(`[data-busqueda]`).value).toLowerCase();
+        console.log(palabraBuscada)
           
 
         const datosDesdeLS2 = JSON.parse(localStorage.getItem("datos"));
-        const albunesFIltrados = datosDesdeLS2.catalogo.filter( (e) => e.album.includes(palabraBuscada))
+        const albunesFIltrados = datosDesdeLS2.catalogo.filter( (e) => (e.album.toLowerCase()).includes(palabraBuscada))
         const dondeVoyaDejarsoloLosFIltrados = d.querySelector('.grilla')
 
         dondeVoyaDejarsoloLosFIltrados.innerHTML = "";               

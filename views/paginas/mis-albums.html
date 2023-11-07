@@ -342,6 +342,8 @@
             (album) => album.id_album == albumFavorito
           );
 
+          console.log(arrAlbumsFavoritos)
+
           $template.querySelector(
             "a"
           ).href = `musica-sonando.html?album=${arrAlbumsFavoritos[0].id_album}`;
