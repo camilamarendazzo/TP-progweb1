@@ -2,10 +2,7 @@ const d = document;
 const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
 const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
 const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
-const $cerrarSesionMobile = d.querySelector(
-    `[data-cerrar-sesion-mobile]`
-  );
-
+const $cerrarSesionMobile = d.querySelector(`[data-cerrar-sesion-mobile]`);
 
 d.addEventListener("DOMContentLoaded", (e) => {
   const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
@@ -23,7 +20,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   d.addEventListener("click", (e) => {
     if (e.target == $cerrarSesion) {
       e.preventDefault();
-      console.log("cerraste sesion");
+
       datosDesdeLS.usuarios.forEach((e) => {
         if (e.estado) {
           e.estado = false;
@@ -34,5 +31,4 @@ d.addEventListener("DOMContentLoaded", (e) => {
       location.href = "../../index.html";
     }
   });
-})
-
+});

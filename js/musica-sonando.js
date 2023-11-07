@@ -4,9 +4,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
   const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
   const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
-  const $cerrarSesionMobile = d.querySelector(
-    `[data-cerrar-sesion-mobile]`
-  );
+  const $cerrarSesionMobile = d.querySelector(`[data-cerrar-sesion-mobile]`);
 
   const $headerAvatar = d.querySelector(`[data-header-avatar]`);
 
@@ -27,13 +25,11 @@ d.addEventListener("DOMContentLoaded", (e) => {
   datosDesdeLS.catalogo.forEach((e) => {
     if (e.id_album === albumActual) {
       e.canciones.forEach((cancion) => {
-        $template.querySelector(`[data-cancion]`).textContent =
-          cancion.nombre;
+        $template.querySelector(`[data-cancion]`).textContent = cancion.nombre;
         $template.querySelector(`[data-album]`).textContent = e.album;
         $template.querySelector(`[data-duracion]`).textContent =
           cancion.duracion;
-        $template.querySelector(`[data-views]`).textContent =
-          cancion.views;
+        $template.querySelector(`[data-views]`).textContent = cancion.views;
         $template.querySelector(
           `[data-estrella-album]`
         ).dataset.idAlbum = `${e.id_album}`;
@@ -43,7 +39,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
         datosDesdeLS.usuarios.forEach((usu) => {
           if (usu.estado) {
-            //console.log(cancion.id_cancion)
             usu.favoritos.canciones.includes(cancion.id_cancion)
               ? ($template.querySelector(
                   `[data-estrella-cancion]`
@@ -54,10 +49,10 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
             usu.favoritos.albums.includes(e.id_album)
               ? ($template.querySelector(
-                `[data-estrella-album]`
+                  `[data-estrella-album]`
                 ).classList.value = `fa-solid fa-star`)
               : ($template.querySelector(
-                `[data-estrella-album]`
+                  `[data-estrella-album]`
                 ).classList.value = `fa-regular fa-star`);
           }
         });
@@ -107,10 +102,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
                 $estrellaAlbumFavorito.classList.remove(`fa-regular`);
                 $estrellaAlbumFavorito.classList.add(`fa-solid`);
               } else {
-                usuario.favoritos.albums =
-                  usuario.favoritos.albums.filter(
-                    (item) => item != el.id_album
-                  );
+                usuario.favoritos.albums = usuario.favoritos.albums.filter(
+                  (item) => item != el.id_album
+                );
                 $estrellaAlbumFavorito.classList.remove(`fa-solid`);
                 $estrellaAlbumFavorito.classList.add(`fa-regular`);
               }
@@ -126,14 +120,10 @@ d.addEventListener("DOMContentLoaded", (e) => {
   //configurar estrellas canciones
 
   const estrellasCancion = d.querySelectorAll(`[data-estrella-cancion]`);
-  //console.log(estrellasCancion)
 
   estrellasCancion.forEach((el) => {
     el.addEventListener("click", (e) => {
       e.preventDefault();
-
-      //console.log(el.dataset.idCancion)
-      //console.log(e.target.dataset.idCancion)
 
       if (e.target.dataset.idCancion == el.dataset.idCancion) {
         const $estrellaCancionFavorito = e.target;
@@ -148,10 +138,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
               $estrellaCancionFavorito.classList.remove(`fa-regular`);
               $estrellaCancionFavorito.classList.add(`fa-solid`);
             } else {
-              usuario.favoritos.canciones =
-                usuario.favoritos.canciones.filter(
-                  (item) => item != el.dataset.idCancion
-                );
+              usuario.favoritos.canciones = usuario.favoritos.canciones.filter(
+                (item) => item != el.dataset.idCancion
+              );
               $estrellaCancionFavorito.classList.remove(`fa-solid`);
               $estrellaCancionFavorito.classList.add(`fa-regular`);
             }

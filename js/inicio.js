@@ -2,13 +2,10 @@ const d = document;
 
 d.addEventListener("DOMContentLoaded", (e) => {
   const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
-  console.log(datosDesdeLS);
 
   const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
   const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
-  const $cerrarSesionMobile = d.querySelector(
-    `[data-cerrar-sesion-mobile]`
-  );
+  const $cerrarSesionMobile = d.querySelector(`[data-cerrar-sesion-mobile]`);
   const $headerAvatar = d.querySelector(`[data-header-avatar]`);
 
   datosDesdeLS.usuarios.forEach((e) => {
@@ -35,9 +32,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     datosDesdeLS.usuarios.forEach((usu) => {
       if (usu.estado) {
         usu.favoritos.albums.includes(album.id_album)
-          ? ($template.querySelector(
-              "i"
-            ).classList.value = `fa-solid fa-star`)
+          ? ($template.querySelector("i").classList.value = `fa-solid fa-star`)
           : ($template.querySelector(
               "i"
             ).classList.value = `fa-regular fa-star`);
@@ -87,10 +82,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
                 $estrellaAlbumFavorito.classList.remove(`fa-regular`);
                 $estrellaAlbumFavorito.classList.add(`fa-solid`);
               } else {
-                usuario.favoritos.albums =
-                  usuario.favoritos.albums.filter(
-                    (item) => item != el.id_album
-                  );
+                usuario.favoritos.albums = usuario.favoritos.albums.filter(
+                  (item) => item != el.id_album
+                );
                 $estrellaAlbumFavorito.classList.remove(`fa-solid`);
                 $estrellaAlbumFavorito.classList.add(`fa-regular`);
               }

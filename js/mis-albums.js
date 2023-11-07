@@ -5,9 +5,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
   const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
   const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
-  const $cerrarSesionMobile = d.querySelector(
-    `[data-cerrar-sesion-mobile]`
-  );
+  const $cerrarSesionMobile = d.querySelector(`[data-cerrar-sesion-mobile]`);
   const $mensajeAlbumVacio = d.querySelector(`[data-mensaje-vacio]`);
   const $headerAvatar = d.querySelector(`[data-header-avatar]`);
 
@@ -33,8 +31,6 @@ d.addEventListener("DOMContentLoaded", (e) => {
     }
   });
 
-  console.log(arrAlbums);
-
   if (arrAlbums.length == 0) {
     $mensajeAlbumVacio.classList.remove(`d-none`);
     $mensajeAlbumVacio.classList.add(`d-block`);
@@ -48,14 +44,10 @@ d.addEventListener("DOMContentLoaded", (e) => {
       (album) => album.id_album == albumFavorito
     );
 
-    console.log(arrAlbumsFavoritos)
-
     $template.querySelector(
       "a"
     ).href = `musica-sonando.html?album=${arrAlbumsFavoritos[0].id_album}`;
-    $template.querySelector(
-      "img"
-    ).src = `${arrAlbumsFavoritos[0].imagen}`;
+    $template.querySelector("img").src = `${arrAlbumsFavoritos[0].imagen}`;
     $template.querySelector(
       "i"
     ).dataset.idAlbum = `${arrAlbumsFavoritos[0].id_album}`;
@@ -63,9 +55,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     datosDesdeLS.usuarios.forEach((usu) => {
       if (usu.estado) {
         usu.favoritos.albums.includes(arrAlbumsFavoritos[0].id_album)
-          ? ($template.querySelector(
-              "i"
-            ).classList.value = `fa-solid fa-star`)
+          ? ($template.querySelector("i").classList.value = `fa-solid fa-star`)
           : ($template.querySelector(
               "i"
             ).classList.value = `fa-regular fa-star`);
@@ -115,10 +105,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
                 $estrellaAlbumFavorito.classList.remove(`fa-regular`);
                 $estrellaAlbumFavorito.classList.add(`fa-solid`);
               } else {
-                usuario.favoritos.albums =
-                  usuario.favoritos.albums.filter(
-                    (item) => item != el.id_album
-                  );
+                usuario.favoritos.albums = usuario.favoritos.albums.filter(
+                  (item) => item != el.id_album
+                );
                 $estrellaAlbumFavorito.classList.remove(`fa-solid`);
                 $estrellaAlbumFavorito.classList.add(`fa-regular`);
               }
