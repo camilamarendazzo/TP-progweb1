@@ -103,7 +103,7 @@ article{
 .modal {
     position: fixed;
     width: 40%;
-    height: 30%;
+    /* height: 30%; */
     background-color: rgba(0, 0, 0, 0.5); 
     text-align: center;
     justify-content: center;
@@ -132,14 +132,7 @@ article{
     color: #000; 
     font-size: 18px;
 }
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #000;
-    cursor: pointer;
-}
+
 .btnModal:hover {
     background-color: #ff8500; 
 }
@@ -170,6 +163,10 @@ article{
         display: grid;
         grid-template-columns: 270px 270px;
         grid-template-rows: 50px 50px;
+    }
+
+    .modal{
+        width: 70%;
     }
 }
 
