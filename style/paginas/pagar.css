@@ -100,6 +100,50 @@ article{
     color: #454545;
 }
 
+.modal {
+    position: fixed;
+    width: 40%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.contenidoModal {
+    background-color: #fff; 
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.btnModal {
+    background-color: #ffa500; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.txtModal {
+    color: #000; 
+    font-size: 18px;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
+.btnModal:hover {
+    background-color: #ff8500; 
+}
+
 @media screen and (width <= 1024px) { 
     .planPagar{
         width: 600px;
@@ -156,4 +200,5 @@ article{
         grid-template-columns: 270px;
         grid-template-rows: 50px;
     }
+
 }
