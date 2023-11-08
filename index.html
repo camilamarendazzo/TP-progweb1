@@ -168,11 +168,11 @@
         } else {
           console.log(datosDesdeLS);
           console.log(datosDesdeLS.catalogo);
-
+          
           d.addEventListener("submit", (e) => {
             if (e.target == $formulario) {
               e.preventDefault();
-
+              
               const dataUsuario = d.querySelector(`[data-usuario]`).value;
               const dataContraseña = d.querySelector(`[data-contraseña]`).value;
 
