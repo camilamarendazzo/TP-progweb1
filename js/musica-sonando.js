@@ -65,8 +65,34 @@ d.addEventListener("DOMContentLoaded", (e) => {
     }
   });
 
+  //dibujar aside
+
+  
+  const $asideImg = d.querySelector(`[data-aside-imagen]`);
+  const $asideDescripcion = d.querySelector(`[data-aside-descripcion]`);
+  const $asideEstrella = d.querySelector(`.aside-foto-div i`);
+
+  console.log($asideEstrella)
+
+  datosDesdeLS.usuarios.forEach((usuario) => {
+    if (usuario.estado) {
+              
+                $asideImg.setAttribute('src',`${usuario.escuchando.img}`)
+                $asideImg.setAttribute('alt',`${usuario.escuchando.album}`)
+
+                $asideEstrella.dataset.idAlbum = `${usuario.escuchando.id_album}`
+              
+                $asideDescripcion.textContent = `${usuario.escuchando.descripcion}`
+              
+              
+            }
+          });
+
+  //dibujar aside
+
+
   d.addEventListener("click", (e) => {
-    if (e.target == $cerrarSesion) {
+    if (e.target == $cerrarSesion || e.target == $cerrarSesionMobile) {
       e.preventDefault();
 
       datosDesdeLS.usuarios.forEach((e) => {
@@ -80,9 +106,51 @@ d.addEventListener("DOMContentLoaded", (e) => {
     }
   });
 
+  //configurar botones play
+
+  const botonesPlay = d.querySelectorAll(`[data-boton-play]`)
+
+  //console.log(botonesPlay)
+
+  botonesPlay.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault()
+
+      console.log(albumActual)
+
+      datosDesdeLS.catalogo.forEach((album) => {
+        if(albumActual == album.id_album){
+
+          datosDesdeLS.usuarios.forEach((usuario) => {
+            if (usuario.estado) {
+              
+              usuario.escuchando.album = album.album
+              usuario.escuchando.img = album.imagen
+              usuario.escuchando.descripcion = album.descripcion
+              usuario.escuchando.id_album = album.id_album
+
+              localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
+              location.reload()
+            }
+          });
+
+        }
+      })
+    })
+  })
+
+
+
+
+
+
+  //configurar botones play
+
+
   //configurar estrellas album
 
   const estrellasAlbum = d.querySelectorAll(`[data-estrella-album]`);
+  
 
   estrellasAlbum.forEach((el) => {
     el.addEventListener("click", (e) => {
@@ -110,6 +178,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
               }
 
               localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
+              location.reload()
             }
           });
         }

@@ -112,17 +112,19 @@
       <aside class="aside">
         <div class="aside-foto">
           <div class="aside-foto-div">
-            <img src="../../assets/img/album.jpg" alt="Album Cover" />
-            <span class="aside-estrella">
-              <i class="fa-solid fa-star"></i>
+            <img data-aside-imagen/>
+            <span class="grilla-estrella">
+              <i
+                class="fa-regular fa-star"
+                data-estrella-album
+                data-id-album="1"
+              ></i>
             </span>
           </div>
         </div>
         <div class="aside-texto">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eos
-            dolore, iste incidunt vel laboriosam culpa provident quam ex
-            cupiditate!
+          <p data-aside-descripcion>
+            
           </p>
         </div>
       </aside>
@@ -197,7 +199,7 @@
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
- -->
+
       <div class="footer-integrante">
         <h3 class="footer-nombre">Gustavo</h3>
         <h3 class="footer-nombre">Miño</h3>
@@ -228,7 +230,7 @@
     <template id="template-fila">
       <tr class="favoritos-fila">
         <td class="favoritos-play">
-          <i class="fa-solid fa-play"></i>
+          <i class="fa-solid fa-play" data-boton-play></i>
         </td>
         <td class="favoritos-cancion">
           <span data-cancion>Canción 1</span>

@@ -64,7 +64,12 @@ d.addEventListener("DOMContentLoaded", (e) => {
           estado: false,
           nacimiento: `${dataNacimiento}`,
           email: `${dataEmail}`,
-          escuchando: {},
+          escuchando: {
+            "album": `${datosDesdeLS.catalogo[0].album}`,
+            "img":`${datosDesdeLS.catalogo[0].imagen}`,
+            "descripcion": `${datosDesdeLS.catalogo[0].descripcion}`,
+            "id_album": `${datosDesdeLS.catalogo[0].id_album}`
+          },
           favoritos: {
             albums: [],
             canciones: [],

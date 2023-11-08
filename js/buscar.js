@@ -17,6 +17,32 @@ d.addEventListener("DOMContentLoaded", (e) => {
     }
   });
 
+  //dibujar aside
+
+  
+  const $asideImg = d.querySelector(`[data-aside-imagen]`);
+  const $asideDescripcion = d.querySelector(`[data-aside-descripcion]`);
+  const $asideEstrella = d.querySelector(`.aside-foto-div i`);
+
+  console.log($asideEstrella)
+
+  datosDesdeLS.usuarios.forEach((usuario) => {
+    if (usuario.estado) {
+              
+                $asideImg.setAttribute('src',`${usuario.escuchando.img}`)
+                $asideImg.setAttribute('alt',`${usuario.escuchando.album}`)
+
+                $asideEstrella.dataset.idAlbum = `${usuario.escuchando.id_album}`
+              
+                $asideDescripcion.textContent = `${usuario.escuchando.descripcion}`
+              
+              
+            }
+          });
+
+  //dibujar aside
+
+
   d.addEventListener("click", (e) => {
     if (e.target == $cerrarSesion) {
       e.preventDefault();

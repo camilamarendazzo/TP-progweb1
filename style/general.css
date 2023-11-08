@@ -99,6 +99,15 @@ img {
   display: flex;
 }
 
+.grilla-estrella {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  font-size: 1.5rem;
+  color: var(--color-principal);
+  cursor: pointer;
+}
+
 .container {
     max-width: 90%;
     overflow: hidden;
