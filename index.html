@@ -15,12 +15,12 @@
     <title>Iniciar Sesion</title>
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="../../style/normalize.css" />
-    <link rel="stylesheet" href="../../style/general.css" />
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/general.css" />
 
-    <link rel="stylesheet" href="../../style/componentes/header.css" />
+    <link rel="stylesheet" href="style/componentes/header.css" />
     <link rel="stylesheet" href="style/index.css" />
-    <link rel="stylesheet" href="../../style/componentes/footer.css" />
+    <link rel="stylesheet" href="style/componentes/footer.css" />
 
     <!-- Font Awesome Icons -->
     <script
@@ -43,6 +43,7 @@
               class="sesion-input"
               placeholder="ej: gusemma23"
               data-usuario
+              required
             />
             <label for="sesion-contraseña" class="sesion-label">
               Contraseña
@@ -54,6 +55,7 @@
               class="sesion-input"
               placeholder="ej: #e2wZ2t6"
               data-contraseña
+              required
             />
             <input
               type="submit"
@@ -64,6 +66,9 @@
           </form>
           <span class="sesion-mensaje" data-mensaje
             >El usuario y/o la contraseña es incorrecta</span
+          >
+          <span class="sesion-mensaje" data-mensaje-registrarse
+            >Primero debes registrarte</span
           >
           <a href="views/paginas/registro.html" class="sesion-btn sesion-link"
             >Registrarme</a
@@ -94,7 +99,7 @@
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
-      <div class="footer-integrante">
+      <!-- <div class="footer-integrante">
         <h3 class="footer-nombre">Antonella</h3>
         <h3 class="footer-nombre">Politi</h3>
         <p class="footer-dni">31.492.164</p>
@@ -117,7 +122,7 @@
         >
           <i class="fa-brands fa-github"></i>
         </a>
-      </div>
+      </div> -->
       <div class="footer-integrante">
         <h3 class="footer-nombre">Gustavo</h3>
         <h3 class="footer-nombre">Miño</h3>
@@ -146,6 +151,7 @@
     <!-- Componente FOOTER -->
 
     <script src="bd.js"></script>
+<<<<<<< HEAD
 
     <script>
 
@@ -213,5 +219,8 @@
     
     
     </script>
+=======
+    <script src="js/index.js"></script>
+>>>>>>> e3f1bae47b598ec5e7d29755c29e70c554553666
   </body>
 </html>

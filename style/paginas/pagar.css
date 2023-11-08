@@ -20,14 +20,13 @@
 .planPagar{
     background-color: #101010;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
     width: 70%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--color-informacion);
+    padding-top: 20px;
     margin-top: 2px;
     margin-bottom: 2px;
     border-radius: 5px;
@@ -36,20 +35,26 @@
 .cajitas{
     display: grid;
     grid-template-columns: 270px 270px;
-    grid-template-rows: 50px 50px;
     margin: 40px;
 }
 
 .tituloCentrado{
     display: flex;
-    width: 40%;
+    width: auto;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-img{
-    width: 300px;
+.img{
+    width: 80%px;
     border-radius: 5px;
+    margin: 10px 0;
+}
+
+.precio{
+    margin: 15px 0 0 20px;
+    font-style: italic;
+    font-size:x-large;
 }
 
 .boton{
@@ -69,7 +74,7 @@ img{
 .cajota{
     display: flex;
     color: #FFFFFF;
-    padding-bottom: 30px;
+    padding: 15px 0;
 }
 
 .cajasValue{
@@ -83,16 +88,53 @@ img{
     flex-wrap: wrap;
 }
 
+.nombreCampo{
+    margin-top: 30px;
+}
+
 article{
     padding: 10px;
 }
 
-input{
-    margin-top: 5px;
-}
- 
 ::placeholder{
     color: #454545;
+}
+
+.modal {
+    position: fixed;
+    width: 40%;
+    /* height: 30%; */
+    background-color: rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.contenidoModal {
+    background-color: #fff; 
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.btnModal {
+    background-color: #ffa500; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.txtModal {
+    color: #000; 
+    font-size: 18px;
+}
+
+.btnModal:hover {
+    background-color: #ff8500; 
 }
 
 @media screen and (width <= 1024px) { 
@@ -121,6 +163,10 @@ input{
         display: grid;
         grid-template-columns: 270px 270px;
         grid-template-rows: 50px 50px;
+    }
+
+    .modal{
+        width: 70%;
     }
 }
 
@@ -151,4 +197,5 @@ input{
         grid-template-columns: 270px;
         grid-template-rows: 50px;
     }
+
 }

@@ -48,6 +48,7 @@
               id="usuario"
               placeholder="ej: gusemma23"
               data-usuario
+              required
             />
 
             <label class="registro-label" for="contraseña">Contraseña</label>
@@ -58,6 +59,7 @@
               id="contraseña"
               placeholder="ej: #2wZ2t6"
               data-contraseña
+              required
             />
 
             <label class="registro-label" for="repetirContraseña"
@@ -70,6 +72,7 @@
               id="repetirContraseña"
               placeholder="repetir contraseña"
               data-repetir-contraseña
+              required
             />
 
             <label class="registro-label" for="nacimiento"
@@ -81,6 +84,7 @@
               name="nacimiento"
               id="nacimiento"
               data-nacimiento
+              required
             />
 
             <label class="registro-label" for="email">E-mail</label>
@@ -91,7 +95,20 @@
               id="email"
               placeholder="ej: gusemma23@gmail.com"
               data-email
+              required
             />
+
+            <span class="registro-exito ocultar" data-mensaje-exito
+              >Datos Guardados Correctamente</span
+            >
+
+            <span class="registro-error ocultar" data-mensaje-error
+              >Las contraseñas no coinciden</span
+            >
+
+            <span class="registro-error ocultar" data-mensaje-error-usuario
+              >Ya exite ese usuario registrado. Elige otro usuario
+            </span>
 
             <input
               type="button"
@@ -111,62 +128,6 @@
           </form>
         </section>
       </div>
-
-      <!--
-      <div class="contenedor">
-        <h1>Registrarse</h1>
-        <div class="estilo">
-          <form action="iniciar-sesion.html" method="post" class="index-form">
-            <label for="Nombre de usuario">Usuario</label>
-            <input
-              type="text"
-              name="Nombre de usuario"
-              placeholder="Nombre de usuario"
-            />
-
-            <label for="password">Contraseña</label>
-
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Ingrese contraseña"
-            />
-
-            <label for="password">Repetir contraseña</label>
-
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Repita contraseña"
-            />
-
-            <label for="fecha">Fecha de Nacimiento</label>
-
-            <input type="date" id="fecha" name="fecha" />
-
-            <label for="email">E-mail</label>
-
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="Ingrese su email"
-            />
-          </form>
-        </div>
-        <a href="./premium.html" class="index-enlace">Premium</a>
-
-        <div class="caja">
-          <div class="boton">
-            <a href="../../index.html" class="index-enlace">Registrarse</a>
-          </div>
-          <div class="boton">
-            <a href="../../index.html" class="index-enlace">Iniciar Sesion</a>
-          </div>
-        </div>
-      </div>-->
     </main>
 
     <!-- Componente FOOTER -->
@@ -185,30 +146,6 @@
         <p class="footer-dni">34.117.699</p>
         <a
           href="https://github.com/javierfunes2018"
-          target="_blank"
-          class="footer-icono"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </div>
-      <div class="footer-integrante">
-        <h3 class="footer-nombre">Antonella</h3>
-        <h3 class="footer-nombre">Politi</h3>
-        <p class="footer-dni">31.492.164</p>
-        <a
-          href="https://github.com/AntonellaPoliti"
-          target="_blank"
-          class="footer-icono"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </div>
-      <div class="footer-integrante">
-        <h3 class="footer-nombre">Nahuel</h3>
-        <h3 class="footer-nombre">Esposito</h3>
-        <p class="footer-dni">43.862.624</p>
-        <a
-          href="https://github.com/Nahuel0911"
           target="_blank"
           class="footer-icono"
         >
@@ -242,72 +179,6 @@
     </footer>
     <!-- Componente FOOTER -->
 
-    <script>
-
-      const d = document;
-      const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
-      const $btnPremium = d.querySelector(`[data-id="registro-premium"]`);
-      const $btnSesion = d.querySelector(`[data-id="registro-sesion"]`);
-      const $formulario = d.querySelector(`[data-id="registro-formulario"]`);
-
-      d.addEventListener("DOMContentLoaded", (e) => {
-        d.addEventListener("click", (e) => {
-          if (e.target == $btnPremium) {
-            e.preventDefault();
-            location.href = "premium.html";
-          }
-
-          if (e.target == $btnSesion) {
-            e.preventDefault();
-            location.href = "../../index.html";
-          }
-        });
-
-        d.addEventListener("submit", (e) => {
-          if (e.target == $formulario) {
-            e.preventDefault();
-            alert("Datos Guardados");
-
-            const dataUsuario = d.querySelector(`[data-usuario]`).value;
-            const dataContraseña = d.querySelector(`[data-contraseña]`).value;
-            const dataRepetirContraseña = d.querySelector(
-              `[data-repetir-contraseña]`
-            ).value;
-            const dataNacimiento = d.querySelector(`[data-nacimiento]`).value;
-            const dataEmail = d.querySelector(`[data-email]`).value;
-
-            //Almacenar la contraseña con requisitos
-            
-            const mitad = dataContraseña.length / 2;
-
-            const parte1 = dataContraseña.slice(0, mitad);
-            const parte2 = dataContraseña.slice(mitad, dataContraseña.length);
-
-            const dataContraseñaFinal = parte2 + parte1;
-
-            const datosUsuario = {
-              id_usuario: `${datosDesdeLS.usuarios.length + 1}`,
-              usuario: `${dataUsuario}`,
-              contraseña: `${dataContraseñaFinal}`,
-              repetirContraseña: `${dataContraseñaFinal}`,
-              estado: false,
-              nacimiento: `${dataNacimiento}`,
-              email: `${dataEmail}`,
-              escuchando: {},
-              favoritos: {
-                albums: [],
-                canciones: [],
-              },
-            };
-
-            datosDesdeLS.usuarios.push(datosUsuario);
-
-            localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
-
-            $formulario.reset();
-          }
-        });
-      });
-    </script>
+    <script src="../../js/registro.js"></script>
   </body>
 </html>

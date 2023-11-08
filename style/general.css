@@ -87,6 +87,27 @@ img {
   object-fit: cover;
 }
 
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.grilla-estrella {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  font-size: 1.5rem;
+  color: var(--color-principal);
+  cursor: pointer;
+}
+
 .container {
     max-width: 90%;
     overflow: hidden;
@@ -94,19 +115,13 @@ img {
     margin-right: auto;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (width >= 1024px) {
   .body {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 300px 3fr;
     grid-template-areas:
       "header      header"
       "barra-lateral        main"
       "barra-lateral       main"
       "footer      footer";
-  }
-}
-
-@media screen and (width >= 1024px) {
-  .body {
-    grid-template-columns: 0.5fr 3fr;
   }
 }

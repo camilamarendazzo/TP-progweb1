@@ -36,22 +36,25 @@
                 <h2 class="header-encabezado">Planes premium</h2>
             </a>
         </div>
-        <div class="header-avatar">
-            <a href="views/paginas/iniciar-sesion.html" class="header-cerrar-mobile">
-                <i class="fa-solid fa-right-from-bracket"></i>
+        <div class="header-avatar d-none" data-header-avatar>
+            <a class="header-cerrar-mobile">
+              <i
+                class="fa-solid fa-right-from-bracket"
+                data-cerrar-sesion-mobile
+              ></i>
             </a>
             <div class="header-texto">
-                <p class="header-usuario">Nombre Usuario</p>
-                <a href="../../index.html" class="header-cerrar">Cerrar Sesion</a>
+              <p class="header-usuario" data-nombre-usuario></p>
+              <a class="header-cerrar" data-cerrar-sesion>Cerrar Sesion</a>
             </div>
             <a href="perfil.html" class="header-perfil">
-                <i class="fa-solid fa-user"></i>
+              <i class="fa-solid fa-user"></i>
             </a>
-        </div>
+          </div>
     </header>
 
     <main>
-        <form>
+        <form action="pagar.html" method="get">
         <section class="contenedor">
             
             <div class="plan">
@@ -63,9 +66,9 @@
                     <p>✓ Reproducción on-demand</p> 
                     <p>✓ Prepagá o suscribite</p>
                 </div>
-                <p>abono mensual final de solo</p>
+                <p>abono mensual de solo</p>
                 <p class="precio">$900</p>
-                <input type="radio" name="plan">
+                <input type="radio" name="plan" value="mensual">
             </div>
             <div class="plan">
                 <img src="../../assets/img/PlanAnual.jpg" alt="Plan anual">
@@ -76,9 +79,9 @@
                     <p>✓ Reproducción on-demand</p> 
                     <p>✓ Prepagá o suscribite</p>
                 </div>
-                <p>abono mensual anual de solo</p>
+                <p>abono anual de solo</p>
                 <p class="precio">$9000</p>
-                <input type="radio" name="plan">
+                <input type="radio" name="plan" value="anual">
             </div>
             <div class="plan">
                 <img src="../../assets/img/PlanInfinito.jpg" alt="Plan infinito">
@@ -91,7 +94,7 @@
                 </div>
                 <p>abono único de solo</p>
                 <p class="precio">$15000</p>
-                <input type="radio" name="plan">
+                <input type="radio" name="plan" value="infinito">
             </div>
         </section>
 
@@ -99,10 +102,10 @@
             <a href="inicio.html">
                 <input type="button" class="boton" value="Cancelar">
             </a>
-            <a href="pagar.html">
+            <!-- <a href="pagar.html"> -->
                 <!-- <button class="boton">Avanzar</button> -->
-                <input type="button" class="boton" value="Avanzar">
-            </a>
+                <input type="submit" class="boton" value="Avanzar">
+            <!-- </a> -->
         </section>
     </form>
     </main>
@@ -114,30 +117,6 @@
             <h3 class="footer-nombre">Klehr</h3>
             <p class="footer-dni">41.026.580</p>
             <a href="https://github.com/Sur4x" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Alexander</h3>
-            <h3 class="footer-nombre">Funes</h3>
-            <p class="footer-dni">34.117.699</p>
-            <a href="https://github.com/javierfunes2018" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Antonella</h3>
-            <h3 class="footer-nombre">Politi</h3>
-            <p class="footer-dni">31.492.164</p>
-            <a href="https://github.com/AntonellaPoliti" target="_blank" class="footer-icono">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div class="footer-integrante">
-            <h3 class="footer-nombre">Nahuel</h3>
-            <h3 class="footer-nombre">Esposito</h3>
-            <p class="footer-dni">43.862.624</p>
-            <a href="https://github.com/Nahuel0911" target="_blank" class="footer-icono">
                 <i class="fa-brands fa-github"></i>
             </a>
         </div>
@@ -159,6 +138,8 @@
         </div>
     </footer>
     <!-- Componente FOOTER -->
+
+    <script src="../../js/premium.js"></script>
         
 
 </body>
