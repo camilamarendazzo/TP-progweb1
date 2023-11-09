@@ -110,7 +110,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
   const botonesPlay = d.querySelectorAll(`[data-boton-play]`)
 
-  //console.log(botonesPlay)
+  console.log(botonesPlay)
 
   botonesPlay.forEach((el) => {
     el.addEventListener('click', (e) => {
