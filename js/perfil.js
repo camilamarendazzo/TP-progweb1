@@ -30,16 +30,31 @@ d.addEventListener("DOMContentLoaded", (e) => {
       localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
       location.href = "../../index.html";
     }
-  });
+  })});
   
-  function eliminarUsuario (){
-  localStorage.removeItem("datos");
-  alert("Usuario elminado del Local Storage");
-  }
+  const eliminarUs = d.querySelector(`[data-eliminar-usuario]`);
 
-  d.getElementById("eliminarUsuario").addEventListener("click",eliminarUsuario);
+d.addEventListener("click" , (e) => {
+  if (e.target == eliminarUs){
+    e.preventDefault();
+    // Paso 2: Encuentra el objeto que cumple con la condición (estado = true)
+    const objetoAEliminar = datosDesdeLS.usuarios.find(item => item.estado === true);
+    
+    if (objetoAEliminar) {
+      // Paso 3: Elimina el objeto del array
+      const index = datosDesdeLS.usuarios.indexOf(objetoAEliminar);
+      datosDesdeLS.usuarios.splice(index, 1);
+    
+      // Paso 4: Actualiza el almacenamiento local con los datos modificados
+      localStorage.setItem('datos', JSON.stringify(datosDesdeLS));
+      location.href = "../../index.html";
+    } else {
+      console.log('No se encontró ningún objeto con estado = true');
+    };
+    }});
 
-});
+
+
 
 d.addEventListener("submit", (e) => {
   console.log(e);
