@@ -60,6 +60,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
         $template.querySelector(`[data-views]`).textContent =
           arrCancionesFavoritos[0].views;
         $template.querySelector(
+          `[data-boton-play]`
+        ).dataset.idAlbum = `${album.id_album}`;
+        $template.querySelector(
           `[data-estrella-album]`
         ).dataset.idAlbum = `${album.id_album}`;
         $template.querySelector(
@@ -136,6 +139,47 @@ d.addEventListener("DOMContentLoaded", (e) => {
       location.href = "../../index.html";
     }
   });
+
+    //configurar botones play
+
+    const botonesPlay = d.querySelectorAll(`[data-boton-play]`)
+
+    //console.log(botonesPlay)
+  
+    botonesPlay.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault()
+  
+        //console.log(albumActual)
+        //console.log(e.target.dataset.idAlbum)
+  
+        datosDesdeLS.catalogo.forEach((album) => {
+          if(e.target.dataset.idAlbum == album.id_album){
+  
+            datosDesdeLS.usuarios.forEach((usuario) => {
+              if (usuario.estado) {
+                
+                usuario.escuchando.album = album.album
+                usuario.escuchando.img = album.imagen
+                usuario.escuchando.descripcion = album.descripcion
+                usuario.escuchando.id_album = album.id_album
+  
+                localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
+                location.reload()
+              }
+            });
+  
+          }
+        })
+      })
+    })
+  
+  
+  
+  
+  
+  
+    //configurar botones play
 
   //configurar estrellas album
 
