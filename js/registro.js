@@ -53,51 +53,61 @@ d.addEventListener("DOMContentLoaded", (e) => {
       const mensajeErrorUsuario = d.querySelector(
         `[data-mensaje-error-usuario]`
       );
-      if (dataContraseña === dataRepetirContraseña) {
-        const dataContraseñaFinal = dividirContraseña(dataContraseña);
 
-        const datosUsuario = {
-          id_usuario: `${datosDesdeLS.usuarios.length + 1}`,
-          usuario: `${dataUsuario}`,
-          contraseña: `${dataContraseñaFinal}`,
-          repetirContraseña: `${dataContraseñaFinal}`,
-          estado: false,
-          nacimiento: `${dataNacimiento}`,
-          email: `${dataEmail}`,
-          premium : false,
-          escuchando: {
-            "album": `${datosDesdeLS.catalogo[0].album}`,
-            "img":`${datosDesdeLS.catalogo[0].imagen}`,
-            "descripcion": `${datosDesdeLS.catalogo[0].descripcion}`,
-            "id_album": `${datosDesdeLS.catalogo[0].id_album}`
-          },
-          favoritos: {
-            albums: [],
-            canciones: [],
-          },
-        };
+      const dataContraseñaFinal = dividirContraseña(dataContraseña);
 
-        if (datosDesdeLS.usuarios.length !== 0) {
-          datosDesdeLS.usuarios.forEach((el) => {
-            if (el.usuario !== datosUsuario.usuario) {
-              datosDesdeLS.usuarios.push(datosUsuario);
+      const datosUsuario = {
+        id_usuario: `${datosDesdeLS.usuarios.length + 1}`,
+        usuario: `${dataUsuario}`,
+        contraseña: `${dataContraseñaFinal}`,
+        repetirContraseña: `${dataContraseñaFinal}`,
+        estado: false,
+        nacimiento: `${dataNacimiento}`,
+        email: `${dataEmail}`,
+        premium: false,
+        escuchando: {
+          album: `${datosDesdeLS.catalogo[0].album}`,
+          img: `${datosDesdeLS.catalogo[0].imagen}`,
+          descripcion: `${datosDesdeLS.catalogo[0].descripcion}`,
+          id_album: `${datosDesdeLS.catalogo[0].id_album}`,
+        },
+        favoritos: {
+          albums: [],
+          canciones: [],
+        },
+      };
 
-              localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
-              mostrarMensaje(mensajeExito);
-
-              $formulario.reset();
-            } else {
-              mostrarMensaje(mensajeErrorUsuario);
-            }
-          });
-        } else {
+      if (datosDesdeLS.usuarios.length == 0) {
+        console.log(`${datosDesdeLS.usuarios.length}`);
+        if (dataContraseña === dataRepetirContraseña) {
           datosDesdeLS.usuarios.push(datosUsuario);
           localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
           mostrarMensaje(mensajeExito);
           $formulario.reset();
+          location.href = "../../index.html";
+        } else {
+          mostrarMensaje(mensajeError);
         }
       } else {
-        mostrarMensaje(mensajeError);
+        const arrUsuarios = datosDesdeLS.usuarios.filter(
+          (el) => el.usuario == datosUsuario.usuario
+        );
+        console.log(arrUsuarios);
+
+        if (arrUsuarios.length == 0) {
+          console.log(`No existen usuarios iguales`);
+          if (dataContraseña === dataRepetirContraseña) {
+            datosDesdeLS.usuarios.push(datosUsuario);
+            localStorage.setItem("datos", JSON.stringify(datosDesdeLS));
+            mostrarMensaje(mensajeExito);
+            $formulario.reset();
+            location.href = "../../index.html";
+          } else {
+            mostrarMensaje(mensajeError);
+          }
+        } else {
+          mostrarMensaje(mensajeErrorUsuario);
+        }
       }
     }
   });

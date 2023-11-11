@@ -17,7 +17,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   });
 
   d.addEventListener("click", (e) => {
-    if (e.target == $cerrarSesion) {
+    if (e.target == $cerrarSesion || e.target == $cerrarSesionMobile) {
       e.preventDefault();
 
       datosDesdeLS.usuarios.forEach((e) => {

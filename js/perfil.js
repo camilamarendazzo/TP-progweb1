@@ -3,6 +3,7 @@ const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
 const $nombreUsuario = d.querySelector(`[data-nombre-usuario]`);
 const $cerrarSesion = d.querySelector(`[data-cerrar-sesion]`);
 const $cerrarSesionMobile = d.querySelector(`[data-cerrar-sesion-mobile]`);
+const $linkPremium = d.querySelector(`[data-link-premium]`);
 
 d.addEventListener("DOMContentLoaded", (e) => {
   const datosDesdeLS = JSON.parse(localStorage.getItem("datos"));
@@ -18,7 +19,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   });
 
   d.addEventListener("click", (e) => {
-    if (e.target == $cerrarSesion) {
+    if (e.target == $cerrarSesion || e.target == $cerrarSesionMobile) {
       e.preventDefault();
 
       datosDesdeLS.usuarios.forEach((e) => {
@@ -31,6 +32,16 @@ d.addEventListener("DOMContentLoaded", (e) => {
       location.href = "../../index.html";
     }
   })});
+
+  datosDesdeLS.usuarios.forEach((e) => {
+    if (e.estado && e.premium) {
+      $linkPremium.classList.remove('d-block')
+      $linkPremium.classList.add('d-none')
+    } else {
+      $linkPremium.classList.remove('d-none')
+      $linkPremium.classList.add('d-block')
+    }
+  });
   
   const eliminarUs = d.querySelector(`[data-eliminar-usuario]`);
 
